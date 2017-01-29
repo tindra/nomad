@@ -1,0 +1,86 @@
+// Amount form
+.amount-form {
+    position:relative;
+    @include rem((
+        width: 194px,
+        height: 65px,
+        padding-left: 65px,
+        padding-right: 65px,
+        padding-top: 12px
+    ));
+
+    &__control {
+        position:absolute;
+        top:0;
+        border:1px solid rgba(49,49,49,.13);
+        background:none;
+        outline:0;
+        transition: all 0.15s ease-out;
+        text-indent:-999em;
+        @include rounded;
+        @include rem((
+            width: 65px,
+            height: 65px
+        ));
+        
+        @include hover-focus-active {
+            outline:0;
+            border-color:rgba(49,49,49,.53);
+            &:before,
+            &:after {
+                background-color:rgba(49,49,49,.64);
+            }
+        }
+        
+        &:before,
+        &:after {
+            content:'';
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            transition: all 0.15s ease-out;
+            background-color:rgba(49,49,49,.44);
+        }
+        
+ 
+        &_dec {
+            left:0;
+            &:after {
+                @include rem((
+                    width: 31px,
+                    height: 2px
+                ));
+            }
+        }
+
+        &_inc {
+            right:0;
+            &:before {
+                @include rem((
+                    width: 2px,
+                    height: 31px
+                ));
+            }
+            &:after {
+                @include rem((
+                    width: 31px,
+                    height: 2px
+                ));
+            }
+        }
+    }
+    
+    &__input {
+        @include rem((
+            width: 64px,
+            height: 40px
+        ));
+        border:0;
+        background:none;
+        text-align:center;
+        padding:0;
+        display:block;
+        @include font-variant(30px, 40px);
+    }
+}

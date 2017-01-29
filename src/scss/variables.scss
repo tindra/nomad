@@ -19,7 +19,7 @@ $base-color: #2d2d2d !default;
 $gray: #363636 !default;
 $gray-light: #999999 !default;
 $gray-lighter: #b2b2b2 !default;
-$gray-lightest: #e5e5e5 !default;
+$gray-lightest: #f0f0f0 !default;
 
 $brand-primary: #e3d14d !default;
 $brand-brick: #93463a !default;
@@ -28,6 +28,8 @@ $brand-sand-shade: #9b843e !default;
 $brand-darksalmon: #aa7e64 !default;
 $brand-gray: #efefef !default;
 $brand-slategray: #4c4c59 !default;
+$brand-darkbrown: #3e2d2e !default;
+$brand-success: #90b756 !default;
 
 $theme-orange-overlay: rgba(214,96,59,0.85) !default;
 $theme-brown: #400211 !default;
@@ -88,14 +90,14 @@ $font-size-base: $font-size-root !default;
 $line-height-base: 21px !default;
 
 $font-size-h1: 39px !default;
-$font-size-h2: 31px !default;
+$font-size-h2: 24px !default;
 $font-size-h3: 21px !default;
 $font-size-h4: 19px !default;
 $font-size-h5: $font-size-root !default;
 $font-size-h6: 15px !default;
 
 $line-height-h1: 1.02564103 !default;
-$line-height-h2: 1.29032258 !default;
+$line-height-h2: 24px !default;
 $line-height-h3: 21px !default;
 $line-height-h4: 19px !default;
 $line-height-h5: $font-size-root !default;
@@ -140,7 +142,7 @@ $button-active-box-shadow: none !default;
 
 $button-default-color: $base-color !default;
 $button-default-bg: transparent !default;
-$button-default-border: #ffffff !default;
+$button-default-border: #000000 !default;
 $button-default-hover-bg: $button-default-bg !default;
 $button-default-hover-border: #dddddd !default;
 

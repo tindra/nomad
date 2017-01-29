@@ -1,17 +1,19 @@
 jQuery(document).ready(function($){
     // Panel
-    $('.js-panel-toggle').click(function(e) {
-      	e.preventDefault();
+    $(function () {
+        $('.js-panel-toggle').click(function(e) {
+          	e.preventDefault();
 
-        var $this = $(this);
+            var $this = $(this);
 
-        if ($this.parent().hasClass('collapsed')) {
-            $this.parent().find('.js-panel-content').slideDown(350);
-            $this.parent().removeClass('collapsed');
-        } else {
-            $this.parent().find('.js-panel-content').slideUp(350);
-            $this.parent().addClass('collapsed');
-        }
+            if ($this.parent().hasClass('collapsed')) {
+                $this.parent().find('.js-panel-content').slideDown(350);
+                $this.parent().removeClass('collapsed');
+            } else {
+                $this.parent().find('.js-panel-content').slideUp(350);
+                $this.parent().addClass('collapsed');
+            }
+        });
     });
     
     // Menu
@@ -29,7 +31,35 @@ jQuery(document).ready(function($){
         $(".js-nav-toggle").css('display','block');
 	});
     
-    // Index slider
+    // Sliders
+    $('.js-slider').slick({
+        mobileFirst: true,
+        responsive: [
+        {
+            breakpoint: 299,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false,
+                arrows:false,
+                autoplay:true
+            }
+        },
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
+                arrows:false,
+                autoplay:true
+            }
+        }
+        ]
+    });
+    
     $('.js-index-slider').slick({
         mobileFirst: true,
         responsive: [
@@ -41,7 +71,7 @@ jQuery(document).ready(function($){
                 infinite: true,
                 dots: false,
                 arrows:false,
-                //autoplay:true
+                autoplay:true
             }
         },
         {
@@ -56,13 +86,25 @@ jQuery(document).ready(function($){
         }
         ]
     });
+
+    $('.js-product-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        dots: false,
+        arrows:true
+    });
     
     $(window).resize(function() {
-      $('.js-index-slider').slick('resize');
+        $('.js-slider').slick('resize');
+        $('.js-index-slider').slick('resize');
+        $('.js-product-slider').slick('resize');
     });
 
     $(window).on('orientationchange', function() {
+        $('.js-slider').slick('resize');
         $('.js-index-slider').slick('resize');
+        $('.js-product-slider').slick('resize');
     });
     
     // Masonry
@@ -105,4 +147,37 @@ jQuery(document).ready(function($){
         });
     });
     
+    // Amount form
+    $(function () {
+        $(".js-amount-control").on("click", function() {
+          var $button = $(this),
+              oldValue = $button.parent().find(".js-amount-input").val();
+
+          if ($button.attr('data-value') == "inc") {
+        	  var newVal = parseFloat(oldValue) + 1;
+        	} else {
+      	   // Don't allow decrementing below zero
+            if (oldValue > 0) {
+              var newVal = parseFloat(oldValue) - 1;
+      	    } else {
+              newVal = 0;
+            }
+      	  }
+
+          $button.parent().find(".js-amount-input").val(newVal);
+        });
+    });
+    
+    // Article section pushed to the right
+    $(function articlePushedToTheRight() {
+        var windowWidth = $(document).outerWidth(true),
+            sectionWidth = $('.article__section_right .continer').width(),
+            pushValue = (windowWidth - sectionWidth)/2;
+        $(".article__section_right .continer").css('margin-right', '-'+pushValue+'px');
+    });
+    articlePushedToTheRight();
+
+    $(window).resize(function() {
+        articlePushedToTheRight();
+    });
 });

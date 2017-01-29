@@ -16,6 +16,12 @@
 
 @include bg-variant('.theme-slategray', $brand-slategray);
 
+@include bg-variant('.theme-darkbrown', $brand-darkbrown);
+
+.theme-pattern-tea {
+    background:url(../i/patterns/tea.jpg) 100% 100% no-repeat;
+}
+
 .theme-inverse {
     color:#ffffff;
     

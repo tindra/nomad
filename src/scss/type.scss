@@ -24,7 +24,10 @@ h1, .h1 {
   @include font-variant($font-size-h1, $line-height-base);
 }
 h2, .h2 {
-  @include font-variant($font-size-h2, 35px);
+  @include font-variant($font-size-h2, $line-height-h2);
+  @include rem((
+      margin-bottom: 28px
+  ));
 }
 h3, .h3 {
   @include font-variant($font-size-h3, $line-height-base);
@@ -46,6 +49,9 @@ h6, .h6 {
 
 .text-primary {
   color: $brand-primary;
+}
+.text-success {
+  color: $brand-success;
 }
 
 //

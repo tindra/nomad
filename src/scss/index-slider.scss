@@ -106,25 +106,7 @@
         }
         
         .slick-arrow {
-            z-index: 10;
-
             background-color: rgba(0,0,0,0.45);
-            background-repeat: no-repeat;
-            background-position: 50%;
-
-            @include size(69px);
-            
-            &:hover {
-                opacity: 0.53;
-            }
-        }
-        
-        .slick-prev {
-            background-image: url("data:image/svg+xml,%3Csvg width='15' height='41' viewBox='0 0 15 41' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.203 20.862l-.807-.58L14.193 0 15 .58 1.203 20.863zm13.22 19.57l-.798.568L0 21.14l.798-.568 13.625 19.86z' fill-opacity='.56' fill='%23EBEBEB' fill-rule='evenodd'/%3E%3C/svg%3E");
-        }
-
-        .slick-next {
-            background-image: url("data:image/svg+xml,%3Csvg width='15' height='41' viewBox='0 0 15 41' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .582L.807 0l13.798 20.28-.808.582L0 .582zm15 20.56L1.374 41l-.796-.57 13.625-19.858.797.57z' fill-opacity='.56' fill='%23EBEBEB' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
     }
 }

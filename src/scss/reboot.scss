@@ -121,7 +121,9 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-top: 0;
 
-  @include px-to-rem(margin-bottom, 15px);
+  @include rem((
+      margin-bottom: 21px
+  ));
 }
 
 // Abbreviations and acronyms
@@ -199,7 +201,23 @@ img {
   // centers them. This won't apply should you reset them to `block` level.
   vertical-align: middle;
   // Note: `<img>`s are deliberately not made responsive by default.
-  // For the rationale behind this, see the comments on the `.img-fluid` class.
+  // For the rationale behind this, see the comments on the `.img-fluid` class.  
+}
+.img-left {
+    float:left;
+    @include rem((
+        margin-right: 36px
+    ));
+}
+.img-right {
+    float:right;
+    @include rem((
+        margin-left: 36px
+    ));
+}
+.img-tea {
+    float:right;
+    margin-left:0;
 }
 
 

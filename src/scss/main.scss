@@ -17,26 +17,30 @@
 
 // Components
 @import "triangle";
-@import "contacts-menu";
+@import "top-block";
+@import "more-link";
+@import "footer";
 @import "header";
 @import "navbar";
 @import "nav";
-@import "top-block";
-@import "breadcrumbs";
-@import "faq";
-@import "page-header";
-@import "more-link";
+@import "contacts-menu";
 @import "intro";
-@import "article";
-@import "section";
-@import "catalog";
-@import "tales";
+@import "page-header";
+@import "breadcrumbs";
+@import "price";
+@import "amount-form";
 @import "card";
-@import "footer";
 
 @import "slick";
 @import "slick-theme";
 @import "index-slider";
+@import "slider";
+@import "faq";
+@import "section";
+@import "catalog";
+@import "product";
+@import "tales";
+@import "article";
 
 // Utility classes
 @import "utilities";

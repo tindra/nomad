@@ -1,10 +1,34 @@
 // Article
 .article {
-    margin-top:10px;
-    @include px-to-rem(margin, 20px);
-    @include px-to-rem(padding, 10px);
-    @include rem((
-        margin: 20px,
-        padding: 10px
-    ));
+    
+    &__section {
+        @include rem((
+            margin-bottom: 49px
+        ));
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+        
+        &_right {
+            .img-right {
+                @include rem((
+                    margin-right: -15px
+                ));
+            }
+        }
+    }
+    
+    &__slider {
+        @include rem((
+            margin-top: 22px,
+            margin-bottom: 22px
+        ));
+        
+        .article__section + & {
+            @include rem((
+                margin-top: -19px
+            ));
+        }
+    }
 }

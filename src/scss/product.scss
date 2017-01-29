@@ -1,0 +1,131 @@
+// Product
+.product {
+    &__header {
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+        @include rem((
+            margin-bottom: 37px
+        ));
+        
+        &-container {
+            padding-left:0;
+            padding-right:0;
+        }
+    }
+    
+    &__intro {
+        color:#313131;
+        background-color:$gray-lightest;
+        background-repeat: no-repeat;
+        background-position: 100% 220%;
+    }
+    
+    &__img {
+        @include rem((
+            margin-top: -$navbar-height-sm
+        ));
+
+        &-item {
+            position:relative;
+            @include rem((
+                height: 424px
+            ));
+        }
+        
+        img {
+            display:block;
+            position:absolute;
+            bottom:0;
+            left:50%;
+            transform:translateX(-50%);
+            box-shadow: 0 13px 24px rgba(12,13,14,.22);
+       }
+    }
+    
+    &__body {
+        @include rem((
+            padding-top: 24px,
+            padding-left: 13px,
+            padding-right: 29px,
+            padding-bottom: 32px
+        ));
+    }
+    
+    &__title {
+        @include font-variant(21px, 22px, $font-family: $font-family-sans-serif-extrabold);
+        margin-top:0;
+        @include rem((
+            margin-bottom: 13px
+        ));
+    }
+    
+    &__subtitle,
+    &__info {
+        @include em-line-height(18px, 22px);
+    }
+
+    &__subtitle {
+        @include rem((
+            margin-bottom: 23px
+        ));
+    }
+
+    &__info {
+        @include rem((
+            margin-bottom: 44px
+        ));
+    }
+    
+    &__order {
+        &-row {
+            position:relative;
+            @include rem((
+                margin-bottom: 28px
+            ));
+        }
+    }
+    
+    &__preorder {
+        position:absolute;
+        top:50%;
+        @include rem((
+            right: 37px
+        ));
+        transform:translateY(-50%);
+    }
+    
+    &__buy {
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        
+        &-button {
+        }
+    }
+    
+    &__price {
+        &-value {
+            @include font-variant(32px, 32px);
+            color:#baac34;
+        }
+    }
+    
+    &_drink {
+        .product__intro {
+            background-image:url(../i/patterns/drink.png);
+        }
+    }
+  
+    @media(min-width:768px) {
+    }
+
+    @media(min-width:1200px) {
+
+        &__header {
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+    }
+}

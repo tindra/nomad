@@ -1,0 +1,58 @@
+// Slider
+.slider {    
+    &__item {
+        position: relative;
+
+        text-align: center;
+
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+
+        @include rem((height: 243px));
+        
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        color:#fefefe;
+
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__title {
+        margin-top: 0;
+        
+        @include font-variant(42px, 42px, $font-family: $font-family-serif);
+        @include rem((margin-bottom: 34px));
+    }
+
+    &__text {
+        opacity:.76;
+    }
+    
+    
+    @media(min-width:1200px) {        
+        &__item {
+            @include rem((height: 448px));
+        }
+        
+        &__content {
+            @include rem((max-width: 425px));
+            padding: 0;
+        }
+
+        &__title {
+            @include font-variant(55px,55px);
+            @include rem(margin-bottom, 41px);
+        }
+
+        &__text {
+            @include font-variant(16px,19px);
+        }
+    }
+}
