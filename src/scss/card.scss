@@ -13,8 +13,8 @@
     background-size: cover;
 
     @include size(100%);
-    @include px-to-rem(padding-left, 13px);
-    @include px-to-rem(padding-right, 13px);
+    @include rem(padding-left, 13px);
+    @include rem(padding-right, 13px);
     
     &__img-overlay {
         position: absolute;
@@ -58,7 +58,7 @@
     &__button {
         color:#ffffff;
         border-color: #ffffff;
-        @include px-to-rem(width, 148px);
+        @include rem(width, 148px);
         
         .card:hover & {
             color: #1c1814;
@@ -77,6 +77,8 @@
     }
     
     &_theme-orange {
+        background-color: $theme-orange;
+        
         &.card_product {
             .card__overlay {
                 background-color: $theme-orange-overlay;
@@ -90,6 +92,8 @@
     }
 
     &_theme-brown {
+        background-color: $theme-brown;
+  
         &.card_pub {            
             &_double {
                 .card__body {
@@ -128,6 +132,8 @@
     }
 
     &_theme-rosybrown {
+        background-color: $theme-rosybrown;
+
         &.card_product {
             .card__overlay {
                 background-color: $theme-rosybrown-overlay;
@@ -178,6 +184,8 @@
     }
 
     &_theme-peru {
+        background-color: $theme-peru;
+        
         &.card_pub {
             &_double {
                 .card__body {
@@ -216,6 +224,8 @@
     }
 
     &_theme-darkblue {
+        background-color: $theme-darkblue;
+        
         &.card_product {
             .card__overlay {
                 background-color: $theme-darkblue-overlay;
@@ -266,6 +276,8 @@
     }
 
     &_theme-violet {
+        background-color: $theme-violet;
+
         &.card_product {
             .card__overlay {
                 background-color: $theme-violet-overlay;
@@ -316,6 +328,8 @@
     }
 
     &_theme-lilac {
+        background-color: $theme-lilac;
+
         &.card_product {
             .card__overlay {
                 background-color: $theme-lilac-overlay;
@@ -332,6 +346,8 @@
     }
 
     &_theme-green {
+        background-color: $theme-green;
+ 
         &.card_product {
             .card__overlay {
                 background-color: $theme-green-overlay;
@@ -348,6 +364,8 @@
     }
  
     &_theme-darkgoldenrod {
+        background-color: $theme-darkgoldenrod;
+
         &.card_product {
             .card__overlay {
                 background-color: $theme-darkgoldenrod-overlay;
@@ -398,6 +416,8 @@
     }
     
     &_theme-darkred {
+        background-color: $theme-darkred;
+
         &.card_product {
             .card__overlay {
                 background-color: $theme-darkred-overlay;
@@ -464,13 +484,15 @@
         }  
         
         .card__labels {
-            @include px-to-rem(margin-left, -13px);
-            @include px-to-rem(margin-right, -13px);
+            @include rem(margin-left, -13px);
+            @include rem(margin-right, -13px);
         }
 
         .card__label {
             width: 100%;
             max-width: 242px;
+            @include rem(padding-left, 20px);
+            @include rem(padding-right, 20px);
 
             text-align: center;
 
@@ -484,17 +506,17 @@
             margin-top: 0;
 
             @include font-variant(21px, 21px, $font-family: $font-family-sans-serif-extrabold);
-            @include px-to-rem(margin-bottom, 7px);
+            @include rem(margin-bottom, 7px);
         }
         
         .card__subtitle {
             @include font-variant(14px, 18px);
-            @include px-to-rem(margin-bottom, 14px);
+            @include rem(margin-bottom, 14px);
         }
 
         .card__price {
             @include font-variant(24px, 24px);
-            @include px-to-rem(margin-bottom, 33px);
+            @include rem(margin-bottom, 33px);
         }
         
         &_catalog {
@@ -504,18 +526,18 @@
             
             .card__title {
                 @include font-variant(28px, 28px);
-                @include px-to-rem(margin-bottom, 4px);
+                @include rem(margin-bottom, 4px);
             }
         
             .card__subtitle {
                 @include font-variant(18px, 28px);
-                @include px-to-rem(margin-bottom, 11px);
+                @include rem(margin-bottom, 11px);
             }
 
             .card__action {
                 text-align: center;
 
-                @include px-to-rem(padding-bottom, 30px);
+                @include rem(padding-bottom, 30px);
                 
             }
 
@@ -525,8 +547,35 @@
 
                 margin-bottom: 0;
 
-                @include px-to-rem(top, 12px);
+                @include rem(top, 12px);
                 @include font-variant(28px, 28px);
+            }
+        }
+        
+        &_single {
+            @include rem(height, 288px);
+            background-position:-140% 80%;
+            background-size:auto 150%;
+            flex-direction:row;
+            
+            .card__labels {
+                margin-right:0;
+                width:50%;
+            }
+            .card__body {
+                width:50%;
+                @include rem(padding-left, 20px);
+            }
+            .card__title {
+                @include em-line-height(21px, 24px);
+                @include rem(margin-bottom, 27px);
+            }
+            .card__subtitle {
+                @include font-variant(18px, 18px);
+                @include rem(margin-bottom, 20px);
+            }
+            .card__price {
+                @include rem(margin-bottom, 28px);
             }
         }
     }
@@ -539,7 +588,7 @@
         justify-content: space-between;
         
         .card__tags {
-            @include px-to-rem(padding-top, 41px);
+            @include rem(padding-top, 41px);
         }
 
         .card__tag {
@@ -556,12 +605,12 @@
         
         .card__title {
             @include font-variant(30px, 24px, $font-family: $font-family-serif);
-            @include px-to-rem(margin-top, 8px);
-            @include px-to-rem(margin-bottom, 8px);
+            @include rem(margin-top, 8px);
+            @include rem(margin-bottom, 8px);
         }
         
         .card__action {
-            @include px-to-rem(margin-bottom, 31px);
+            @include rem(margin-bottom, 31px);
         } 
         
         &_double {
@@ -583,8 +632,8 @@
                 max-width: 100%;
 
                 flex-grow: 1;
-                @include px-to-rem(padding-left, 15px);
-                @include px-to-rem(padding-right, 15px);
+                @include rem(padding-left, 15px);
+                @include rem(padding-right, 15px);
                 
                 &:before,
                 &:after {
@@ -602,7 +651,7 @@
                 margin-top: 0;
 
                 @include font-variant(24px, 24px);
-                @include px-to-rem(margin-bottom, 29px);
+                @include rem(margin-bottom, 29px);
             }
 
             .card__text {
@@ -615,8 +664,8 @@
                 height: 100%;
 
                 @include font-variant(18px, 22px);
-                @include px-to-rem(padding-left, 15px);
-                @include px-to-rem(padding-right, 15px);
+                @include rem(padding-left, 15px);
+                @include rem(padding-right, 15px);
                 align-items: center;
             }
             
@@ -655,7 +704,7 @@
                 flex-direction: row;
 
                 align-items: initial;
-                @include px-to-rem(height, 279px);
+                @include rem(height, 279px);
                 
                 .card__img-block {
                     width: 50%;
@@ -663,7 +712,7 @@
                 .card__body {
                     &:before,
                     &:after {
-                        @include px-to-rem(top, 38px);
+                        @include rem(top, 38px);
                     }
                 }
             }
@@ -678,7 +727,7 @@
                     &:after {
                         left: auto;
 
-                        @include px-to-rem(right, 38px);
+                        @include rem(right, 38px);
                     }
                 }
                 .card__text {
@@ -700,7 +749,7 @@
       
                     &:before,
                     &:after {
-                        @include px-to-rem(left, 38px);
+                        @include rem(left, 38px);
                     }
                 }
                 .card__text {
@@ -715,7 +764,7 @@
 
                 width: 50%;
 
-                @include px-to-rem(height, 558px);
+                @include rem(height, 558px);
                 
                 .card__img-block {
                     width: 100%;
@@ -739,7 +788,7 @@
                 margin-top: 0;
 
                 @include font-variant(24px, 21px);
-                @include px-to-rem(margin-bottom, 27px);
+                @include rem(margin-bottom, 27px);
             }
             .card__action {
                 margin-bottom: 0;
@@ -756,8 +805,8 @@
             opacity: 0.84;
 
             @include font-variant(30px, 30px, $font-family: $font-family-serif);
-            @include px-to-rem(padding-left, 62px);
-            @include px-to-rem(padding-right, 60px);
+            @include rem(padding-left, 62px);
+            @include rem(padding-right, 60px);
             
             b,
             strong {
@@ -770,8 +819,8 @@
                 opacity: 1;
 
                 @include font-variant(16px, 16px);
-                @include px-to-rem(padding-left, 44px);
-                @include px-to-rem(padding-right, 42px);
+                @include rem(padding-left, 44px);
+                @include rem(padding-right, 42px);
             }
         }
     }
@@ -780,14 +829,16 @@
         &__button {
             border-color: rgba(255,255,255,0.44);
 
-            @include px-to-rem(width, 134px);
+            @include rem(width, 134px);
         }
 
         &_product {
             justify-content: center;
         
             .card__label {
-                width: 130px;
+                width: auto;
+                max-width:100%;
+                display:inline-block;
 
                 @include font-variant(14px, 45px);
             }
@@ -798,20 +849,17 @@
         
             .card__title {
                 @include font-variant(18px, 18px);
-                @include px-to-rem(margin-bottom, 3px);
+                @include rem(margin-bottom, 3px);
             }
         
             .card__subtitle {
                 @include font-variant(12px, 18px);
-                @include px-to-rem(margin-bottom, 14px);
-            }
-
-            .card__action {
+                @include rem(margin-bottom, 14px);
             }
 
             .card__price {
                 @include font-variant(18px, 24px);
-                @include px-to-rem(margin-bottom, 30px);
+                @include rem(margin-bottom, 30px);
             }   
              
             &_catalog {
@@ -822,17 +870,47 @@
 
                     justify-content: space-between;
                     align-items: center;
-                    @include px-to-rem(padding-bottom, 21px);
+                    @include rem(padding-bottom, 21px);
                 
                 }
 
                 .card__subtitle {
-                    @include px-to-rem(margin-bottom, 7px);
+                    @include rem(margin-bottom, 7px);
                 }
 
                 .card__price {
                     position: static;
 
+                    margin-bottom: 0;
+                }
+            }
+
+            &_single {
+                @include rem(height, 206px);
+                background-position:0 80%;
+                background-size:auto 180%;
+                justify-content:space-between;
+            
+                .card__body {
+                    max-width: 100%;
+                    @include rem(padding-left, 62px);
+                    @include rem(padding-right, 63px);
+                }
+                .card__title {
+                    @include font-variant(24px, 24px);
+                    @include rem(margin-bottom, 5px);
+                }
+                .card__subtitle {
+                    @include font-variant(12px, 18px);
+                    @include rem(margin-bottom, 17px);
+                }
+                .card__action {
+                    display:flex;
+                    align-items:center;
+                    justify-content:space-between;
+                }
+                .card__price {
+                    @include font-variant(24px, 24px);
                     margin-bottom: 0;
                 }
             }
@@ -859,7 +937,7 @@
         
             .card__title {
                 @include font-variant(26px, 24px);
-                @include px-to-rem(margin-bottom, 36px);
+                @include rem(margin-bottom, 36px);
             }
         
             .card__action {
@@ -877,7 +955,7 @@
             
                 .card__title {
                     @include font-variant(36px, 33px);
-                    @include px-to-rem(margin-bottom, 30px);
+                    @include rem(margin-bottom, 30px);
                 }
 
                 .card__text {
@@ -889,17 +967,17 @@
                     padding-left: 0;
 
                     @include font-variant(16px, 20px);
-                    @include px-to-rem(margin-bottom, 29px);
+                    @include rem(margin-bottom, 29px);
                 }
                 
                 &_right,
                 &_left {
-                    @include px-to-rem(height, 286px);
+                    @include rem(height, 286px);
                 }
 
                 &_bottom,
                 &_top {
-                    @include px-to-rem(height, 572px);
+                    @include rem(height, 572px);
                     .card__body {
                         flex-grow: 0;
                     }
@@ -917,7 +995,7 @@
             .grid_tales & {
                 .card__title {
                     @include font-variant(36px, 33px);
-                    @include px-to-rem(margin-bottom, 46px);
+                    @include rem(margin-bottom, 46px);
                 }
             }    
         }
@@ -945,11 +1023,11 @@
     }
 
     @media (min-width:1200px) {
-        @include px-to-rem(padding-left, 30px);
-        @include px-to-rem(padding-right, 30px);
+        @include rem(padding-left, 30px);
+        @include rem(padding-right, 30px);
 
         &__button {
-            @include px-to-rem(width, 125px);
+            @include rem(width, 125px);
         }
 
         &_with-overlay:hover {
@@ -982,8 +1060,8 @@
 
             @include font-variant(16px, 19px);
             justify-content: center;
-            @include px-to-rem(padding-left, 47px);
-            @include px-to-rem(padding-right, 47px);
+            @include rem(padding-left, 47px);
+            @include rem(padding-right, 47px);
         
             .card:hover & {
                 transition: none;
@@ -992,12 +1070,12 @@
             }
         
             .tiles__w-lg-2 & {
-                @include px-to-rem(padding-left, 90px);
-                @include px-to-rem(padding-right, 90px);
+                @include rem(padding-left, 90px);
+                @include rem(padding-right, 90px);
             }
         
             .card__button {
-                @include px-to-rem(margin-top, 22px);
+                @include rem(margin-top, 22px);
             }
         }
     
@@ -1005,24 +1083,24 @@
             justify-content: center;
         
             .card__labels {
-                @include px-to-rem(margin-left, -30px);
-                @include px-to-rem(margin-right, -30px);
+                @include rem(margin-left, -30px);
+                @include rem(margin-right, -30px);
             }
         
             .card__body {
-                @include px-to-rem(padding-bottom, 27px);
+                @include rem(padding-bottom, 27px);
                 justify-content: flex-end;
                 flex-grow: 1;
             }
     
             .card__title {
                 @include font-variant(24px, 24px);
-                @include px-to-rem(margin-bottom, 5px);
+                @include rem(margin-bottom, 5px);
             }
     
             .card__subtitle {
                 @include font-variant(12px, 18px);
-                @include px-to-rem(margin-bottom, 19px);
+                @include rem(margin-bottom, 19px);
             }
 
             .card__action {
@@ -1055,8 +1133,8 @@
                     background-size: contain;
 
                     @include size(44px,26px);
-                    @include px-to-rem(top, -64px);
-                    @include px-to-rem(margin-left, -22px);
+                    @include rem(top, -64px);
+                    @include rem(margin-left, -22px);
                 }
             } 
             
@@ -1064,27 +1142,44 @@
                 .card__body {
                     max-width: 100%;
 
-                    @include px-to-rem(padding-bottom, 36px);
+                    @include rem(padding-bottom, 36px);
                 }
     
                 .card__title {
                     @include font-variant(22px, 22px);
-                    @include px-to-rem(margin-bottom, 1px);
+                    @include rem(margin-bottom, 1px);
                 }
     
                 .card__subtitle {
                     @include font-variant(11px, 22px);
-                    @include px-to-rem(margin-bottom, 15px);
+                    @include rem(margin-bottom, 15px);
                 }
                 
                 .card__action {
                     padding-bottom: 0;                
 
-                    @include px-to-rem(max-width, 226px);
+                    @include rem(max-width, 226px);
                 }
 
                 .card__price {
                     @include font-variant(22px, 22px);
+                }
+            }
+
+            &_single {            
+                background-position: -20% 70%;
+                background-size: auto 270%;
+ 
+                .card__labels {
+                    margin-right:0;
+                    width:60%;
+                }
+                .card__body {
+                    width:45%;
+                    @include rem(padding-left, 62px);
+                    @include rem(padding-right, 63px);
+                    padding-bottom:0;
+                    justify-content:center;
                 }
             }
         }    
@@ -1098,7 +1193,7 @@
                 margin-top: 0;
 
                 @include font-variant(36px, 33px);
-                @include px-to-rem(margin-bottom, 22px);
+                @include rem(margin-bottom, 22px);
             }
     
             &_double {
@@ -1107,18 +1202,18 @@
                                       
                 &_right,
                 &_left {
-                    @include px-to-rem(height, 311px);
+                    @include rem(height, 311px);
                 }
 
                 &_bottom,
                 &_top {
-                    @include px-to-rem(height, 622px);
+                    @include rem(height, 622px);
                 }
             } 
             .grid_tales & {
                 .card__title {
                     @include font-variant(28px, 28px);
-                    @include px-to-rem(margin-bottom, 37px);
+                    @include rem(margin-bottom, 37px);
                 }
             }          
         }
@@ -1126,8 +1221,8 @@
         &_slogan {
             .card__text {
                 @include font-variant(18px, 23px);
-                @include px-to-rem(padding-left, 10px);
-                @include px-to-rem(padding-right, 10px);
+                @include rem(padding-left, 10px);
+                @include rem(padding-right, 10px);
             }
                 
             &_catalog {
@@ -1150,7 +1245,7 @@
             }
 
             .card__price {
-                @include px-to-rem(margin-bottom, 27px);
+                @include rem(margin-bottom, 27px);
             }
         }   
     } 

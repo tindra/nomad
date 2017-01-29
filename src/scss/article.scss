@@ -31,6 +31,24 @@
         }
     }
     
+    &__card {
+        @include rem((
+            margin-top: 37px,
+            margin-bottom: 37px
+        ));
+  
+        .container {
+            padding-left:0;
+            padding-right:0;
+        }
+        
+        .article__section + & {
+            @include rem((
+                margin-top: -16px
+            ));
+        }
+    }
+    
     @media(min-width:768px) {
         @include rem((
             margin-bottom: 41px
@@ -48,6 +66,18 @@
                 ));
             }
         }
+        &__card {
+            @include rem((
+                margin-top: 30px,
+                margin-bottom: 54px
+            ));
+          
+            .article__section + & {
+                @include rem((
+                    margin-top: -23px
+                ));
+            }
+        }    
     }
 
     @media(min-width:1200px) {
@@ -74,6 +104,25 @@
             .article__section + & {
                 @include rem((
                     margin-top: 69px
+                ));
+            }
+        }
+        &__card {
+            @include rem((
+                margin-top: 66px,
+                margin-bottom: 54px
+            ));
+            
+            .container {
+                @include rem((
+                    padding-left: 20px,
+                    padding-right: 20px
+                ));
+            }
+          
+            .article__section + & {
+                @include rem((
+                    margin-top: 66px
                 ));
             }
         }

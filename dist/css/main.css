@@ -2362,12 +2362,20 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   display: none;
 }
 
+.card_theme-orange {
+  background-color: #d6603b;
+}
+
 .card_theme-orange.card_product .card__overlay {
   background-color: rgba(214, 96, 59, 0.85);
 }
 
 .card_theme-orange.card_pub .card__img-overlay {
   background-color: rgba(214, 96, 59, 0.85);
+}
+
+.card_theme-brown {
+  background-color: #400211;
 }
 
 .card_theme-brown.card_pub_double .card__body {
@@ -2388,6 +2396,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 
 .card_theme-brown.card_pub_double_top .card__body:after {
   border-top-color: #400211;
+}
+
+.card_theme-rosybrown {
+  background-color: #573d41;
 }
 
 .card_theme-rosybrown.card_product .card__overlay {
@@ -2422,6 +2434,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   border-top-color: #573d41;
 }
 
+.card_theme-peru {
+  background-color: #a17231;
+}
+
 .card_theme-peru.card_pub_double .card__body {
   background-color: #a17231;
 }
@@ -2440,6 +2456,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 
 .card_theme-peru.card_pub_double_top .card__body:after {
   border-top-color: #a17231;
+}
+
+.card_theme-darkblue {
+  background-color: #1d1d46;
 }
 
 .card_theme-darkblue.card_product .card__overlay {
@@ -2474,6 +2494,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   border-top-color: #1d1d46;
 }
 
+.card_theme-violet {
+  background-color: #2b2248;
+}
+
 .card_theme-violet.card_product .card__overlay {
   background-color: rgba(56, 23, 83, 0.62);
 }
@@ -2506,6 +2530,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   border-top-color: #2b2248;
 }
 
+.card_theme-lilac {
+  background-color: #7d75b7;
+}
+
 .card_theme-lilac.card_product .card__overlay {
   background-color: rgba(125, 117, 183, 0.85);
 }
@@ -2518,6 +2546,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   background-color: rgba(125, 117, 183, 0.85);
 }
 
+.card_theme-green {
+  background-color: #30b52b;
+}
+
 .card_theme-green.card_product .card__overlay {
   background-color: rgba(135, 174, 61, 0.85);
 }
@@ -2528,6 +2560,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 
 .card_theme-green.card_pub .card__overlay {
   background-color: rgba(135, 174, 61, 0.85);
+}
+
+.card_theme-darkgoldenrod {
+  background-color: #635429;
 }
 
 .card_theme-darkgoldenrod.card_product .card__overlay {
@@ -2560,6 +2596,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 
 .card_theme-darkgoldenrod.card_pub_double_top .card__body:after {
   border-top-color: #635429;
+}
+
+.card_theme-darkred {
+  background-color: #4e1106;
 }
 
 .card_theme-darkred.card_product .card__overlay {
@@ -2615,6 +2655,8 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 .card_product .card__label {
   width: 100%;
   max-width: 242px;
+  padding-left: 1.1111111111rem;
+  padding-right: 1.1111111111rem;
   text-align: center;
   color: #000000;
   background-color: #ddd058;
@@ -2671,6 +2713,38 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   top: 0.6666666667rem;
   font-size: 1.5555555556rem;
   line-height: 1;
+}
+
+.card_product_single {
+  height: 16rem;
+  background-position: -140% 80%;
+  background-size: auto 150%;
+  flex-direction: row;
+}
+
+.card_product_single .card__labels {
+  margin-right: 0;
+  width: 50%;
+}
+
+.card_product_single .card__body {
+  width: 50%;
+  padding-left: 1.1111111111rem;
+}
+
+.card_product_single .card__title {
+  line-height: 1.1428571429;
+  margin-bottom: 1.5rem;
+}
+
+.card_product_single .card__subtitle {
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: 1.1111111111rem;
+}
+
+.card_product_single .card__price {
+  margin-bottom: 1.5555555556rem;
 }
 
 .card_pub {
@@ -3019,7 +3093,9 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
     justify-content: center;
   }
   .card_product .card__label {
-    width: 130px;
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
     font-size: 0.7777777778rem;
     line-height: 3.2142857143;
   }
@@ -3053,6 +3129,37 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   }
   .card_product_catalog .card__price {
     position: static;
+    margin-bottom: 0;
+  }
+  .card_product_single {
+    height: 11.4444444444rem;
+    background-position: 0 80%;
+    background-size: auto 180%;
+    justify-content: space-between;
+  }
+  .card_product_single .card__body {
+    max-width: 100%;
+    padding-left: 3.4444444444rem;
+    padding-right: 3.5rem;
+  }
+  .card_product_single .card__title {
+    font-size: 1.3333333333rem;
+    line-height: 1;
+    margin-bottom: 0.2777777778rem;
+  }
+  .card_product_single .card__subtitle {
+    font-size: 0.6666666667rem;
+    line-height: 1.5;
+    margin-bottom: 0.9444444444rem;
+  }
+  .card_product_single .card__action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card_product_single .card__price {
+    font-size: 1.3333333333rem;
+    line-height: 1;
     margin-bottom: 0;
   }
   .card_pub {
@@ -3247,6 +3354,21 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   .card_product_catalog .card__price {
     font-size: 1.2222222222rem;
     line-height: 1;
+  }
+  .card_product_single {
+    background-position: -20% 70%;
+    background-size: auto 270%;
+  }
+  .card_product_single .card__labels {
+    margin-right: 0;
+    width: 60%;
+  }
+  .card_product_single .card__body {
+    width: 45%;
+    padding-left: 3.4444444444rem;
+    padding-right: 3.5rem;
+    padding-bottom: 0;
+    justify-content: center;
   }
   .card_pub .card__tag {
     font-size: 0.7222222222rem;
@@ -3479,7 +3601,7 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   display: block;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 20px 0;
   list-style: none;
   text-align: center;
 }
@@ -3487,7 +3609,7 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 .slick-dots li {
   position: relative;
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 3px;
   padding: 0;
   cursor: pointer;
   width: 20px;
@@ -4169,6 +4291,20 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   margin-top: -1.0555555556rem;
 }
 
+.article__card {
+  margin-top: 2.0555555556rem;
+  margin-bottom: 2.0555555556rem;
+}
+
+.article__card .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.article__section + .article__card {
+  margin-top: -0.8888888889rem;
+}
+
 @media (min-width: 768px) {
   .article {
     margin-bottom: 2.2777777778rem;
@@ -4179,6 +4315,13 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   }
   .article__section + .article__slider {
     margin-top: 1.5rem;
+  }
+  .article__card {
+    margin-top: 1.6666666667rem;
+    margin-bottom: 3rem;
+  }
+  .article__section + .article__card {
+    margin-top: -1.2777777778rem;
   }
 }
 
@@ -4195,6 +4338,17 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   }
   .article__section + .article__slider {
     margin-top: 3.8333333333rem;
+  }
+  .article__card {
+    margin-top: 3.6666666667rem;
+    margin-bottom: 3rem;
+  }
+  .article__card .container {
+    padding-left: 1.1111111111rem;
+    padding-right: 1.1111111111rem;
+  }
+  .article__section + .article__card {
+    margin-top: 3.6666666667rem;
   }
 }
 

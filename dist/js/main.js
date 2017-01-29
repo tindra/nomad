@@ -173,7 +173,7 @@ jQuery(document).ready(function($){
         var windowWidth = $(document).outerWidth(true),
             sectionWidth = $('.article__section_right .container').width(),
             pushValue = (windowWidth - sectionWidth)/2;
-        $(".article__section_right .img-tea").css('margin-right', '-'+pushValue+'px');
+        $(".article__section_right .img-right").css('margin-right', '-'+pushValue+'px');
     }
     articlePushedToTheRight();
 
