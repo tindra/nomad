@@ -1,0 +1,10 @@
+// Article
+.article {
+    margin-top:10px;
+    @include px-to-rem(margin, 20px);
+    @include px-to-rem(padding, 10px);
+    @include rem((
+        margin: 20px,
+        padding: 10px
+    ));
+}

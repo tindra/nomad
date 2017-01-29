@@ -1,0 +1,230 @@
+.container {
+    @include rem((
+        padding-left: 13px,
+        padding-right: 15px
+    ));
+    
+    .grid {
+        @include rem((
+            margin-left: -13px,
+            margin-right: -15px
+        ));
+    }
+
+    @media (min-width:768px) {
+        margin-right: auto;
+        margin-left: auto;
+
+        @include rem((
+            max-width: 1000px,
+            padding-left: 50px,
+            padding-right: 50px
+        ));
+        
+        &_lg {
+            @include rem((
+                max-width: 1060px
+            ));
+        }
+
+        .grid {
+            @include rem((
+                margin-left: -50px,
+                margin-right: -50px
+            ));
+        }
+    }
+
+    @media (min-width:1200px) {
+        @include rem((
+            max-width: 940px,
+            padding-left: 20px,
+            padding-right: 20px
+        ));
+    
+        &_lg {
+            @include rem((
+                max-width: 1000px
+            ));
+        }
+ 
+        .grid {
+            margin-right: 0;
+            margin-left: 0;
+        }   
+    }
+}
+
+.grid {
+    @include clearfix;
+    
+    &__col {
+        float: left;
+
+        height: 18rem;
+    }
+
+    &__sizer-sm,
+    &__w-sm-1 {
+        width: 50%;
+    }
+
+    &__w-sm-2 {
+        width: 100%;
+    }
+
+    &__h-sm {
+        @include rem((
+            height: 102px
+        ));
+    }
+    
+    &_tales {
+        .grid__col,
+        .grid__h-sm-1 {
+            @include rem((
+                height: 250px
+            ));
+        }
+
+        .grid__h-sm-2 {
+            @include rem((
+                height: 500px
+            ));
+        }
+    }
+    
+    @media (max-width:767px) {
+        &_sm {
+            .grid__col {
+                height: 14rem;
+            }
+  
+            .grid__h-sm {
+                @include rem((
+                    height: 102px
+                ));
+            }
+        }
+    }
+    
+    @media (min-width:768px) {
+        $height-m-base: 290.6666667px !default; 
+    
+        &__sizer-m,
+        &__w-m-1 {
+            width: 33.3333333%;
+        }
+
+        &__w-m-2 {
+            width: 66.6666666%;
+        }
+
+        &__w-m-3 {
+            width: 100%;
+        }
+
+        &__col,
+        &__h-m-1 {
+            @include rem((
+                height: $height-m-base
+            ));
+        }
+
+        &__h-m-2 {
+            @include rem((
+                height: $height-m-base*2
+            ));
+        }
+
+        &__h-m-3 {
+            @include rem((
+                height: $height-m-base*3
+            ));
+        }
+
+        /*&_tales {
+            .grid__col,
+            .grid__h-m-1 {
+                @include rem((
+                    height: $height-m-base
+                ));
+            }
+
+            .grid__h-m-2 {
+                @include rem((
+                    height: $height-m-base*2
+                ));
+            }
+        }*/
+    }
+    
+    @media (min-width:1200px) {
+        $height-lg-base: 290.5px !default; 
+        $height-xl-base: 356px !default; 
+ 
+        &__sizer-lg,
+        &__w-lg-1 {
+            width: 25%;
+        }
+
+        &__w-lg-2 {
+            width: 50%;
+        }
+
+        &__w-lg-3 {
+            width: 75%;
+        }
+
+        &__w-lg-4 {
+            width: 100%;
+        }
+ 
+        &__col,
+        &__h-lg-1 {
+            @include px-to-rem(height, $height-lg-base);
+        }
+
+        &__h-lg-2 {
+            @include px-to-rem(height, $height-lg-base*2);
+        }
+        
+        &__h-lg-3 {
+            @include px-to-rem(height, $height-lg-base*3);
+        }
+
+        &__h-lg-4 {
+            @include px-to-rem(height, $height-lg-base*4);
+        }
+        
+        &_sm {
+            .grid__col,
+            .grid__h-lg-1 {
+                @include px-to-rem(height, $height-xl-base);
+            }
+
+            .grid__h-lg-2 {
+                @include px-to-rem(height, $height-xl-base*2);
+            }
+        
+            .grid__h-lg-3 {
+                @include px-to-rem(height, $height-xl-base*3);
+            }
+
+            .grid__h-lg-4 {
+                @include px-to-rem(height, $height-xl-base*4);
+            }
+        }
+        
+        &_tales {
+            .grid__col,
+            .grid__h-lg-1 {
+                @include px-to-rem(height, 308px);
+            }
+
+            .grid__h-lg-2 {
+                @include px-to-rem(height, 616px);
+            }
+        }
+    }
+}

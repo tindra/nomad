@@ -1,0 +1,7 @@
+// Contextual backgrounds
+
+@mixin bg-variant($parent, $background) {
+  #{$parent} {
+    background-color: $background;
+  }
+}

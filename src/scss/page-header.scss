@@ -1,0 +1,147 @@
+// Page header
+.page-header {
+    position: relative;
+    
+    &__container {
+        @include rem((
+            padding-top: 8px,
+            padding-bottom: 40px
+        ));
+    }
+    
+    &__breadcrumbs {
+        display: none;
+    }
+    
+    &__subtitle {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        text-align: center;
+        letter-spacing: 0.3em;
+
+        color: #f0f0f0;
+
+        @include font-variant(14px, 40px, $font-family: $font-family-sans-serif-bold);
+    }
+  
+    &__title {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        text-align: center;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+
+        color: rgba(240,240,240,0.35);
+
+        @include font-variant(36px, 22px, $font-family: $font-family-serif);
+    }
+    
+    &__img {
+        display: none;
+    }
+    
+    @media(min-width:768px) {
+        &__container {
+            @include rem((
+                padding-top: 24px,
+                padding-bottom: 55px
+            ));
+        }
+    
+        &__subtitle {
+            @include rem((
+                font-size: 20px
+            ));
+        }
+  
+        &__title {
+            position: relative;
+            z-index: 1;
+
+            @include font-variant(76px, 45px);
+        }
+        
+        &__img {
+            display: block;
+
+            margin-right: auto;
+            margin-left: auto;
+            
+            &_catalog {
+                @include rem((
+                    height: 225px,
+                    margin-top: -41px,
+                    margin-bottom: -19px
+                ));
+            }
+
+            &_tales {
+                position: relative;
+
+                @include rem((
+                    height: 202px,
+                    margin-top: -11px,
+                    margin-bottom: -30px,
+                    left: -31px
+                ));
+            }
+        }
+    }
+
+    @media(min-width:1200px) {
+        &__container {
+            position: relative;
+
+            @include rem((
+                padding-top: 34px,
+                padding-bottom: 74px
+            ));
+        }
+    
+        &__breadcrumbs {
+            position: absolute;
+
+            display: block;
+
+            @include rem((
+                top: 32px,
+                left: 20px
+            ));
+        }
+        
+        &__subtitle {
+            letter-spacing: 0.4em;
+
+            @include rem((
+                font-size: 20px,
+                margin-bottom: 16px
+            ));
+        }
+  
+        &__title {
+            @include font-variant(102px, 54px);
+        }
+
+        &__img {
+            &_catalog {
+                height: auto;
+
+                @include rem((
+                    margin-top: -47px,
+                    margin-bottom: -95px
+                ));
+            }
+            &_tales {
+                height: auto;
+
+                @include rem((
+                    margin-top: -22px,
+                    margin-bottom: -95px,
+                    left: -75px
+                ));
+            }
+        }
+    }
+}

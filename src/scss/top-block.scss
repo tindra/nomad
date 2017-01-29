@@ -1,0 +1,12 @@
+// top-block
+.top-block {
+    @include px-to-rem(padding-top, $navbar-height-sm);
+    
+    @media(min-width:768px) {    
+        @include px-to-rem(padding-top, $navbar-height-m);
+    }
+
+    @media(min-width:1200px) {
+        @include px-to-rem(padding-top, $navbar-height-lg);
+    }
+}

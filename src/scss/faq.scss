@@ -1,0 +1,159 @@
+.faq {
+  
+    &__item {
+        border-bottom: 1px solid rgba(46,34,28,0.35);
+
+        &:last-child {
+            border-bottom: 0;
+        }
+      
+        &.collapsed {
+           .faq__header {
+               background-color: transparent;
+           } 
+         
+           .faq__icon {
+               &_down {
+                   display: block;
+               }
+
+               &_up {
+                   display: none;
+               }
+           }
+
+           .faq__body {
+               display: none;
+           } 
+        }
+    }
+
+    &__header {
+        display: block;
+
+        text-decoration: none;
+
+        background-color: rgba(46,34,28,0.21);
+
+        @include rem((
+            padding-top: 24px,
+            padding-bottom: 23px
+        ));
+        
+        .container {
+            position: relative;
+
+            @include rem((
+                padding-right: 51px
+            ));
+        }
+    }
+
+    &__title {
+        @include font-variant(24px, 24px, $font-family: $font-family-sans-serif-bold);
+    }
+  
+    &__icon {
+        position: absolute;
+        top: 50%;
+
+        transition: all 0.25s;
+        transform: translateY(-50%);
+
+        @include rem((
+            right: 18px
+        ));
+      
+        &_down {
+            display: none;
+        }
+
+        &_up {
+            display: block;
+        }
+    }
+  
+    &__body {
+        color: #4b4747;
+        background-color: #ffffff;
+
+        @include font-variant(17px, 21px, $font-family: $font-family-sans-serif-light);
+        @include rem((
+            padding-top: 23px,
+            padding-bottom: 29px
+        ));
+    }
+  
+    p:last-child {
+        margin-bottom: 0;
+    }
+  
+    @media(max-width:767px) {
+        &__item {
+            &.collapsed {
+                .faq__header {
+                    @include rem((
+                        padding-top: 23px,
+                        padding-bottom: 24px
+                    ));
+                } 
+
+                .faq__title {
+                    @include font-variant(19px, 19px);
+                }
+            }
+        }
+      
+        &__header {
+            @include rem((
+                padding-top: 24px,
+                padding-bottom: 27px
+            ));
+        }
+    }
+  
+    @media(min-width:768px) {
+        &__title {
+            @include font-variant(17px, 19px);
+        }
+      
+        &__icon {
+            @include rem((
+                right: 50px
+            ));
+        }
+
+        &__body {
+            @include em-line-height(17px, 23px);
+            @include rem((
+                padding-top: 32px,
+                padding-bottom: 28px
+            ));
+        }
+    }
+
+    @media(min-width:1200px) {
+        @include rem((
+            padding-bottom: 106px
+        ));
+
+        &__header {
+            @include rem((
+                padding-top: 28px,
+                padding-bottom: 31px
+            ));
+        }
+
+        &__title {
+            @include font-variant(18px, 24px);
+        }
+      
+        &__body {
+            @include font-variant(18px, 24px);
+            @include rem((
+                padding-top: 37px,
+                padding-bottom: 50px
+            ));
+        }
+    }
+}

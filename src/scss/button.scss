@@ -1,0 +1,91 @@
+.button {
+    display: inline-block;
+
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
+
+    border: 1px solid transparent;
+    background: none;
+
+    @include font-variant(14px, 38px);
+    @include transition(all 0.2s ease-in-out);
+    @include hover-focus {
+      text-decoration: none;
+    }
+
+    &,
+    &:active,
+    &.active {
+      &:focus,
+      &.focus {
+        @include tab-focus();
+      }
+    }
+    &.focus {
+      text-decoration: none;
+    }
+
+    &:active,
+    &.active {
+      outline: 0;
+      background-image: none;
+    }
+
+    &.disabled,
+    &:disabled {
+      cursor: $cursor-disabled;
+    }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.button.disabled,
+fieldset[disabled] a.button {
+  pointer-events: none;
+}
+
+
+//
+// Alternate buttons
+//
+
+.button_primary {
+  	border-radius: 19px;
+  	background-image: linear-gradient(to top, rgba(0,0,0,0.07), rgba(255,255,255,0.07));
+	box-shadow: 0 2px 7px rgba(0,0,0,0.15);
+
+  @include button-variant($button-primary-color, $button-primary-bg, $button-primary-border, $button-primary-hover-color, $button-primary-hover-bg, $button-primary-hover-border);
+}
+
+.button_outline {
+  @include button-outline-variant($button-default-border);
+}
+
+
+//
+// Block button
+//
+
+.button_block {
+  display: block;
+
+  width: auto;
+}
+
+// Vertically space out multiple block buttons
+.button_block + .button_block {
+  margin-top: $button-block-spacing-y;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  &.button_block {
+    width: 100%;
+  }
+}

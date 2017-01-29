@@ -1,0 +1,220 @@
+// Intro
+.intro {
+    overflow: hidden;
+
+    text-align: center;
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        @include px-to-rem(padding-top, 34px);
+        @include px-to-rem(padding-bottom, 36px);
+    }
+    
+    &__author {
+        order: 2;
+   
+        &-avatar {
+            display: none;
+        }
+        
+        &-name {
+            @include font-variant(18px, 26px, $font-family: $font-family-sans-serif-bold);
+            @include px-to-rem(margin-bottom, 11px);
+        }
+
+        &-info {
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+
+            color: rgba(255,255,255,0.54);
+
+            @include font-variant(16px, 17px);
+        }
+    }
+ 
+    &__quote {
+        position: relative;
+
+        order: 1;
+        @include font-variant(25px, 26px, $font-family: $font-family-serif);
+        @include px-to-rem(padding-top, 29px);
+        @include px-to-rem(margin-bottom, 24px);
+        
+        &:before {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+
+            content: "„";
+            transform: translateX(-50%);
+
+            color: rgba(255,255,255,0.2);
+            background-color: $brand-sand;
+
+            @include font-variant(89px, 89px, $font-family: $font-family-serif-bold);
+            @include px-to-rem(top, -76px);
+            @include px-to-rem(padding-left, 8px);
+            @include px-to-rem(padding-right, 8px);
+        }
+        
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 50%;
+
+            width: 152px;
+            height: 1px;
+            margin-left: -76px;
+
+            content: "";
+
+            opacity: 0.35;
+            background: #ffffff;
+        }
+    }
+    
+    &__action {
+        background-color: #5f492d;
+
+        @include px-to-rem(margin-left, -13px);
+        @include px-to-rem(margin-right, -15px);
+    }
+    
+    @media(min-width:768px) {    
+        &__content {
+            display: flex;
+            flex-direction: row;
+
+            align-items: center;
+            @include px-to-rem(padding-top, 23px);
+            @include px-to-rem(padding-bottom, 24px);
+        }
+    
+        &__author {
+            width: 272px;
+
+            flex: 0 0 272px;
+            @include px-to-rem(padding-left, 15px);
+            @include px-to-rem(padding-right, 75px);
+            order: 1;
+   
+            &-avatar {
+                display: block;
+
+                margin-right: auto;
+                margin-left: auto;
+
+                @include size(90px);
+                @include rounded;
+                @include px-to-rem(margin-bottom, 10px);
+            }
+        
+            &-name {
+                @include px-to-rem(font-size, 16px);
+                @include px-to-rem(margin-bottom, 10px);
+            }
+
+            &-info {
+                width: auto;
+
+                @include font-variant(13px, 13px);
+            }
+        }
+ 
+        &__quote {
+            order: 2;
+            @include font-variant(24px, 26px);
+            @include px-to-rem(padding-top, 30px);
+            @include px-to-rem(margin-bottom, 10px);
+        
+            &:before {
+                @include font-variant(106px, 106px);
+                @include px-to-rem(top, -93px);
+            }
+        
+            &:after {
+                width: 182px;
+                margin-left: -91px;
+            }
+        }
+    
+        &__action {
+            @include px-to-rem(margin-left, -50px);
+            @include px-to-rem(margin-right, -50px);
+        }
+    }
+
+    @media(min-width:1200px) {
+        position: relative;
+        z-index: 101;
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+
+            height: 100%;
+        }
+        
+        &__content {
+            flex-direction: column;
+
+            flex-grow: 1;
+            justify-content: center;
+            @include px-to-rem(padding, 0 21px);
+        }
+    
+        &__author {
+            position: relative;
+            z-index: 10;
+
+            width: auto;
+            padding-right: 0;
+            padding-left: 0;
+
+            flex: 0 0 auto;
+            @include px-to-rem(margin-bottom, 47px);
+   
+            &-avatar {
+                @include px-to-rem(margin-bottom, 8px);
+            }
+        
+            &-name {
+                @include font-variant(20px,29px);
+                @include px-to-rem(margin-bottom, 7px);
+            }
+
+            &-info {
+                @include font-variant(12px, 14px);
+            }
+        }
+ 
+        &__quote {
+            margin-bottom: 0;
+
+            @include font-variant(22px, 29px);
+            @include px-to-rem(padding-top, 34px);
+        
+            &:before {
+                @include font-variant(120px, 120px);
+                @include px-to-rem(top, -104px);
+            }
+        
+            &:after {
+                left: 0;
+
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    
+        &__action {
+            text-align: left;
+
+            @include px-to-rem(margin-left, -20px);
+            @include px-to-rem(margin-right, -20px);
+        }
+    }
+}

@@ -1,0 +1,55 @@
+// Tales
+.tales {
+    .grid__col {
+        &:nth-child(n+8) {
+            display: none;
+        }
+    }
+    
+    @media(min-width:768px) {
+    }
+
+    @media(min-width:1200px) {
+        .grid__col {
+            &:nth-child(n+8) {
+                display: block;
+            }
+        }
+        &__action {
+            display: none;
+        }
+    }    
+}
+
+.tales-sm {
+    &__col {
+        width: 100%;
+        height: auto;
+     
+        &:nth-child(n+2) {
+            display: none;
+        }
+    }
+ 
+    @media(min-width:768px) {
+        &__col {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media(min-width:1200px) {
+        &__col {
+            width: 50%;
+            height: auto;
+
+            &:nth-child(n+2) {
+                display: block;
+            }
+        }
+     
+        &__action {
+            display: none;
+        }
+    }
+} 

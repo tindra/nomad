@@ -1,0 +1,290 @@
+.navbar {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    text-align: center;
+
+    background-color: rgba(47,48,61,0.38);
+    box-shadow: 0 1px 3px rgba(12,13,14,0.15);
+    
+    &__container {
+        position: relative;
+
+        @include px-to-rem(height, $navbar-height-sm);
+        @include px-to-rem(max-width, 1165px);
+        @include px-to-rem(padding-top, 20px);
+    }
+    
+    &__mobile-toggle {
+        position: absolute;
+        z-index: 100;
+
+        @include px-to-rem(left, 13px);
+    }
+
+    &__nav-toggle {
+        top: 50%;
+
+        display: block;
+
+        transform: translateY(-50%);
+    }
+
+    &__nav-close {
+        position: fixed;
+        top: 22px;
+
+        display: none;
+    }
+  
+    &__brand {
+        display: block;
+
+        text-decoration: none;
+        
+        &-img {
+            display: none;
+        }
+
+        &-img2 {
+            display: inline-block;
+
+            vertical-align: bottom;
+        }
+    }
+  
+    &__cart {
+        position: absolute;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        @include px-to-rem(right, 15px);
+        @include px-to-rem(margin-top, 4px);
+        
+        &-link {
+            position: relative;
+
+            display: block;
+
+            text-decoration: none;
+
+            @include px-to-rem(padding-right, 16px);
+        }
+        
+        &-icon {
+            display: block;
+        }
+
+        &-badge {
+            position: absolute;
+
+            display: block;
+
+            text-align: center;
+
+            color: #111111;
+            background-color: #e3d14d;
+
+            @include size(26px);
+            @include rounded;
+            @include font-variant(20px, 26px, $font-family: $font-family-sans-serif-semibold);
+            @include px-to-rem(right, 1px);
+            @include px-to-rem(top, -8px);
+        }
+
+        &-button {
+            display: none;
+        }
+    }
+    
+    @media(max-width:1199px) {
+        &__nav {
+            position: fixed;
+            z-index: 99;
+            top: 0;
+            left: 0;
+
+            display: none;
+            overflow-y: auto;
+
+            width: 353px;
+            height: 100vh;
+            padding-top: 85px;
+
+            background: #eeeeee url(../i/nav-bg.png) 0 50% no-repeat;
+            
+            &:before {
+                position: absolute;
+                top: 63px;
+                right: 0;
+                left: 0;
+
+                content: "";
+
+                border-top: 1px solid #dbdbdb;
+            }
+        }        
+    }
+
+    @media(max-width:767px) {
+        &__nav {
+            background-position: 0 100%;
+
+            @include px-to-rem(padding-top, 87px);
+            
+            &:before {
+                @include px-to-rem(top, 70px);
+            }
+        }        
+    }
+
+    @media(min-width:768px) {  
+        &__container {
+            @include px-to-rem(height, $navbar-height-m);
+            @include px-to-rem(padding-top, 18px);
+        }
+ 
+        &__brand {
+            &-img {
+                display: inline-block;
+
+                vertical-align: bottom;
+
+                @include px-to-rem(width, 37px);
+                @include px-to-rem(margin-right, 10px);
+            }
+
+            &-img2 {
+                @include px-to-rem(width, 112px);
+            }
+        }
+ 
+        &__mobile-toggle {
+            @include px-to-rem(left, 50px);
+        }
+  
+        &__nav-close {
+            top: 21px;
+        }
+ 
+        &__cart {
+            @include px-to-rem(right, 50px);
+            @include px-to-rem(margin-top, 2px);
+        
+            &-link {
+                @include px-to-rem(padding-right, 14px);
+            }
+        
+            &-icon {
+                display: block;
+            }
+
+            &-badge {
+                @include size(22px);
+                @include font-variant(16px, 22px);
+                @include px-to-rem(top, -7px);
+            }
+        }
+    }
+
+    @media(min-width:1200px) {
+        white-space: nowrap;
+        
+        &__container {
+            @include px-to-rem(height, $navbar-height-lg);
+            @include px-to-rem(padding-top, 26px);
+        }
+ 
+        &__brand {
+            display: inline-block;
+
+            vertical-align: top;
+
+            @include px-to-rem(margin-right, 45px);
+            
+            &-img {
+                @include px-to-rem(width, 44px);
+                @include px-to-rem(margin-right, 12px);
+            }
+
+            &-img2 {
+                @include px-to-rem(width, 133px);
+            }
+        }
+ 
+        &__mobile-toggle {
+            display: none !important;
+        }
+        
+        &__nav {
+            display: inline-block !important;
+
+            vertical-align: top;
+
+            @include px-to-rem(margin-top, 7px);
+            @include px-to-rem(margin-right, 11px);
+        }
+  
+        &__cart {
+            position: static;
+
+            display: inline-block;
+
+            margin-top: 0;
+
+            transform: none;
+            vertical-align: top;
+
+            border-left: 1px solid rgba(255,255,255,0.2);
+
+            @include px-to-rem(padding-left, 24px);
+        
+            &-link {
+                display: inline-block;
+
+                vertical-align: middle;
+
+                @include px-to-rem(top, -1px);
+                @include px-to-rem(padding-right, 12px);
+            }
+        
+            &-icon {
+                display: block;
+            }
+
+            &-badge {
+                @include size(19px);
+                @include font-variant(14px, 20px);
+                @include px-to-rem(top, -6px);
+            }
+
+            &-button {
+                display: inline-block;
+
+                text-transform: uppercase;
+
+                @include px-to-rem(width, 180px);
+                @include px-to-rem(margin-top, -2px);
+                @include px-to-rem(margin-left, 40px);
+                
+                .header__left & {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    @media(min-width:1900px) {
+        &__cart {
+            &-button {
+                .header__left & {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

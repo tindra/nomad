@@ -1,0 +1,17 @@
+// Px to rem units converter
+//#{$property}: $pxs;	//<=ie8
+@mixin px-to-rem($property, $pxs, $rootPxSize: $font-size-root){
+	$rems: null;
+	@each $px in $pxs {
+        @if $px == 0 {
+      		$rems: append($rems, 0);
+        }
+        @else {
+      		$rems: append($rems, ($px / $rootPxSize) + rem);
+        }
+	}
+  
+	#{$property}: $rems;
+}
+
+

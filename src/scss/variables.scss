@@ -1,0 +1,200 @@
+// Variables
+
+// Table of Contents
+//
+// Colors
+// Navbar
+// Grid
+// Spacing
+// Body
+// Typography
+// Components
+
+
+// Colors
+//
+// Grayscale and brand colors
+
+$base-color: #2d2d2d !default;
+$gray: #363636 !default;
+$gray-light: #999999 !default;
+$gray-lighter: #b2b2b2 !default;
+$gray-lightest: #e5e5e5 !default;
+
+$brand-primary: #e3d14d !default;
+$brand-brick: #93463a !default;
+$brand-sand: #948344 !default;
+$brand-sand-shade: #9b843e !default;
+$brand-darksalmon: #aa7e64 !default;
+$brand-gray: #efefef !default;
+$brand-slategray: #4c4c59 !default;
+
+$theme-orange-overlay: rgba(214,96,59,0.85) !default;
+$theme-brown: #400211 !default;
+$theme-rosybrown: #573d41 !default;
+$theme-rosybrown-overlay: rgba(106,73,76,0.75) !default;
+$theme-rosybrown-overlay-darker: rgba(106,65,77,0.88) !default;
+$theme-violet: #2b2248 !default;
+$theme-violet-overlay: rgba(56,23,83,0.62) !default;
+$theme-violet-overlay-darker: rgba(56,23,83,0.90) !default;
+$theme-lilac-overlay: rgba(125,117,183,0.85) !default;
+$theme-green-overlay: rgba(135,174,61,0.85) !default;
+$theme-peru: #a17231 !default;
+$theme-darkblue: #1d1d46 !default;
+$theme-darkblue-overlay: rgba(29,29,70,0.5) !default;
+$theme-darkgoldenrod: #635429 !default;
+$theme-darkgoldenrod-overlay: rgba(99,84,41,0.5) !default;
+$theme-darkred: #4e1106 !default;
+$theme-darkred-overlay: rgba(78,17,6,0.72) !default;
+
+// Navbar
+//
+// 
+$navbar-height-sm: 71px !default;
+$navbar-height-m: 64px !default;
+$navbar-height-lg: 91px !default;
+
+// Grid
+//
+// 
+$gutter: 30px;
+$layout-width: 1200px + $gutter;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: #ffffff !default;
+$body-color: $base-color !default;
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif: "ProximaNova-Regular", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif-light: "ProximaNova-Light", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif-semibold: "ProximaNova-Semibold", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif-bold: "ProximaNova-Bold", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif-extrabold: "ProximaNova-Extrabld", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif: "PlayfairDisplay-Regular", Georgia, "Times New Roman", Times, serif !default;
+$font-family-serif-bold: "PlayfairDisplay-Bold", Georgia, "Times New Roman", Times, serif !default;
+$font-family-base: $font-family-sans-serif !default;
+
+// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+$font-size-root: 18px !default;
+$font-size-base: $font-size-root !default;
+
+$line-height-base: 21px !default;
+
+$font-size-h1: 39px !default;
+$font-size-h2: 31px !default;
+$font-size-h3: 21px !default;
+$font-size-h4: 19px !default;
+$font-size-h5: $font-size-root !default;
+$font-size-h6: 15px !default;
+
+$line-height-h1: 1.02564103 !default;
+$line-height-h2: 1.29032258 !default;
+$line-height-h3: 21px !default;
+$line-height-h4: 19px !default;
+$line-height-h5: $font-size-root !default;
+$line-height-h6: 15px !default;
+
+$headings-margin-bottom: 0 !default;
+$headings-font-family: $font-family-sans-serif-extrabold !default;
+$headings-font-weight: 400 !default;
+$headings-line-height: 1.02564103 !default;
+$headings-color: inherit !default;
+
+$lead-font-size: 22px !default;
+$lead-font-weight: 400 !default;
+$lead-line-height: 30px !default;
+
+$small-font-size: 80% !default;
+
+$text-muted: $gray-light !default;
+
+$abbr-border-color: $gray-light !default;
+
+$dt-font-weight: bold !default;
+
+$kbd-box-shadow: inset 0 -0.1rem 0 rgba(0,0,0,0.25) !default;
+$nested-kbd-font-weight: bold !default;
+
+$list-inline-padding: 5px !default;
+
+
+// Buttons
+//
+//
+
+$button-border-width: 1px !default;
+$button-padding-x: 17px !default;
+$button-padding-y-top: 11px !default;
+$button-padding-y-bottom: 15px !default;
+$button-line-height: 1.5 !default;
+$button-font-weight: 500 !default;
+$button-box-shadow: none !default;
+$button-active-box-shadow: none !default;
+
+$button-default-color: $base-color !default;
+$button-default-bg: transparent !default;
+$button-default-border: #ffffff !default;
+$button-default-hover-bg: $button-default-bg !default;
+$button-default-hover-border: #dddddd !default;
+
+$button-primary-color: #2b2929 !default;
+$button-primary-bg: #e3d14d !default;
+$button-primary-border: #e3d14d !default;
+$button-primary-hover-color: #2b2929 !default;
+$button-primary-hover-bg: #e3d14d !default;
+$button-primary-hover-border: #e3d14d !default;
+
+$button-link-disabled-color: $gray-light !default;
+
+$button-disabled-bg: #f5f5f5 !default;
+$button-disabled-color: $gray-light !default;
+
+$button-padding-x-sm: 8.5px !default;
+$button-padding-y-top-sm: 7px !default;
+$button-padding-y-bottom-sm: 9px !default;
+
+$button-block-spacing-y: 8.5px !default;
+
+
+// Form
+//
+// 
+$input-font-size: 15px !default;
+$input-padding-x: 18px !default;
+$input-padding-y-top: 13px !default;
+$input-padding-y-bottom: 14px !default;
+$input-line-height: 22px !default;
+
+$input-bg: #f5f5f5 !default;
+$input-bg-disabled: $gray-lightest !default;
+
+$input-color: $base-color !default;
+$input-border-color: $input-bg !default;
+$input-button-border-width: 2px !default; // For form controls and buttons
+
+$input-bg-focus: #ffffff !default;
+$input-border-focus: #f1f1f1 !default;
+$input-color-focus: $base-color !default;
+
+$input-color-placeholder: $gray-light !default;
+
+$input-height: 50px !default;
+
+$input-lg-font-size: 30px !default;
+$input-lg-padding-x: 28px !default;
+$input-lg-padding-y-top: 9px !default;
+$input-lg-padding-y-bottom: 16px !default;
+$input-lg-line-height: 40px !default;
+
+$input-lg-height: 70px !default;
+
+$form-group-margin-bottom: 20px !default;
+
+$cursor-disabled: not-allowed !default;
