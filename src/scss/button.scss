@@ -63,7 +63,7 @@ fieldset[disabled] a.button {
 .button_outline {
     @include rem((
         border-radius: 30px,
-        border-width: 1.25px,
+        border-width: 1px,
         padding-left: 22px,
         padding-right: 22px
     ));
@@ -73,7 +73,18 @@ fieldset[disabled] a.button {
     @include button-outline-variant($button-default-border);
 }
 
+@media (min-width:768px) {
+    .button_outline {
+        border-color: rgba(0,0,0,0.44);
+        @include font-variant(16px, 36px);
+    }
+}
 
+@media (min-width:1200px) {
+    .button_outline {
+        @include em-line-height(16px, 32px);
+    }
+}
 //
 // Block button
 //

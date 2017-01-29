@@ -47,6 +47,14 @@ h6, .h6 {
   @include px-to-rem(margin-bottom, 18px);
 }
 
+@media(min-width:1200px) {
+    h2, .h2 {
+      @include rem((
+          margin-bottom: 50px
+      ));
+    }
+}
+
 .text-primary {
   color: $brand-primary;
 }

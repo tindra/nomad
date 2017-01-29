@@ -54,7 +54,7 @@ jQuery(document).ready(function($){
                 infinite: true,
                 dots: true,
                 arrows:false,
-                autoplay:true
+                //autoplay:true
             }
         }
         ]
@@ -169,12 +169,12 @@ jQuery(document).ready(function($){
     });
     
     // Article section pushed to the right
-    $(function articlePushedToTheRight() {
+    function articlePushedToTheRight() {
         var windowWidth = $(document).outerWidth(true),
-            sectionWidth = $('.article__section_right .continer').width(),
+            sectionWidth = $('.article__section_right .container').width(),
             pushValue = (windowWidth - sectionWidth)/2;
-        $(".article__section_right .continer").css('margin-right', '-'+pushValue+'px');
-    });
+        $(".article__section_right .img-tea").css('margin-right', '-'+pushValue+'px');
+    }
     articlePushedToTheRight();
 
     $(window).resize(function() {

@@ -779,11 +779,8 @@
     @media (min-width:768px) {
         &__button {
             border-color: rgba(255,255,255,0.44);
-            border-radius: 30px;
 
-            @include font-variant(16px, 36px);
             @include px-to-rem(width, 134px);
-            @include px-to-rem(border-width, 1px);
         }
 
         &_product {
@@ -952,7 +949,6 @@
         @include px-to-rem(padding-right, 30px);
 
         &__button {
-            @include font-variant(16px, 32px);
             @include px-to-rem(width, 125px);
         }
 

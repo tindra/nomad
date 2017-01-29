@@ -13,6 +13,10 @@
         
     }
     
+    &__img {
+        width:100%;
+    }
+    
     &__content {
         display: flex;
         flex-direction:column;
@@ -35,17 +39,18 @@
         opacity:.76;
     }
     
-    
+    @media(min-width:768px) {        
+        &__content {
+            @include rem((max-width: 430px));
+            padding: 0;
+        }
+    }
+
     @media(min-width:1200px) {        
         &__item {
             @include rem((height: 448px));
         }
         
-        &__content {
-            @include rem((max-width: 425px));
-            padding: 0;
-        }
-
         &__title {
             @include font-variant(55px,55px);
             @include rem(margin-bottom, 41px);

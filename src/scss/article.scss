@@ -1,6 +1,13 @@
 // Article
 .article {
     
+    &__breadcrumbs {
+        opacity:1;
+        @include rem((
+            margin-bottom: 54px
+        ));
+    }
+    
     &__section {
         @include rem((
             margin-bottom: 49px
@@ -8,14 +15,6 @@
         
         &:last-child {
             margin-bottom: 0;
-        }
-        
-        &_right {
-            .img-right {
-                @include rem((
-                    margin-right: -15px
-                ));
-            }
         }
     }
     
@@ -29,6 +28,54 @@
             @include rem((
                 margin-top: -19px
             ));
+        }
+    }
+    
+    @media(min-width:768px) {
+        @include rem((
+            margin-bottom: 41px
+        ));
+
+        &__slider {
+            @include rem((
+                margin-top: 27px,
+                margin-bottom: 49px
+            ));
+        
+            .article__section + & {
+                @include rem((
+                    margin-top: 27px
+                ));
+            }
+        }
+    }
+
+    @media(min-width:1200px) {
+        @include rem((
+            margin-bottom: 78px
+        ));
+        
+        &__section {
+            &_right {
+                .img-right {
+                    @include rem((
+                        margin-right: -50px
+                    ));
+                }
+            }
+        }
+
+        &__slider {
+            @include rem((
+                margin-top: 69px,
+                margin-bottom: 55px
+            ));
+        
+            .article__section + & {
+                @include rem((
+                    margin-top: 69px
+                ));
+            }
         }
     }
 }

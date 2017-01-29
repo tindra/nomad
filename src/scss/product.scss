@@ -15,16 +15,12 @@
     }
     
     &__intro {
-        color:#313131;
-        background-color:$gray-lightest;
-        background-repeat: no-repeat;
-        background-position: 100% 220%;
-    }
-    
-    &__img {
         @include rem((
             margin-top: -$navbar-height-sm
         ));
+    }
+    
+    &__img {
 
         &-item {
             position:relative;
@@ -44,6 +40,10 @@
     }
     
     &__body {
+        color:#313131;
+        background-color:$gray-lightest;
+        background-repeat: no-repeat;
+        background-position: 100% 220%;
         @include rem((
             padding-top: 24px,
             padding-left: 13px,
@@ -99,9 +99,6 @@
         display:flex;
         align-items:center;
         justify-content:space-between;
-        
-        &-button {
-        }
     }
     
     &__price {
@@ -112,20 +109,178 @@
     }
     
     &_drink {
-        .product__intro {
+        .product__body {
             background-image:url(../i/patterns/drink.png);
         }
     }
   
     @media(min-width:768px) {
+        &__header {
+            @include rem((
+                margin-bottom: 32px
+            ));
+        
+            &-container {
+                padding-left:0;
+                padding-right:0;
+            }
+        }
+    
+        &__intro {
+             display:flex;
+             @include rem((
+                 margin-top: -$navbar-height-m,
+                 padding-top: $navbar-height-m
+             ));
+        }
+    
+        &__img {
+            @include rem((
+                width: calc(100% - 260px),
+            ));
+
+            &-item {
+                @include rem((
+                    height: 346px
+                ));
+            }
+        }
+    
+        &__body {
+            background-position: -100% 90%;
+            @include rem((
+                width:260px,
+                padding-left: 18px
+            ));
+            padding-bottom:0;
+        }
+    
+        &__title {
+            margin-bottom: 0;
+        }
+    
+        &__subtitle {
+            @include rem((
+                margin-bottom: 9px
+            ));
+            @include font-variant(11px, 22px);
+        }
+
+        &__info {
+            @include font-variant(13px, 19px);
+            @include rem((
+                margin-bottom: -2px
+            ));
+        }
+    
+        &__order {
+            &-row {
+                @include rem((
+                    margin-bottom: 16px
+                ));
+            }
+        }
+    
+        &__preorder {
+            position:static;
+            transform:none;
+            @include font-variant(13px, 22px);
+        }
+
+        &__amount {
+            @include rem((
+                margin-top: 29px
+            ));
+        }
+    
+        &__buy {
+            display:block;
+        }
+    
+        &__price {
+            @include rem((
+                margin-bottom: 22px
+            ));
+            &-value {
+                @include font-variant(22px, 22px);
+            }
+        }
     }
 
     @media(min-width:1200px) {
-
         &__header {
             display:flex;
             align-items:center;
             justify-content:center;
+            @include rem((
+                margin-bottom: 50px,
+                padding-top: $navbar-height-lg + 37px,
+                padding-bottom: 76px
+            ));        
+        }
+    
+        &__intro {
+             margin-top: 0;
+             padding-top: 0;
+        }
+    
+        &__img {
+            @include rem((
+                width: 490px,
+            ));
+
+            &-item {
+                @include rem((
+                    height: 415px
+                ));
+            }
+        }
+    
+        &__body {
+            display:flex;
+            flex-direction:column;
+            background-position: 150% 68%;
+            @include rem((
+                width:410px,
+                padding-top: 37px,
+                padding-left: 44px,
+                padding-right: 41px,
+                padding-bottom: 30px
+            ));
+        }
+    
+        &__subtitle {
+            @include rem((
+                margin-bottom: 10px
+            ));
+            @include font-variant(12px, 22px);
+        }
+
+        &__info {
+            flex-grow:1;
+            @include font-variant(14px, 20px);
+        }
+        
+        &__preorder {
+            @include font-variant(14px, 20px);
+        }
+        
+        &__amount {
+            @include rem((
+                margin-bottom: 13px
+            ));
+        }
+    
+        &__buy {
+            display:flex;
+        }
+    
+        &__price {
+            margin-bottom: 0;
+            
+            &-value {
+                @include font-variant(24px, 24px);
+            }
         }
     }
 }

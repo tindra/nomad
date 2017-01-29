@@ -486,6 +486,13 @@ p {
   margin-bottom: 1.1666666667rem;
 }
 
+@media (min-width: 1200px) {
+  p {
+    line-height: 1.3333333333;
+    margin-bottom: 1.3333333333rem;
+  }
+}
+
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
@@ -685,6 +692,12 @@ h6, .h6 {
   font-weight: 400;
   font-family: "PlayfairDisplay-Regular", Georgia, "Times New Roman", Times, serif;
   margin-bottom: 1rem;
+}
+
+@media (min-width: 1200px) {
+  h2, .h2 {
+    margin-bottom: 2.7777777778rem;
+  }
 }
 
 .text-primary {
@@ -959,7 +972,7 @@ fieldset[disabled] a.button {
 
 .button_outline {
   border-radius: 1.6666666667rem;
-  border-width: 0.0694444444rem;
+  border-width: 0.0555555556rem;
   padding-left: 1.2222222222rem;
   padding-right: 1.2222222222rem;
   color: #000000;
@@ -991,6 +1004,20 @@ fieldset[disabled] a.button {
 
 .button_outline.disabled:hover, .button_outline:disabled:hover {
   border-color: #333333;
+}
+
+@media (min-width: 768px) {
+  .button_outline {
+    border-color: rgba(0, 0, 0, 0.44);
+    font-size: 0.8888888889rem;
+    line-height: 2.25;
+  }
+}
+
+@media (min-width: 1200px) {
+  .button_outline {
+    line-height: 2;
+  }
 }
 
 .button_block {
@@ -2143,6 +2170,20 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   cursor: auto;
 }
 
+@media (min-width: 768px) {
+  .price__currency-item {
+    font-size: 0.7222222222rem;
+    line-height: 1.6923076923;
+  }
+}
+
+@media (min-width: 1200px) {
+  .price__currency-item {
+    font-size: 0.7777777778rem;
+    line-height: 1.7142857143;
+  }
+}
+
 .amount-form {
   position: relative;
   width: 10.7777777778rem;
@@ -2217,6 +2258,38 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   display: block;
   font-size: 1.6666666667rem;
   line-height: 1.3333333333;
+}
+
+@media (min-width: 768px) {
+  .amount-form {
+    width: 5.4444444444rem;
+    height: 1.8333333333rem;
+    padding-left: 1.8333333333rem;
+    padding-right: 1.8333333333rem;
+    padding-top: 0.0555555556rem;
+  }
+  .amount-form__control {
+    width: 1.8333333333rem;
+    height: 1.8333333333rem;
+  }
+  .amount-form__control_dec:after {
+    width: 0.8888888889rem;
+    height: 0.0555555556rem;
+  }
+  .amount-form__control_inc:before {
+    width: 0.0555555556rem;
+    height: 0.8888888889rem;
+  }
+  .amount-form__control_inc:after {
+    width: 0.8888888889rem;
+    height: 0.0555555556rem;
+  }
+  .amount-form__input {
+    width: 1.7777777778rem;
+    height: 1.7777777778rem;
+    font-size: 0.8333333333rem;
+    line-height: 2.1333333333;
+  }
 }
 
 .card {
@@ -2940,11 +3013,7 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 @media (min-width: 768px) {
   .card__button {
     border-color: rgba(255, 255, 255, 0.44);
-    border-radius: 30px;
-    font-size: 0.8888888889rem;
-    line-height: 2.25;
     width: 7.4444444444rem;
-    border-width: 0.0555555556rem;
   }
   .card_product {
     justify-content: center;
@@ -3071,8 +3140,6 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
     padding-right: 1.6666666667rem;
   }
   .card__button {
-    font-size: 0.8888888889rem;
-    line-height: 2;
     width: 6.9444444444rem;
   }
   .card_with-overlay:hover .card__labels,
@@ -3572,6 +3639,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   height: 13.5rem;
 }
 
+.slider__img {
+  width: 100%;
+}
+
 .slider__content {
   display: flex;
   flex-direction: column;
@@ -3594,13 +3665,16 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   opacity: .76;
 }
 
+@media (min-width: 768px) {
+  .slider__content {
+    max-width: 23.8888888889rem;
+    padding: 0;
+  }
+}
+
 @media (min-width: 1200px) {
   .slider__item {
     height: 24.8888888889rem;
-  }
-  .slider__content {
-    max-width: 23.6111111111rem;
-    padding: 0;
   }
   .slider__title {
     font-size: 3.0555555556rem;
@@ -3835,13 +3909,6 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 }
 
 .product__intro {
-  color: #313131;
-  background-color: #f0f0f0;
-  background-repeat: no-repeat;
-  background-position: 100% 220%;
-}
-
-.product__img {
   margin-top: -3.9444444444rem;
 }
 
@@ -3860,6 +3927,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 }
 
 .product__body {
+  color: #313131;
+  background-color: #f0f0f0;
+  background-repeat: no-repeat;
+  background-position: 100% 220%;
   padding-top: 1.3333333333rem;
   padding-left: 0.7222222222rem;
   padding-right: 1.6111111111rem;
@@ -3910,8 +3981,70 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   color: #baac34;
 }
 
-.product_drink .product__intro {
+.product_drink .product__body {
   background-image: url(../i/patterns/drink.png);
+}
+
+@media (min-width: 768px) {
+  .product__header {
+    margin-bottom: 1.7777777778rem;
+  }
+  .product__header-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .product__intro {
+    display: flex;
+    margin-top: -3.5555555556rem;
+    padding-top: 3.5555555556rem;
+  }
+  .product__img {
+    width: calc(100% - 260px);
+  }
+  .product__img-item {
+    height: 19.2222222222rem;
+  }
+  .product__body {
+    background-position: -100% 90%;
+    width: 14.4444444444rem;
+    padding-left: 1rem;
+    padding-bottom: 0;
+  }
+  .product__title {
+    margin-bottom: 0;
+  }
+  .product__subtitle {
+    margin-bottom: 0.5rem;
+    font-size: 0.6111111111rem;
+    line-height: 2;
+  }
+  .product__info {
+    font-size: 0.7222222222rem;
+    line-height: 1.4615384615;
+    margin-bottom: -0.1111111111rem;
+  }
+  .product__order-row {
+    margin-bottom: 0.8888888889rem;
+  }
+  .product__preorder {
+    position: static;
+    transform: none;
+    font-size: 0.7222222222rem;
+    line-height: 1.6923076923;
+  }
+  .product__amount {
+    margin-top: 1.6111111111rem;
+  }
+  .product__buy {
+    display: block;
+  }
+  .product__price {
+    margin-bottom: 1.2222222222rem;
+  }
+  .product__price-value {
+    font-size: 1.2222222222rem;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -3919,6 +4052,56 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2.7777777778rem;
+    padding-top: 7.1111111111rem;
+    padding-bottom: 4.2222222222rem;
+  }
+  .product__intro {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .product__img {
+    width: 27.2222222222rem;
+  }
+  .product__img-item {
+    height: 23.0555555556rem;
+  }
+  .product__body {
+    display: flex;
+    flex-direction: column;
+    background-position: 150% 68%;
+    width: 22.7777777778rem;
+    padding-top: 2.0555555556rem;
+    padding-left: 2.4444444444rem;
+    padding-right: 2.2777777778rem;
+    padding-bottom: 1.6666666667rem;
+  }
+  .product__subtitle {
+    margin-bottom: 0.5555555556rem;
+    font-size: 0.6666666667rem;
+    line-height: 1.8333333333;
+  }
+  .product__info {
+    flex-grow: 1;
+    font-size: 0.7777777778rem;
+    line-height: 1.4285714286;
+  }
+  .product__preorder {
+    font-size: 0.7777777778rem;
+    line-height: 1.4285714286;
+  }
+  .product__amount {
+    margin-bottom: 0.7222222222rem;
+  }
+  .product__buy {
+    display: flex;
+  }
+  .product__price {
+    margin-bottom: 0;
+  }
+  .product__price-value {
+    font-size: 1.3333333333rem;
+    line-height: 1;
   }
 }
 
@@ -3964,16 +4147,17 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   }
 }
 
+.article__breadcrumbs {
+  opacity: 1;
+  margin-bottom: 3rem;
+}
+
 .article__section {
   margin-bottom: 2.7222222222rem;
 }
 
 .article__section:last-child {
   margin-bottom: 0;
-}
-
-.article__section_right .img-right {
-  margin-right: -0.8333333333rem;
 }
 
 .article__slider {
@@ -3983,6 +4167,35 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 
 .article__section + .article__slider {
   margin-top: -1.0555555556rem;
+}
+
+@media (min-width: 768px) {
+  .article {
+    margin-bottom: 2.2777777778rem;
+  }
+  .article__slider {
+    margin-top: 1.5rem;
+    margin-bottom: 2.7222222222rem;
+  }
+  .article__section + .article__slider {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article {
+    margin-bottom: 4.3333333333rem;
+  }
+  .article__section_right .img-right {
+    margin-right: -2.7777777778rem;
+  }
+  .article__slider {
+    margin-top: 3.8333333333rem;
+    margin-bottom: 3.0555555556rem;
+  }
+  .article__section + .article__slider {
+    margin-top: 3.8333333333rem;
+  }
 }
 
 .theme-brick {
@@ -4018,7 +4231,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 }
 
 .theme-pattern-tea {
-  background: url(../i/patterns/tea.jpg) 100% 100% no-repeat;
+  background-image: url(../i/patterns/tea.jpg);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .theme-inverse {

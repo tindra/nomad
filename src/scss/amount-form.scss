@@ -42,7 +42,6 @@
             transition: all 0.15s ease-out;
             background-color:rgba(49,49,49,.44);
         }
-        
  
         &_dec {
             left:0;
@@ -82,5 +81,54 @@
         padding:0;
         display:block;
         @include font-variant(30px, 40px);
+    }
+    
+    @media(min-width:768px) {
+        @include rem((
+            width: 98px,
+            height: 33px,
+            padding-left: 33px,
+            padding-right: 33px,
+            padding-top: 1px
+        ));
+
+        &__control {
+            @include rem((
+                width: 33px,
+                height: 33px
+            ));
+        
+            &_dec {
+                &:after {
+                    @include rem((
+                        width: 16px,
+                        height: 1px
+                    ));
+                }
+            }
+
+            &_inc {
+                &:before {
+                    @include rem((
+                        width: 1px,
+                        height: 16px
+                    ));
+                }
+                &:after {
+                    @include rem((
+                        width: 16px,
+                        height: 1px
+                    ));
+                }
+            }
+        }
+    
+        &__input {
+            @include rem((
+                width: 32px,
+                height: 32px
+            ));
+            @include font-variant(15px, 32px);
+        }
     }
 }
