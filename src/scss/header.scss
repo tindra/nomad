@@ -1,51 +1,56 @@
 .header {
-  position: relative;
+    position: relative;
   
-  &__left {
-      position: relative;
-  }
+    &__left {
+        position: relative;
+    }
   
-  &__contacts {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
+    &__contacts {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
 
-      background: rgba(35,33,31,0.65);
+        background: rgba(35,33,31,0.65);
 
-      @include px-to-rem(padding-top, 23px);        
-      @include px-to-rem(padding-bottom, 22px);
-  }
+        @include rem((
+            padding-top: 23px,
+            padding-bottom: 22px
+        ));
+    }
   
-  @media(min-width:768px) {
-      &__contacts {
-          @include px-to-rem(padding-top, 21px);        
-          @include px-to-rem(padding-bottom, 19px);
-      }  
-  }
+    @media(min-width:768px) {
+        &__contacts {
+            @include rem((
+                padding-top: 21px,
+                padding-bottom: 19px
+            ));
+        }  
+    }
 
-  @media(min-width:1200px) {      
-      &__content {
-          display: flex;
-          //@include px-to-rem(margin-top, -91px);
-      }
+    @media(min-width:1200px) {      
+        &__content {
+            display: flex;
+        }
       
-      &__left {
-          width: calc(100% - 277px);
-      }
+        &__left {
+            width: calc(100% - 277px);
+        }
 
-      &__right {
-          width: 277px;
-      }
+        &__right {
+            width: 277px;
+        }
       
-      &__contacts {
-          left: 50%;
+        &__contacts {
+            left: 50%;
 
-          @include px-to-rem(width, 606px);        
-          @include px-to-rem(bottom, 47px);        
-          @include px-to-rem(padding-top, 20px);        
-          @include px-to-rem(padding-bottom, 21px);
-          @include px-to-rem(margin-left, -303px);
-      }
-  }
+            @include rem((
+                width: 606px,
+                padding-top: 20px,
+                padding-bottom: 21px,
+                margin-left: -303px,
+                bottom: 47px
+            ));
+        }
+    }
 }

@@ -13,16 +13,20 @@
     &__container {
         position: relative;
 
-        @include px-to-rem(height, $navbar-height-sm);
-        @include px-to-rem(max-width, 1165px);
-        @include px-to-rem(padding-top, 20px);
+        @include rem((
+            padding-top: 20px,
+            max-width: 1165px,
+            height: $navbar-height-sm
+        ));
     }
     
     &__mobile-toggle {
         position: absolute;
         z-index: 100;
 
-        @include px-to-rem(left, 13px);
+        @include rem((
+            left: 13px
+        ));
     }
 
     &__nav-toggle {
@@ -62,8 +66,10 @@
 
         transform: translateY(-50%);
 
-        @include px-to-rem(right, 15px);
-        @include px-to-rem(margin-top, 4px);
+        @include rem((
+            right: 15px,
+            margin-top: 4px
+        ));
         
         &-link {
             position: relative;
@@ -72,7 +78,9 @@
 
             text-decoration: none;
 
-            @include px-to-rem(padding-right, 16px);
+            @include rem((
+                padding-right: 16px
+            ));
         }
         
         &-icon {
@@ -92,8 +100,10 @@
             @include size(26px);
             @include rounded;
             @include font-variant(20px, 26px, $font-family: $font-family-sans-serif-semibold);
-            @include px-to-rem(right, 1px);
-            @include px-to-rem(top, -8px);
+            @include rem((
+                top: -8px,
+                right: -1px
+            ));
         }
 
         &-button {
@@ -133,19 +143,24 @@
     @media(max-width:767px) {
         &__nav {
             background-position: 0 100%;
-
-            @include px-to-rem(padding-top, 87px);
             
+            @include rem((
+                padding-top: 87px
+            ));
             &:before {
-                @include px-to-rem(top, 70px);
+                @include rem((
+                    top: 70px
+                ));
             }
         }        
     }
 
     @media(min-width:768px) {  
         &__container {
-            @include px-to-rem(height, $navbar-height-m);
-            @include px-to-rem(padding-top, 18px);
+            @include rem((
+                padding-top: 18px,
+                height: $navbar-height-m
+            ));
         }
  
         &__brand {
@@ -154,17 +169,23 @@
 
                 vertical-align: bottom;
 
-                @include px-to-rem(width, 37px);
-                @include px-to-rem(margin-right, 10px);
+                @include rem((
+                    width: 37px,
+                    margin-right: 10px
+                ));
             }
 
             &-img2 {
-                @include px-to-rem(width, 112px);
+                @include rem((
+                    width: 112px
+                ));
             }
         }
  
         &__mobile-toggle {
-            @include px-to-rem(left, 50px);
+            @include rem((
+                left: 50px
+            ));
         }
   
         &__nav-close {
@@ -172,11 +193,15 @@
         }
  
         &__cart {
-            @include px-to-rem(right, 50px);
-            @include px-to-rem(margin-top, 2px);
+            @include rem((
+                margin-top: 2px,
+                right: 50px
+            ));
         
             &-link {
-                @include px-to-rem(padding-right, 14px);
+                @include rem((
+                    padding-right: 14px
+                ));
             }
         
             &-icon {
@@ -186,7 +211,9 @@
             &-badge {
                 @include size(22px);
                 @include font-variant(16px, 22px);
-                @include px-to-rem(top, -7px);
+                @include rem((
+                    top: -7px
+                ));
             }
         }
     }
@@ -195,8 +222,10 @@
         white-space: nowrap;
         
         &__container {
-            @include px-to-rem(height, $navbar-height-lg);
-            @include px-to-rem(padding-top, 26px);
+            @include rem((
+                padding-top: 26px,
+                height: $navbar-height-lg
+            ));
         }
  
         &__brand {
@@ -204,15 +233,21 @@
 
             vertical-align: top;
 
-            @include px-to-rem(margin-right, 45px);
+            @include rem((
+                margin-right: 45px
+            ));
             
             &-img {
-                @include px-to-rem(width, 44px);
-                @include px-to-rem(margin-right, 12px);
+                @include rem((
+                    width: 44px,
+                    margin-right: 12px
+                ));
             }
 
             &-img2 {
-                @include px-to-rem(width, 133px);
+                @include rem((
+                    width: 133px
+                ));
             }
         }
  
@@ -225,8 +260,10 @@
 
             vertical-align: top;
 
-            @include px-to-rem(margin-top, 7px);
-            @include px-to-rem(margin-right, 11px);
+            @include rem((
+                margin-top: 7px,
+                margin-right: 11px
+            ));
         }
   
         &__cart {
@@ -241,15 +278,21 @@
 
             border-left: 1px solid rgba(255,255,255,0.2);
 
-            @include px-to-rem(padding-left, 24px);
+            @include rem((
+                padding-left: 24px
+            ));
         
             &-link {
                 display: inline-block;
 
-                vertical-align: middle;
+                vertical-align: top;
 
-                @include px-to-rem(top, -1px);
-                @include px-to-rem(padding-right, 12px);
+                @include rem((
+                    top: -1px,
+                    padding-bottom: 12px,
+                    padding-right: 10px,
+                    padding-top: 8px
+                ));
             }
         
             &-icon {
@@ -259,17 +302,23 @@
             &-badge {
                 @include size(19px);
                 @include font-variant(14px, 20px);
-                @include px-to-rem(top, -6px);
+                @include rem((
+                    top: 2px
+                ));
             }
 
             &-button {
                 display: inline-block;
 
+                vertical-align: top;
+
                 text-transform: uppercase;
 
-                @include px-to-rem(width, 180px);
-                @include px-to-rem(margin-top, -2px);
-                @include px-to-rem(margin-left, 40px);
+                @include rem((
+                    width: 180px,
+                    margin-top: -2px,
+                    margin-left: 40px                    
+                ));
                 
                 .header__left & {
                     display: none;

@@ -78,22 +78,7 @@
             height: 102px
         ));
     }
-    
-    &_tales {
-        .grid__col,
-        .grid__h-sm-1 {
-            @include rem((
-                height: 250px
-            ));
-        }
-
-        .grid__h-sm-2 {
-            @include rem((
-                height: 500px
-            ));
-        }
-    }
-    
+        
     @media (max-width:767px) {
         &_sm {
             .grid__col {
@@ -103,6 +88,21 @@
             .grid__h-sm {
                 @include rem((
                     height: 102px
+                ));
+            }
+        }
+
+        &_tales {
+            .grid__col,
+            .grid__h-sm-1 {
+                @include rem((
+                    height: 250px
+                ));
+            }
+
+            .grid__h-sm-2 {
+                @include rem((
+                    height: 500px
                 ));
             }
         }
@@ -142,26 +142,12 @@
                 height: $height-m-base*3
             ));
         }
-
-        /*&_tales {
-            .grid__col,
-            .grid__h-m-1 {
-                @include rem((
-                    height: $height-m-base
-                ));
-            }
-
-            .grid__h-m-2 {
-                @include rem((
-                    height: $height-m-base*2
-                ));
-            }
-        }*/
     }
     
     @media (min-width:1200px) {
         $height-lg-base: 290.5px !default; 
         $height-xl-base: 356px !default; 
+        $height-tales-base: 308px !default; 
  
         &__sizer-lg,
         &__w-lg-1 {
@@ -182,48 +168,69 @@
  
         &__col,
         &__h-lg-1 {
-            @include px-to-rem(height, $height-lg-base);
+            @include rem((
+                height: $height-lg-base
+            ));
         }
 
         &__h-lg-2 {
-            @include px-to-rem(height, $height-lg-base*2);
+            @include rem((
+                height: $height-lg-base*2
+            ));
         }
         
         &__h-lg-3 {
-            @include px-to-rem(height, $height-lg-base*3);
+            @include rem((
+                height: $height-lg-base*3
+            ));
         }
 
         &__h-lg-4 {
-            @include px-to-rem(height, $height-lg-base*4);
+            @include rem((
+                height: $height-lg-base*4
+            ));
         }
         
         &_sm {
             .grid__col,
             .grid__h-lg-1 {
-                @include px-to-rem(height, $height-xl-base);
+                @include rem((
+                    height: $height-xl-base
+                ));
             }
 
             .grid__h-lg-2 {
-                @include px-to-rem(height, $height-xl-base*2);
+                @include rem((
+                    height: $height-xl-base*2
+                ));
             }
         
             .grid__h-lg-3 {
-                @include px-to-rem(height, $height-xl-base*3);
+                @include rem((
+                    height: $height-xl-base*3
+                ));
             }
 
             .grid__h-lg-4 {
-                @include px-to-rem(height, $height-xl-base*4);
+                @include rem((
+                    height: $height-xl-base*4
+                ));
             }
         }
         
         &_tales {
             .grid__col,
             .grid__h-lg-1 {
-                @include px-to-rem(height, 308px);
+                @include rem((
+                    height: $height-tales-base
+                ));
+                
             }
 
             .grid__h-lg-2 {
-                @include px-to-rem(height, 616px);
+                @include rem((
+                    height: $height-tales-base*2
+                ));
             }
         }
     }
