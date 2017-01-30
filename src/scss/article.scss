@@ -10,6 +10,9 @@
     
     &__source {
         font-family:$font-family-sans-serif-italic;
+        @include rem((
+            margin-bottom: 29px
+        ));
     }
 
     &__section {
@@ -64,6 +67,12 @@
             margin-bottom: 41px
         ));
 
+        &__source {
+            @include rem((
+                margin-bottom: 42px
+            ));
+        }
+  
         &__section {
             &_right {
                 .container {
