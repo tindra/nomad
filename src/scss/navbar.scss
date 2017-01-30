@@ -9,7 +9,7 @@
 
     background-color: rgba(47,48,61,0.38);
     box-shadow: 0 1px 3px rgba(12,13,14,0.15);
-    
+
     &__container {
         position: relative;
 
@@ -19,7 +19,7 @@
             height: $navbar-height-sm
         ));
     }
-    
+
     &__mobile-toggle {
         position: absolute;
         z-index: 100;
@@ -43,12 +43,12 @@
 
         display: none;
     }
-  
+
     &__brand {
         display: block;
 
         text-decoration: none;
-        
+
         &-img {
             display: none;
         }
@@ -59,7 +59,7 @@
             vertical-align: bottom;
         }
     }
-  
+
     &__cart {
         position: absolute;
         top: 50%;
@@ -70,7 +70,7 @@
             right: 15px,
             margin-top: 4px
         ));
-        
+
         &-link {
             position: relative;
 
@@ -82,7 +82,7 @@
                 padding-right: 16px
             ));
         }
-        
+
         &-icon {
             display: block;
         }
@@ -110,7 +110,7 @@
             display: none;
         }
     }
-    
+
     @media(max-width:1199px) {
         &__nav {
             position: fixed;
@@ -126,7 +126,7 @@
             padding-top: 85px;
 
             background: #eeeeee url(../i/nav-bg.png) 0 50% no-repeat;
-            
+
             &:before {
                 position: absolute;
                 top: 63px;
@@ -137,13 +137,13 @@
 
                 border-top: 1px solid #dbdbdb;
             }
-        }        
+        }
     }
 
     @media(max-width:767px) {
         &__nav {
             background-position: 0 100%;
-            
+
             @include rem((
                 padding-top: 87px
             ));
@@ -152,17 +152,17 @@
                     top: 70px
                 ));
             }
-        }        
+        }
     }
 
-    @media(min-width:768px) {  
+    @media(min-width:768px) {
         &__container {
             @include rem((
                 padding-top: 18px,
                 height: $navbar-height-m
             ));
         }
- 
+
         &__brand {
             &-img {
                 display: inline-block;
@@ -181,29 +181,29 @@
                 ));
             }
         }
- 
+
         &__mobile-toggle {
             @include rem((
                 left: 50px
             ));
         }
-  
+
         &__nav-close {
             top: 21px;
         }
- 
+
         &__cart {
             @include rem((
                 margin-top: 2px,
                 right: 50px
             ));
-        
+
             &-link {
                 @include rem((
                     padding-right: 14px
                 ));
             }
-        
+
             &-icon {
                 display: block;
             }
@@ -220,14 +220,14 @@
 
     @media(min-width:1200px) {
         white-space: nowrap;
-        
+
         &__container {
             @include rem((
                 padding-top: 26px,
                 height: $navbar-height-lg
             ));
         }
- 
+
         &__brand {
             display: inline-block;
 
@@ -236,7 +236,7 @@
             @include rem((
                 margin-right: 45px
             ));
-            
+
             &-img {
                 @include rem((
                     width: 44px,
@@ -250,11 +250,11 @@
                 ));
             }
         }
- 
+
         &__mobile-toggle {
             display: none !important;
         }
-        
+
         &__nav {
             display: inline-block !important;
 
@@ -265,7 +265,7 @@
                 margin-right: 11px
             ));
         }
-  
+
         &__cart {
             position: static;
 
@@ -281,7 +281,7 @@
             @include rem((
                 padding-left: 24px
             ));
-        
+
             &-link {
                 display: inline-block;
 
@@ -294,7 +294,7 @@
                     padding-top: 8px
                 ));
             }
-        
+
             &-icon {
                 display: block;
             }
@@ -311,22 +311,21 @@
                 display: inline-block;
 
                 vertical-align: top;
-
                 text-transform: uppercase;
 
                 @include rem((
                     width: 180px,
                     margin-top: -2px,
-                    margin-left: 40px                    
+                    margin-left: 40px
                 ));
-                
+
                 .header__left & {
                     display: none;
                 }
             }
         }
     }
-    
+
     @media(min-width:1900px) {
         &__cart {
             &-button {

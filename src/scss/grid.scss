@@ -3,7 +3,7 @@
         padding-left: 13px,
         padding-right: 15px
     ));
-    
+
     .grid {
         @include rem((
             margin-left: -13px,
@@ -20,7 +20,7 @@
             padding-left: 50px,
             padding-right: 50px
         ));
-        
+
         &_lg {
             @include rem((
                 max-width: 1060px
@@ -41,23 +41,23 @@
             padding-left: 20px,
             padding-right: 20px
         ));
-    
+
         &_lg {
             @include rem((
                 max-width: 1000px
             ));
         }
- 
+
         .grid {
             margin-right: 0;
             margin-left: 0;
-        }   
+        }
     }
 }
 
 .grid {
     @include clearfix;
-    
+
     &__col {
         float: left;
 
@@ -78,13 +78,13 @@
             height: 102px
         ));
     }
-        
+
     @media (max-width:767px) {
         &_sm {
             .grid__col {
                 height: 14rem;
             }
-  
+
             .grid__h-sm {
                 @include rem((
                     height: 102px
@@ -107,10 +107,10 @@
             }
         }
     }
-    
+
     @media (min-width:768px) {
-        $height-m-base: 290.6666667px !default; 
-    
+        $height-m-base: 290.6666667px !default;
+
         &__sizer-m,
         &__w-m-1 {
             width: 33.3333333%;
@@ -143,12 +143,12 @@
             ));
         }
     }
-    
+
     @media (min-width:1200px) {
-        $height-lg-base: 290.5px !default; 
-        $height-xl-base: 356px !default; 
-        $height-tales-base: 308px !default; 
- 
+        $height-lg-base: 290.5px !default;
+        $height-xl-base: 356px !default;
+        $height-tales-base: 308px !default;
+
         &__sizer-lg,
         &__w-lg-1 {
             width: 25%;
@@ -165,7 +165,7 @@
         &__w-lg-4 {
             width: 100%;
         }
- 
+
         &__col,
         &__h-lg-1 {
             @include rem((
@@ -178,7 +178,7 @@
                 height: $height-lg-base*2
             ));
         }
-        
+
         &__h-lg-3 {
             @include rem((
                 height: $height-lg-base*3
@@ -190,7 +190,7 @@
                 height: $height-lg-base*4
             ));
         }
-        
+
         &_sm {
             .grid__col,
             .grid__h-lg-1 {
@@ -204,7 +204,7 @@
                     height: $height-xl-base*2
                 ));
             }
-        
+
             .grid__h-lg-3 {
                 @include rem((
                     height: $height-xl-base*3
@@ -217,14 +217,13 @@
                 ));
             }
         }
-        
+
         &_tales {
             .grid__col,
             .grid__h-lg-1 {
                 @include rem((
                     height: $height-tales-base
                 ));
-                
             }
 
             .grid__h-lg-2 {

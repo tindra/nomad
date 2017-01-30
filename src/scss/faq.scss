@@ -1,30 +1,29 @@
 .faq {
-  
     &__item {
         border-bottom: 1px solid rgba(46,34,28,0.35);
 
         &:last-child {
             border-bottom: 0;
         }
-      
+
         &.collapsed {
-           .faq__header {
-               background-color: transparent;
-           } 
-         
-           .faq__icon {
-               &_down {
-                   display: block;
-               }
+            .faq__header {
+                background-color: transparent;
+            }
 
-               &_up {
-                   display: none;
-               }
-           }
+            .faq__icon {
+                &_down {
+                    display: block;
+                }
 
-           .faq__body {
-               display: none;
-           } 
+                &_up {
+                    display: none;
+                }
+            }
+
+            .faq__body {
+                display: none;
+            }
         }
     }
 
@@ -39,7 +38,7 @@
             padding-top: 24px,
             padding-bottom: 23px
         ));
-        
+
         .container {
             position: relative;
 
@@ -52,7 +51,7 @@
     &__title {
         @include font-variant(24px, 24px, $font-family: $font-family-sans-serif-bold);
     }
-  
+
     &__icon {
         position: absolute;
         top: 50%;
@@ -63,7 +62,7 @@
         @include rem((
             right: 18px
         ));
-      
+
         &_down {
             display: none;
         }
@@ -72,7 +71,7 @@
             display: block;
         }
     }
-  
+
     &__body {
         color: #4b4747;
         background-color: #ffffff;
@@ -83,11 +82,11 @@
             padding-bottom: 29px
         ));
     }
-  
+
     p:last-child {
         margin-bottom: 0;
     }
-  
+
     @media(max-width:767px) {
         &__item {
             &.collapsed {
@@ -96,14 +95,14 @@
                         padding-top: 23px,
                         padding-bottom: 24px
                     ));
-                } 
+                }
 
                 .faq__title {
                     @include font-variant(19px, 19px);
                 }
             }
         }
-      
+
         &__header {
             @include rem((
                 padding-top: 24px,
@@ -111,12 +110,12 @@
             ));
         }
     }
-  
+
     @media(min-width:768px) {
         &__title {
             @include font-variant(17px, 19px);
         }
-      
+
         &__icon {
             @include rem((
                 right: 50px
@@ -147,7 +146,7 @@
         &__title {
             @include font-variant(18px, 24px);
         }
-      
+
         &__body {
             @include font-variant(18px, 24px);
             @include rem((

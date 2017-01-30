@@ -3,8 +3,8 @@
     @include rem((
         padding-top: $navbar-height-sm
     ));
-    
-    @media(min-width:768px) {    
+
+    @media(min-width:768px) {
         @include rem((
             padding-top: $navbar-height-m
         ));

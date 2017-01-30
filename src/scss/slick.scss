@@ -75,7 +75,7 @@
     min-height: 1px;
 
     outline: 0;
-    
+
     [dir="rtl"] & {
         float: right;
     }
@@ -94,11 +94,11 @@
         display: block;
 
         opacity: 1;
-        
-        &.slick-current {
-          visibility: visible;
 
-          opacity: 1;
+        &.slick-current {
+            visibility: visible;
+
+            opacity: 1;
         }
     }
 

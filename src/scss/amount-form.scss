@@ -1,6 +1,7 @@
 // Amount form
 .amount-form {
-    position:relative;
+    position: relative;
+
     @include rem((
         width: 194px,
         height: 65px,
@@ -10,41 +11,45 @@
     ));
 
     &__control {
-        position:absolute;
-        top:0;
-        border:1px solid rgba(49,49,49,.13);
-        background:none;
-        outline:0;
+        position: absolute;
+        top: 0;
+
         transition: all 0.15s ease-out;
-        text-indent:-999em;
+        text-indent: -999em;
+
+        border: 1px solid rgba(49,49,49,0.13);
+        outline: 0;
+        background: none;
+
         @include rounded;
         @include rem((
             width: 65px,
             height: 65px
         ));
-        
         @include hover-focus-active {
-            outline:0;
-            border-color:rgba(49,49,49,.53);
+            border-color: rgba(49,49,49,0.53);
+            outline: 0;
             &:before,
             &:after {
-                background-color:rgba(49,49,49,.64);
+                background-color: rgba(49,49,49,0.64);
             }
         }
-        
+
         &:before,
         &:after {
-            content:'';
-            position:absolute;
-            left:50%;
-            top:50%;
-            transform: translate(-50%,-50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            content: "";
             transition: all 0.15s ease-out;
-            background-color:rgba(49,49,49,.44);
+            transform: translate(-50%,-50%);
+
+            background-color: rgba(49,49,49,0.44);
         }
- 
+
         &_dec {
-            left:0;
+            left: 0;
             &:after {
                 @include rem((
                     width: 31px,
@@ -54,7 +59,7 @@
         }
 
         &_inc {
-            right:0;
+            right: 0;
             &:before {
                 @include rem((
                     width: 2px,
@@ -69,20 +74,24 @@
             }
         }
     }
-    
+
     &__input {
+        display: block;
+
+        padding: 0;
+
+        text-align: center;
+
+        border: 0;
+        background: none;
+
         @include rem((
             width: 64px,
             height: 40px
         ));
-        border:0;
-        background:none;
-        text-align:center;
-        padding:0;
-        display:block;
         @include font-variant(30px, 40px);
     }
-    
+
     @media(min-width:768px) {
         @include rem((
             width: 98px,
@@ -97,7 +106,7 @@
                 width: 33px,
                 height: 33px
             ));
-        
+
             &_dec {
                 &:after {
                     @include rem((
@@ -122,7 +131,7 @@
                 }
             }
         }
-    
+
         &__input {
             @include rem((
                 width: 32px,

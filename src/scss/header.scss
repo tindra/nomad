@@ -1,10 +1,10 @@
 .header {
     position: relative;
-  
+
     &__left {
         position: relative;
     }
-  
+
     &__contacts {
         position: absolute;
         right: 0;
@@ -18,21 +18,21 @@
             padding-bottom: 22px
         ));
     }
-  
+
     @media(min-width:768px) {
         &__contacts {
             @include rem((
                 padding-top: 21px,
                 padding-bottom: 19px
             ));
-        }  
+        }
     }
 
-    @media(min-width:1200px) {      
+    @media(min-width:1200px) {
         &__content {
             display: flex;
         }
-      
+
         &__left {
             width: calc(100% - 277px);
         }
@@ -40,7 +40,7 @@
         &__right {
             width: 277px;
         }
-      
+
         &__contacts {
             left: 50%;
 

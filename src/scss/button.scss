@@ -14,37 +14,37 @@
     @include font-variant(14px, 38px);
     @include transition(all 0.2s ease-in-out);
     @include hover-focus {
-      text-decoration: none;
+        text-decoration: none;
     }
 
     &,
     &:active,
     &.active {
-      &:focus,
-      &.focus {
-        @include tab-focus();
-      }
+        &:focus,
+        &.focus {
+            @include tab-focus();
+        }
     }
     &.focus {
-      text-decoration: none;
+        text-decoration: none;
     }
 
     &:active,
     &.active {
-      outline: 0;
-      background-image: none;
+        outline: 0;
+        background-image: none;
     }
 
     &.disabled,
     &:disabled {
-      cursor: $cursor-disabled;
+        cursor: $cursor-disabled;
     }
 }
 
 // Future-proof disabling of clicks on `<a>` elements
 a.button.disabled,
 fieldset[disabled] a.button {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 
@@ -53,29 +53,30 @@ fieldset[disabled] a.button {
 //
 
 .button_primary {
-  	border-radius: 19px;
-  	background-image: linear-gradient(to top, rgba(0,0,0,0.07), rgba(255,255,255,0.07));
-	box-shadow: 0 2px 7px rgba(0,0,0,0.15);
+    border-radius: 19px;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.07), rgba(255,255,255,0.07));
+    box-shadow: 0 2px 7px rgba(0,0,0,0.15);
 
-  @include button-variant($button-primary-color, $button-primary-bg, $button-primary-border, $button-primary-hover-color, $button-primary-hover-bg, $button-primary-hover-border);
+    @include button-variant($button-primary-color, $button-primary-bg, $button-primary-border, $button-primary-hover-color, $button-primary-hover-bg, $button-primary-hover-border);
 }
 
 .button_outline {
+    color: #000000;
+
     @include rem((
         border-radius: 30px,
         border-width: 1px,
         padding-left: 22px,
         padding-right: 22px
     ));
-    color:#000000;
     @include font-variant(24px, 60px);
-
     @include button-outline-variant($button-default-border);
 }
 
 @media (min-width:768px) {
     .button_outline {
         border-color: rgba(0,0,0,0.44);
+
         @include font-variant(16px, 36px);
     }
 }
@@ -90,14 +91,14 @@ fieldset[disabled] a.button {
 //
 
 .button_block {
-  display: block;
+    display: block;
 
-  width: auto;
+    width: auto;
 }
 
 // Vertically space out multiple block buttons
 .button_block + .button_block {
-  margin-top: $button-block-spacing-y;
+    margin-top: $button-block-spacing-y;
 }
 
 // Specificity overrides
@@ -105,7 +106,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button {
-  &.button_block {
-    width: 100%;
-  }
+    &.button_block {
+        width: 100%;
+    }
 }

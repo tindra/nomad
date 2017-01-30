@@ -15,7 +15,7 @@
     @include size(100%);
     @include rem(padding-left, 13px);
     @include rem(padding-right, 13px);
-    
+
     &__img-overlay {
         position: absolute;
         top: 0;
@@ -29,8 +29,8 @@
         transition: all 0.25s;
 
         background-image: linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0));
-    }  
-            
+    }
+
     &__tags {
         position: relative;
     }
@@ -49,36 +49,37 @@
         flex-grow: 1;
         justify-content: center;
     }
-    
+
     &__action {
         position: relative;
         z-index: 20;
     }
-    
+
     &__button {
-        color:#ffffff;
+        color: #ffffff;
         border-color: #ffffff;
+
         @include rem(width, 148px);
-        
+
         .card:hover & {
             color: #1c1814;
             background-color: #ffffff;
             box-shadow: 0 3px 5px rgba(0,0,0,0.14);
-            
+
             &:hover {
                 background-color: $brand-primary;
                 box-shadow: 0 3px 13px rgba(0,0,0,0.14);
             }
         }
     }
-    
+
     &__overlay {
         display: none;
     }
-    
+
     &_theme-orange {
         background-color: $theme-orange;
-        
+
         &.card_product {
             .card__overlay {
                 background-color: $theme-orange-overlay;
@@ -93,11 +94,11 @@
 
     &_theme-brown {
         background-color: $theme-brown;
-  
-        &.card_pub {            
+
+        &.card_pub {
             &_double {
                 .card__body {
-                    background-color: $theme-brown;                    
+                    background-color: $theme-brown;
                 }
                 &_right {
                     .card__body {
@@ -146,10 +147,10 @@
             .card__overlay {
                 background-color: $theme-rosybrown-overlay-darker;
             }
-            
+
             &_double {
                 .card__body {
-                    background-color: $theme-rosybrown;                    
+                    background-color: $theme-rosybrown;
                 }
                 &_right {
                     .card__body {
@@ -185,11 +186,11 @@
 
     &_theme-peru {
         background-color: $theme-peru;
-        
+
         &.card_pub {
             &_double {
                 .card__body {
-                    background-color: $theme-peru;                    
+                    background-color: $theme-peru;
                 }
                 &_right {
                     .card__body {
@@ -225,7 +226,7 @@
 
     &_theme-darkblue {
         background-color: $theme-darkblue;
-        
+
         &.card_product {
             .card__overlay {
                 background-color: $theme-darkblue-overlay;
@@ -241,7 +242,7 @@
 
             &_double {
                 .card__body {
-                    background-color: $theme-darkblue;                    
+                    background-color: $theme-darkblue;
                 }
                 &_right {
                     .card__body {
@@ -290,10 +291,10 @@
             .card__overlay {
                 background-color: $theme-violet-overlay-darker;
             }
-            
+
             &_double {
                 .card__body {
-                    background-color: $theme-violet;                    
+                    background-color: $theme-violet;
                 }
                 &_right {
                     .card__body {
@@ -347,7 +348,7 @@
 
     &_theme-green {
         background-color: $theme-green;
- 
+
         &.card_product {
             .card__overlay {
                 background-color: $theme-green-overlay;
@@ -362,7 +363,7 @@
             }
         }
     }
- 
+
     &_theme-darkgoldenrod {
         background-color: $theme-darkgoldenrod;
 
@@ -381,7 +382,7 @@
 
             &_double {
                 .card__body {
-                    background-color: $theme-darkgoldenrod;                    
+                    background-color: $theme-darkgoldenrod;
                 }
                 &_right {
                     .card__body {
@@ -414,7 +415,7 @@
             }
         }
     }
-    
+
     &_theme-darkred {
         background-color: $theme-darkred;
 
@@ -433,7 +434,7 @@
 
             &_double {
                 .card__body {
-                    background-color: $theme-darkred;                    
+                    background-color: $theme-darkred;
                 }
                 &_right {
                     .card__body {
@@ -466,23 +467,23 @@
             }
         }
     }
-    
+
     [class^="card__theme"] {
         .card__img-overlay {
             background-image: none;
-        }  
+        }
     }
-    
+
     &_product {
         cursor: pointer;
-        
+
         &:not(.card_with-overlay):hover {
             .card__img-overlay {
                 background-color: rgba(28,13,13,0.68);
                 background-image: none;
             }
-        }  
-        
+        }
+
         .card__labels {
             @include rem(margin-left, -13px);
             @include rem(margin-right, -13px);
@@ -491,24 +492,24 @@
         .card__label {
             width: 100%;
             max-width: 242px;
-            @include rem(padding-left, 20px);
-            @include rem(padding-right, 20px);
 
             text-align: center;
 
             color: #000000;
             background-color: #ddd058;
 
+            @include rem(padding-left, 20px);
+            @include rem(padding-right, 20px);
             @include font-variant(20px, 61px, $font-family: $font-family-sans-serif-extrabold);
         }
-        
+
         .card__title {
             margin-top: 0;
 
             @include font-variant(21px, 21px, $font-family: $font-family-sans-serif-extrabold);
             @include rem(margin-bottom, 7px);
         }
-        
+
         .card__subtitle {
             @include font-variant(14px, 18px);
             @include rem(margin-bottom, 14px);
@@ -518,17 +519,17 @@
             @include font-variant(24px, 24px);
             @include rem(margin-bottom, 33px);
         }
-        
+
         &_catalog {
             .card__body {
                 justify-content: flex-end;
             }
-            
+
             .card__title {
                 @include font-variant(28px, 28px);
                 @include rem(margin-bottom, 4px);
             }
-        
+
             .card__subtitle {
                 @include font-variant(18px, 28px);
                 @include rem(margin-bottom, 11px);
@@ -538,7 +539,6 @@
                 text-align: center;
 
                 @include rem(padding-bottom, 30px);
-                
             }
 
             .card__price {
@@ -551,19 +551,22 @@
                 @include font-variant(28px, 28px);
             }
         }
-        
+
         &_single {
+            flex-direction: row;
+
+            background-position: -100px 80%;
+            background-size: auto 150%;
+
             @include rem(height, 288px);
-            background-position:-140% 80%;
-            background-size:auto 150%;
-            flex-direction:row;
-            
+
             .card__labels {
-                margin-right:0;
-                width:50%;
+                width: 50%;
+                margin-right: 0;
             }
             .card__body {
-                width:50%;
+                width: 50%;
+
                 @include rem(padding-left, 20px);
             }
             .card__title {
@@ -586,7 +589,7 @@
 
         align-items: center;
         justify-content: space-between;
-        
+
         .card__tags {
             @include rem(padding-top, 41px);
         }
@@ -594,7 +597,7 @@
         .card__tag {
             @include font-variant(20px, 24px, $font-family: $font-family-sans-serif-semibold);
         }
-        
+
         .card__content {
             display: flex;
             flex-direction: column;
@@ -602,21 +605,21 @@
             justify-content: center;
             flex-grow: 1;
         }
-        
+
         .card__title {
             @include font-variant(30px, 24px, $font-family: $font-family-serif);
             @include rem(margin-top, 8px);
             @include rem(margin-bottom, 8px);
         }
-        
+
         .card__action {
             @include rem(margin-bottom, 31px);
-        } 
-        
+        }
+
         &_double {
             padding-right: 0;
             padding-left: 0;
-            
+
             .card__img-block {
                 overflow: hidden;
 
@@ -634,7 +637,7 @@
                 flex-grow: 1;
                 @include rem(padding-left, 15px);
                 @include rem(padding-right, 15px);
-                
+
                 &:before,
                 &:after {
                     margin: 0;
@@ -644,7 +647,7 @@
             .card__content {
                 flex-grow: 0;
             }
-            
+
             .card__title {
                 position: relative;
 
@@ -668,44 +671,44 @@
                 @include rem(padding-right, 15px);
                 align-items: center;
             }
-            
+
             .card__action {
                 margin-bottom: 0;
             }
-            
+
             &_right {
                 align-items: flex-end;
                 .card__body {
-                    @include triangle(14px, 0, transparent, left); 
+                    @include triangle(14px, 0, transparent, left);
                 }
                 .card__text {
                     right: 100%;
                 }
             }
-            
+
             &_left {
                 align-items: flex-start;
-                
+
                 .card__img-block {
                     order: 2;
                 }
-                
+
                 .card__body {
                     order: 1;
-                    @include triangle(14px, 0, transparent, right); 
+                    @include triangle(14px, 0, transparent, right);
                 }
                 .card__text {
                     left: 100%;
                 }
             }
-            
+
             &_right,
             &_left {
                 flex-direction: row;
 
                 align-items: initial;
                 @include rem(height, 279px);
-                
+
                 .card__img-block {
                     width: 50%;
                 }
@@ -719,10 +722,10 @@
 
             &_bottom {
                 justify-content: flex-end;
-                
+
                 .card__body {
-                    @include triangle(14px, 0, transparent, top); 
-                                   
+                    @include triangle(14px, 0, transparent, top);
+
                     &:before,
                     &:after {
                         left: auto;
@@ -735,18 +738,18 @@
                     left: 0;
                 }
             }
-            
+
             &_top {
                 justify-content: flex-start;
-                
+
                 .card__img-block {
                     order: 2;
                 }
 
                 .card__body {
                     order: 1;
-                    @include triangle(14px, 0, transparent, bottom); 
-      
+                    @include triangle(14px, 0, transparent, bottom);
+
                     &:before,
                     &:after {
                         @include rem(left, 38px);
@@ -757,7 +760,7 @@
                     left: 0;
                 }
             }
- 
+
             &_bottom,
             &_top {
                 float: left;
@@ -765,22 +768,21 @@
                 width: 50%;
 
                 @include rem(height, 558px);
-                
+
                 .card__img-block {
                     width: 100%;
                     height: 50%;
                 }
                 .card__body {
                     width: 100%;
-                    height: 50%; 
+                    height: 50%;
                 }
             }
+        }
 
-        }   
-        
         .grid_tales & {
             justify-content: center;
-            
+
             .card__content {
                 flex-grow: 0;
             }
@@ -792,28 +794,28 @@
             }
             .card__action {
                 margin-bottom: 0;
-            } 
-        }    
+            }
+        }
     }
 
     &_slogan {
         text-align: center;
 
         justify-content: center;
-                        
+
         .card__text {
             opacity: 0.84;
 
             @include font-variant(30px, 30px, $font-family: $font-family-serif);
             @include rem(padding-left, 62px);
             @include rem(padding-right, 60px);
-            
+
             b,
             strong {
                 font-family: $font-family-serif-bold;
             }
         }
-                
+
         &_catalog {
             .card__text {
                 opacity: 1;
@@ -834,24 +836,25 @@
 
         &_product {
             justify-content: center;
-        
+
             .card__label {
+                display: inline-block;
+
                 width: auto;
-                max-width:100%;
-                display:inline-block;
+                max-width: 100%;
 
                 @include font-variant(14px, 45px);
             }
-            
+
             .card__body {
                 max-width: 244px;
             }
-        
+
             .card__title {
                 @include font-variant(18px, 18px);
                 @include rem(margin-bottom, 3px);
             }
-        
+
             .card__subtitle {
                 @include font-variant(12px, 18px);
                 @include rem(margin-bottom, 14px);
@@ -860,8 +863,8 @@
             .card__price {
                 @include font-variant(18px, 24px);
                 @include rem(margin-bottom, 30px);
-            }   
-             
+            }
+
             &_catalog {
                 .card__action {
                     display: flex;
@@ -871,7 +874,6 @@
                     justify-content: space-between;
                     align-items: center;
                     @include rem(padding-bottom, 21px);
-                
                 }
 
                 .card__subtitle {
@@ -886,13 +888,15 @@
             }
 
             &_single {
+                background-position: 0 80%;
+                background-size: auto 180%;
+
                 @include rem(height, 206px);
-                background-position:0 80%;
-                background-size:auto 180%;
-                justify-content:space-between;
-            
+                justify-content: space-between;
+
                 .card__body {
                     max-width: 100%;
+
                     @include rem(padding-left, 62px);
                     @include rem(padding-right, 63px);
                 }
@@ -905,20 +909,22 @@
                     @include rem(margin-bottom, 17px);
                 }
                 .card__action {
-                    display:flex;
-                    align-items:center;
-                    justify-content:space-between;
+                    display: flex;
+
+                    align-items: center;
+                    justify-content: space-between;
                 }
                 .card__price {
-                    @include font-variant(24px, 24px);
                     margin-bottom: 0;
+
+                    @include font-variant(24px, 24px);
                 }
             }
-        }    
-        
+        }
+
         &_pub {
             justify-content: center;
-                
+
             .card__tags {
                 padding-top: 0;
             }
@@ -926,7 +932,7 @@
             .card__tag {
                 @include font-variant(14px, 24px);
             }
-        
+
             .card__body {
                 flex-grow: 0;
             }
@@ -934,25 +940,25 @@
             .card__content {
                 flex-grow: 0;
             }
-        
+
             .card__title {
                 @include font-variant(26px, 24px);
                 @include rem(margin-bottom, 36px);
             }
-        
+
             .card__action {
                 margin-bottom: 0;
             }
 
             &_double {
                 .card__body {
-                    flex-grow: 1;                
+                    flex-grow: 1;
                 }
 
                 .card__content {
                     flex-grow: 0;
                 }
-            
+
                 .card__title {
                     @include font-variant(36px, 33px);
                     @include rem(margin-bottom, 30px);
@@ -969,7 +975,7 @@
                     @include font-variant(16px, 20px);
                     @include rem(margin-bottom, 29px);
                 }
-                
+
                 &_right,
                 &_left {
                     @include rem(height, 286px);
@@ -997,7 +1003,7 @@
                     @include font-variant(36px, 33px);
                     @include rem(margin-bottom, 46px);
                 }
-            }    
+            }
         }
 
         &_slogan {
@@ -1007,7 +1013,7 @@
 
                 @include font-variant(21px, 21px);
             }
-                
+
             &_catalog {
                 .card__text {
                     @include font-variant(26px, 26px);
@@ -1019,7 +1025,7 @@
             .card__tags {
                 align-self: flex-end;
             }
-        }    
+        }
     }
 
     @media (min-width:1200px) {
@@ -1035,7 +1041,7 @@
             .card__content {
                 opacity: 0;
             }
-        
+
             &.card_pub {
                 .card__body {
                     opacity: 0;
@@ -1062,42 +1068,42 @@
             justify-content: center;
             @include rem(padding-left, 47px);
             @include rem(padding-right, 47px);
-        
+
             .card:hover & {
                 transition: none;
 
                 opacity: 1;
             }
-        
+
             .tiles__w-lg-2 & {
                 @include rem(padding-left, 90px);
                 @include rem(padding-right, 90px);
             }
-        
+
             .card__button {
                 @include rem(margin-top, 22px);
             }
         }
-    
+
         &_product {
             justify-content: center;
-        
+
             .card__labels {
                 @include rem(margin-left, -30px);
                 @include rem(margin-right, -30px);
             }
-        
+
             .card__body {
                 @include rem(padding-bottom, 27px);
                 justify-content: flex-end;
                 flex-grow: 1;
             }
-    
+
             .card__title {
                 @include font-variant(24px, 24px);
                 @include rem(margin-bottom, 5px);
             }
-    
+
             .card__subtitle {
                 @include font-variant(12px, 18px);
                 @include rem(margin-bottom, 19px);
@@ -1114,11 +1120,11 @@
                 margin-bottom: 0;
 
                 @include font-variant(24px, 24px);
-            }                    
-                            
+            }
+
             .card__overlay-text {
                 position: relative;
-                
+
                 &:before {
                     position: absolute;
                     left: 50%;
@@ -1136,27 +1142,27 @@
                     @include rem(top, -64px);
                     @include rem(margin-left, -22px);
                 }
-            } 
-            
+            }
+
             &_catalog {
                 .card__body {
                     max-width: 100%;
 
                     @include rem(padding-bottom, 36px);
                 }
-    
+
                 .card__title {
                     @include font-variant(22px, 22px);
                     @include rem(margin-bottom, 1px);
                 }
-    
+
                 .card__subtitle {
                     @include font-variant(11px, 22px);
                     @include rem(margin-bottom, 15px);
                 }
-                
+
                 .card__action {
-                    padding-bottom: 0;                
+                    padding-bottom: 0;
 
                     @include rem(max-width, 226px);
                 }
@@ -1166,40 +1172,41 @@
                 }
             }
 
-            &_single {            
+            &_single {
                 background-position: -20% 70%;
                 background-size: auto 270%;
- 
+
                 .card__labels {
-                    margin-right:0;
-                    width:60%;
+                    width: 60%;
+                    margin-right: 0;
                 }
                 .card__body {
-                    width:45%;
+                    width: 45%;
+                    padding-bottom: 0;
+
                     @include rem(padding-left, 62px);
                     @include rem(padding-right, 63px);
-                    padding-bottom:0;
-                    justify-content:center;
+                    justify-content: center;
                 }
             }
-        }    
-    
+        }
+
         &_pub {
             .card__tag {
                 @include font-variant(13px, 18px);
             }
-    
+
             .card__title {
                 margin-top: 0;
 
                 @include font-variant(36px, 33px);
                 @include rem(margin-bottom, 22px);
             }
-    
+
             &_double {
                 padding-right: 0;
                 padding-left: 0;
-                                      
+
                 &_right,
                 &_left {
                     @include rem(height, 311px);
@@ -1209,13 +1216,13 @@
                 &_top {
                     @include rem(height, 622px);
                 }
-            } 
+            }
             .grid_tales & {
                 .card__title {
                     @include font-variant(28px, 28px);
                     @include rem(margin-bottom, 37px);
                 }
-            }          
+            }
         }
 
         &_slogan {
@@ -1224,7 +1231,7 @@
                 @include rem(padding-left, 10px);
                 @include rem(padding-right, 10px);
             }
-                
+
             &_catalog {
                 .card__text {
                     @include font-variant(26px, 27px);
@@ -1247,6 +1254,6 @@
             .card__price {
                 @include rem(margin-bottom, 27px);
             }
-        }   
-    } 
- }
+        }
+    }
+}

@@ -5,7 +5,7 @@
             display: none;
         }
     }
-    
+
     @media(min-width:768px) {
     }
 
@@ -18,19 +18,19 @@
         &__action {
             display: none;
         }
-    }    
+    }
 }
 
 .tales-sm {
     &__col {
         width: 100%;
         height: auto;
-     
+
         &:nth-child(n+2) {
             display: none;
         }
     }
- 
+
     @media(min-width:768px) {
         &__col {
             width: 100%;
@@ -47,9 +47,9 @@
                 display: block;
             }
         }
-     
+
         &__action {
             display: none;
         }
     }
-} 
+}

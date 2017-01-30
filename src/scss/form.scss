@@ -1,113 +1,105 @@
 .form {
-  
-  &__control {
-    display: block;
+    &__control {
+        display: block;
 
-    width: 100%;
+        width: 100%;
 
-    color: $input-color;
-    border: $input-button-border-width solid $input-border-color;
-    background-color: $input-bg;
-    background-image: none;
-    background-clip: padding-box;
+        color: $input-color;
+        border: $input-button-border-width solid $input-border-color;
+        background-color: $input-bg;
+        background-image: none;
+        background-clip: padding-box;
 
-    @include px-to-rem(height, $input-height);
-    @include px-to-rem(padding, $input-padding-y-top $input-padding-x $input-padding-y-bottom);
-    @include font-variant($input-font-size, $input-line-height);
-    @include transition(border-color ease-in-out 0.15s, background-color ease-in-out 0.15s);
-    // Customize the `:focus` state to imitate native WebKit styles.
-    @include form-control-focus($input-border-focus, $base-color);
+        @include px-to-rem(height, $input-height);
+        @include px-to-rem(padding, $input-padding-y-top $input-padding-x $input-padding-y-bottom);
+        @include font-variant($input-font-size, $input-line-height);
+        @include transition(border-color ease-in-out 0.15s, background-color ease-in-out 0.15s);
+        // Customize the `:focus` state to imitate native WebKit styles.
+        @include form-control-focus($input-border-focus, $base-color);
 
-    // Unstyle the caret on `<select>`s in IE10+.
-    &::-ms-expand {
-      border: 0;
-      background-color: transparent;
+        // Unstyle the caret on `<select>`s in IE10+.
+        &::-ms-expand {
+            border: 0;
+            background-color: transparent;
+        }
+
+        // Placeholder
+        &::placeholder {
+            opacity: 1;
+            color: $input-color-placeholder;
+        }
+
+        // Disabled and read-only inputs
+        //
+        // HTML5 says that controls under a fieldset > legend:first-child won't be
+        // disabled if the fieldset is disabled. Due to implementation difficulty, we
+        // don't honor that edge case; we style them as disabled anyway.
+        &:disabled,
+        &[readonly] {
+            opacity: 1;
+            background-color: $input-bg-disabled;
+        }
+
+        &:disabled {
+            cursor: $cursor-disabled;
+        }
     }
 
-    // Placeholder
-    &::placeholder {
-      opacity: 1;
-      color: $input-color-placeholder;
+    &__control.select {
+        &:not([size]):not([multiple]) {
+            height: calc(#{$input-height} - #{$input-button-border-width});
+
+            //$select-border-width: (1px * 2);
+        }
+
+        &:focus::-ms-value {
+            // Suppress the nested default white text on blue background highlight given to
+            // the selected option text when the (still closed) <select> receives focus
+            // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+            // match the appearance of the native widget.
+            color: $input-color;
+            background-color: $input-bg;
+        }
     }
 
-    // Disabled and read-only inputs
+    // Make file inputs better match text inputs by forcing them to new lines.
+    &__control-file,
+    &__control-range {
+        display: block;
+    }
+
+    // Form groups
     //
-    // HTML5 says that controls under a fieldset > legend:first-child won't be
-    // disabled if the fieldset is disabled. Due to implementation difficulty, we
-    // don't honor that edge case; we style them as disabled anyway.
-    &:disabled,
-    &[readonly] {
-      opacity: 1;
-      background-color: $input-bg-disabled;
+    // Designed to help with the organization and spacing of vertical forms. For
+    // horizontal forms, use the predefined grid classes.
+
+    &__group {
+        margin-bottom: $form-group-margin-bottom;
     }
-
-    &:disabled {
-      cursor: $cursor-disabled;
-    }
-  }
-  
-  &__control.select {
-    &:not([size]):not([multiple]) {
-      height: calc(#{$input-height} - #{$input-button-border-width});
-
-      //$select-border-width: (1px * 2);
-    }
-
-    &:focus::-ms-value {
-      // Suppress the nested default white text on blue background highlight given to
-      // the selected option text when the (still closed) <select> receives focus
-      // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
-      // match the appearance of the native widget.
-      color: $input-color;
-      background-color: $input-bg;
-    }
-  }
-
-  // Make file inputs better match text inputs by forcing them to new lines.
-  &__control-file,
-  &__control-range {
-    display: block;
-  }
-  
-  // Form groups
-  //
-  // Designed to help with the organization and spacing of vertical forms. For
-  // horizontal forms, use the predefined grid classes.
-
-  &__group {
-    margin-bottom: $form-group-margin-bottom;
-  }
 }
 
 textarea.form__control {
-  height: auto;
+    height: auto;
 }
 
 .custom-control {
-  position: relative;
+    position: relative;
 
-  display: inline-block;
+    display: inline-block;
 
-  margin-bottom: 0;
+    margin-bottom: 0;
 
-  cursor: pointer;
-  transition: color 0.25s ease-in-out;
+    cursor: pointer;
+    transition: color 0.25s ease-in-out;
 
-  @include px-to-rem(padding-left, 40px);
-
-  &:disabled,
-  &.disabled {
-  }
+    @include px-to-rem(padding-left, 40px);
 }
 
 .custom-control__input {
-  position: absolute;
-  z-index: -1; // Put the input behind the label so it doesn't overlay text
+    position: absolute;
+    z-index: -1; // Put the input behind the label so it doesn't overlay text
 
-  opacity: 0;
-
-  &:disabled {
-  }
+    opacity: 0;
 }
 
 // Custom indicator
@@ -115,23 +107,23 @@ textarea.form__control {
 // Generates a shadow element to create our makeshift checkbox/radio background.
 
 .custom-control__indicator {
-  position: absolute;
-  left: 0;
+    position: absolute;
+    left: 0;
 
-  display: block;
+    display: block;
 
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    pointer-events: none;
 
-  color: inherit;
-  border: 2px solid $gray-lighter;
+    color: inherit;
+    border: 2px solid $gray-lighter;
 
-  @include px-to-rem(top, 4px);
-  @include px-to-rem(width, 18px);
-  @include px-to-rem(height, 18px);
+    @include px-to-rem(top, 4px);
+    @include px-to-rem(width, 18px);
+    @include px-to-rem(height, 18px);
 }
 
 // Checkboxes
@@ -139,27 +131,27 @@ textarea.form__control {
 // Tweak just a few things for checkboxes.
 
 .custom-checkbox {
-  .custom-control__icon {
-    position: absolute;
-
-    display: none;
-
-    color: #ffffff;
-
-    @include px-to-rem(font-size, 10px);
-    @include px-to-rem(top, 3px);
-    @include px-to-rem(left, 2px);
-  }
-  
-  .custom-control__input:checked ~ .custom-control__indicator,
-  .custom-control__input:active ~ .custom-control__indicator {
-    border-color: $brand-primary;
-    background-color: $brand-primary;
-    
     .custom-control__icon {
-      display: block;
-    }    
-  }
+        position: absolute;
+
+        display: none;
+
+        color: #ffffff;
+
+        @include px-to-rem(font-size, 10px);
+        @include px-to-rem(top, 3px);
+        @include px-to-rem(left, 2px);
+    }
+
+    .custom-control__input:checked ~ .custom-control__indicator,
+    .custom-control__input:active ~ .custom-control__indicator {
+        border-color: $brand-primary;
+        background-color: $brand-primary;
+
+        .custom-control__icon {
+            display: block;
+        }
+    }
 }
 
 // Radios
@@ -167,13 +159,13 @@ textarea.form__control {
 // Tweak just a few things for radios.
 
 .custom-radio {
-  .custom-control__indicator {
-    @include rounded;
-  }
+    .custom-control__indicator {
+        @include rounded;
+    }
 
-  .custom-control__input:checked ~ .custom-control__indicator,
-  .custom-control__input:active ~ .custom-control__indicator {
-    border-width: 6px;
-    border-color: $brand-primary;
-  }
+    .custom-control__input:checked ~ .custom-control__indicator,
+    .custom-control__input:active ~ .custom-control__indicator {
+        border-width: 6px;
+        border-color: $brand-primary;
+    }
 }

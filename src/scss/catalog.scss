@@ -1,17 +1,17 @@
 // Catalog
 .catalog-sm {
-    .grid__col {  
+    .grid__col {
         @include rem((
             height: 255px
         ));
-        
+
         &:nth-child(n+4) {
             display: none;
         }
     }
- 
+
     @media(min-width:768px) {
-        .grid__col {  
+        .grid__col {
             @include rem((
                 height: 290px
             ));
@@ -23,10 +23,10 @@
             @include rem((
                 height: 389px
             ));
-  
+
             &:nth-child(n+4) {
                 display: block;
             }
         }
     }
-} 
+}

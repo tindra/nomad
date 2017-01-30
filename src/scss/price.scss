@@ -1,23 +1,26 @@
 // Price
 .price {
     font-family: $font-family-sans-serif-extrabold;
-    
+
     &__currency {
         &-item {
-            color:#cbcbcb;
-            cursor:pointer;
+            cursor: pointer;
+
+            color: #cbcbcb;
+
             @include rem((
                 padding-left: 3px,
                 padding-right: 3px
             ));
-            
+
             &.active {
-                color:#313131;
-                cursor:auto;
+                cursor: auto;
+
+                color: #313131;
             }
         }
     }
-    
+
     @media(min-width:768px) {
         &__currency {
             &-item {

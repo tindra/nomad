@@ -1,5 +1,5 @@
 // Index slider
-.index-slider {    
+.index-slider {
     &__item {
         position: relative;
 
@@ -10,7 +10,7 @@
         background-size: cover;
 
         @include px-to-rem(height, 474px);
-        
+
         &:before {
             position: absolute;
             top: 0;
@@ -23,7 +23,7 @@
             background-image: linear-gradient(63deg, rgba(33,33,33,0.56), rgba(90,74,50,0));
         }
     }
-    
+
     &__content {
         position: absolute;
         z-index: 1;
@@ -41,7 +41,7 @@
         @include px-to-rem(padding-top, 63px);
         @include px-to-rem(padding-bottom, 135px);
     }
-    
+
     &__title {
         width: 80%;
         margin-top: 0;
@@ -55,20 +55,20 @@
     &__text {
         @include em-line-height(18px,22px);
     }
-    
-    
-    @media(min-width:768px) { 
+
+
+    @media(min-width:768px) {
         &__item {
             @include px-to-rem(height, 477px);
         }
-    
+
         &__content {
             @include px-to-rem(padding-top, 53px);
             @include px-to-rem(padding-bottom, 98px);
             @include px-to-rem(padding-left, 50px);
             @include px-to-rem(padding-right, 50px);
         }
-    
+
         &__title {
             width: auto;
 
@@ -81,11 +81,11 @@
         }
     }
 
-    @media(min-width:1200px) {        
+    @media(min-width:1200px) {
         &__item {
             @include px-to-rem(height, 652px);
         }
-        
+
         &__container {
             max-width: 560px;
             padding: 0;
@@ -104,7 +104,7 @@
         &__text {
             opacity: 0.76;
         }
-        
+
         .slick-arrow {
             background-color: rgba(0,0,0,0.45);
         }

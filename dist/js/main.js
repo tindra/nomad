@@ -171,9 +171,11 @@ jQuery(document).ready(function($){
     // Article section pushed to the right
     function articlePushedToTheRight() {
         var windowWidth = $(document).outerWidth(true),
-            sectionWidth = $('.article__section_right .container').width(),
+            sectionWidth = 900,
             pushValue = (windowWidth - sectionWidth)/2;
-        $(".article__section_right .img-right").css('margin-right', '-'+pushValue+'px');
+        if(windowWidth>=1000){
+            $(".article__section_right .container").css({'margin-left':pushValue+'px','padding-left':0});
+        }
     }
     articlePushedToTheRight();
 

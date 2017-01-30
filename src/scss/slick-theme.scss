@@ -50,14 +50,12 @@ $slick-opacity-not-active: 0 !default;
 .slick-prev,
 .slick-next {
     position: absolute;
+    z-index: 10;
     top: 50%;
 
     display: block;
 
-    @include size(69px);
     padding: 0;
-    
-    z-index: 10;
 
     cursor: pointer;
     -webkit-transform: translate(0, -50%);
@@ -74,15 +72,18 @@ $slick-opacity-not-active: 0 !default;
 
     font-size: 0;
     line-height: 0;
-    
-    &:hover, &:focus {
+
+    @include size(69px);
+
+    &:hover,
+    &:focus {
+        opacity: 0.53;
         color: transparent;
         outline: none;
         background: transparent;
-        opacity: 0.53;
     }
     &.slick-disabled {
-      cursor: default;
+        cursor: default;
     }
 }
 
@@ -95,10 +96,6 @@ $slick-opacity-not-active: 0 !default;
         right: 0;
         left: auto;
     }
-    &:before {
-        [dir="rtl"] & {
-        }
-    }
 }
 
 .slick-next {
@@ -110,28 +107,25 @@ $slick-opacity-not-active: 0 !default;
         right: auto;
         left: 0;
     }
-    &:before {
-        [dir="rtl"] & {
-        }
-    }
 }
 
 /* Dots */
 .slick-dots {
-    position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
     display: block;
 
     width: 100%;
     margin: 0;
-    padding:20px 0;
+    padding: 20px 0;
 
     list-style: none;
 
     text-align: center;
-    
+
     li {
         position: relative;
 
@@ -171,8 +165,9 @@ $slick-opacity-not-active: 0 !default;
                 left: 50%;
 
                 content: "";
-                transform: translate(-50%, -50%);                
-                background-color: rgba(255,255,255,.33);
+                transform: translate(-50%, -50%);
+
+                background-color: rgba(255,255,255,0.33);
 
                 @include size(11px);
                 @include rounded;

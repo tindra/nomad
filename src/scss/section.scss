@@ -1,13 +1,14 @@
 // Section
-.section {    
+.section {
     &__title {
         position: relative;
+
         text-align: center;
 
         @include font-variant(16px, 21px, $font-family: $font-family-sans-serif-extrabold);
         @include px-to-rem(margin-top, 23px);
         @include px-to-rem(margin-bottom, 25px);
-        
+
         &:before {
             display: block;
 
@@ -18,13 +19,13 @@
 
             opacity: 0.49;
             background: url(../i/logo-dark.png) 50% no-repeat;
-            background-size:contain;
+            background-size: contain;
 
             @include size(52px,31px);
             @include px-to-rem(margin-bottom, 13px);
         }
     }
-    
+
     @media(min-width:768px) and (max-width:1199px) {
         &__breadcrumbs {
             position: relative;
@@ -37,7 +38,7 @@
 
         .breadcrumbs__item + .breadcrumbs__item:before {
             background-image: url("data:image/svg+xml,%3Csvg width='5' height='5' viewBox='0 0 5 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.853 3.243c-.862.496-1.72.997-2.577 1.503C.42 5.25-.006 5.003 0 4.002.006 3.002.006 2 0 .998c-.006-1 .42-1.25 1.276-.744C2.132.76 2.99 1.26 3.853 1.757c.863.496.863.99 0 1.486z' fill='%23ffffff' fill-rule='evenodd'/%3E%3C/svg%3E");
-        }    
+        }
     }
 
     @media(min-width:768px) {
@@ -47,16 +48,16 @@
             @include px-to-rem(margin-bottom, 36px);
         }
     }
-    
+
     @media(min-width:1200px) {
         & + & {
             @include px-to-rem(margin-top, 81px);
         }
-        
+
         &__title {
             @include font-variant(24px, 24px);
             @include px-to-rem(margin-bottom, 40px);
-            
+
             &:before {
                 @include size(59px,35px);
             }
