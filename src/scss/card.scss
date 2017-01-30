@@ -441,6 +441,15 @@
     }
 
     @media (min-width:768px) {
+        .card__label {
+            display: inline-block;
+
+            width: auto;
+            max-width: 100%;
+
+            @include font-variant(14px, 45px);
+        }
+
         &__button {
             border-color: rgba(255,255,255,0.44);
 
@@ -449,15 +458,6 @@
 
         &_product {
             justify-content: center;
-
-            .card__label {
-                display: inline-block;
-
-                width: auto;
-                max-width: 100%;
-
-                @include font-variant(14px, 45px);
-            }
 
             .card__body {
                 max-width: 244px;
@@ -615,6 +615,17 @@
                 .card__title {
                     @include font-variant(36px, 33px);
                     @include rem(margin-bottom, 46px);
+                }
+            }
+ 
+            &_single {
+                @include rem(height, 206px);
+ 
+                .card__labels {
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    margin-left:0;
                 }
             }
         }
@@ -871,7 +882,7 @@
     }
 }
 
-[class^="theme"] {
+[class*="theme"] {
     .card__img-overlay {
         background-image: none;
     }

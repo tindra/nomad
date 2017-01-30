@@ -2857,19 +2857,19 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 }
 
 @media (min-width: 768px) {
+  .card .card__label {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    font-size: 0.7777777778rem;
+    line-height: 3.2142857143;
+  }
   .card__button {
     border-color: rgba(255, 255, 255, 0.44);
     width: 7.4444444444rem;
   }
   .card_product {
     justify-content: center;
-  }
-  .card_product .card__label {
-    display: inline-block;
-    width: auto;
-    max-width: 100%;
-    font-size: 0.7777777778rem;
-    line-height: 3.2142857143;
   }
   .card_product .card__body {
     max-width: 244px;
@@ -2997,6 +2997,15 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
     font-size: 2rem;
     line-height: 0.9166666667;
     margin-bottom: 2.5555555556rem;
+  }
+  .card_pub_single {
+    height: 11.4444444444rem;
+  }
+  .card_pub_single .card__labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 0;
   }
   .card_slogan .card__text {
     padding-right: 0;
@@ -3190,7 +3199,7 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   }
 }
 
-[class^="theme"] .card__img-overlay {
+[class*="theme"] .card__img-overlay {
   background-image: none;
 }
 
@@ -3562,7 +3571,7 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 @media (min-width: 768px) {
   .slider__content {
     padding: 0;
-    max-width: 23.8888888889rem;
+    max-width: 29.4444444444rem;
   }
   .slider__text {
     opacity: 0.76;
@@ -3955,22 +3964,6 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   }
 }
 
-.product__header {
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: cover;
-  margin-bottom: 2.0555555556rem;
-}
-
-.product__header-container {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.product__intro {
-  margin-top: -3.9444444444rem;
-}
-
 .product__img-item {
   position: relative;
   height: 23.5555555556rem;
@@ -4016,16 +4009,8 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   margin-bottom: 2.4444444444rem;
 }
 
-.product__order-row {
-  position: relative;
-  margin-bottom: 1.5555555556rem;
-}
-
-.product__preorder {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 2.0555555556rem;
+.product__amount {
+  margin-bottom: 0.9444444444rem;
 }
 
 .product__buy {
@@ -4044,19 +4029,18 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   background-image: url(../i/patterns/drink.png);
 }
 
+@media (max-width: 767px) {
+  .product__info {
+    position: relative;
+  }
+  .product__preorder {
+    position: absolute;
+    right: 2.0555555556rem;
+    bottom: -4.6666666667rem;
+  }
+}
+
 @media (min-width: 768px) {
-  .product__header {
-    margin-bottom: 1.7777777778rem;
-  }
-  .product__header-container {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .product__intro {
-    display: flex;
-    margin-top: -3.5555555556rem;
-    padding-top: 3.5555555556rem;
-  }
   .product__img {
     width: calc(100% - 260px);
   }
@@ -4066,8 +4050,8 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   .product__body {
     padding-bottom: 0;
     background-position: -100% 90%;
-    width: 14.4444444444rem;
     padding-left: 1rem;
+    width: 14.4444444444rem;
   }
   .product__title {
     margin-bottom: 0;
@@ -4082,9 +4066,6 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
     line-height: 1.4615384615;
     margin-bottom: -0.1111111111rem;
   }
-  .product__order-row {
-    margin-bottom: 0.8888888889rem;
-  }
   .product__preorder {
     position: static;
     transform: none;
@@ -4092,7 +4073,8 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
     line-height: 1.6923076923;
   }
   .product__amount {
-    margin-top: 1.6111111111rem;
+    margin-top: 1.3888888889rem;
+    margin-bottom: 0.9444444444rem;
   }
   .product__buy {
     display: block;
@@ -4107,18 +4089,6 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 }
 
 @media (min-width: 1200px) {
-  .product__header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2.7777777778rem;
-    padding-top: 7.1111111111rem;
-    padding-bottom: 4.2222222222rem;
-  }
-  .product__intro {
-    margin-top: 0;
-    padding-top: 0;
-  }
   .product__img {
     width: 27.2222222222rem;
   }
@@ -4242,12 +4212,13 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 
 @media (min-width: 768px) {
   .tale__intro {
-    height: 22.7777777778rem;
+    min-height: 22.7777777778rem;
     padding-top: 0;
+    height: auto;
   }
   .tale__img {
     width: 33%;
-    height: 100%;
+    height: auto;
   }
   .tale__body {
     width: 67%;
@@ -4288,18 +4259,34 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 }
 
 @media (min-width: 1200px) {
-  .tale__img {
-    width: 27.2222222222rem;
+  .tale__intro {
+    min-height: 21.3888888889rem;
   }
-  .tale__img-item {
-    height: 23.0555555556rem;
+  .tale__img {
+    width: 51%;
   }
   .tale__body {
-    width: 22.7777777778rem;
-    padding-top: 2.0555555556rem;
-    padding-left: 2.4444444444rem;
-    padding-right: 2.2777777778rem;
-    padding-bottom: 1.6666666667rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 49%;
+    padding-top: 2.4444444444rem;
+    padding-bottom: 2.2222222222rem;
+  }
+  .tale__title {
+    margin-bottom: 2.3888888889rem;
+  }
+  .tale__text {
+    font-size: 1rem;
+    line-height: 1.3333333333;
+  }
+  .tale__description h1 {
+    font-size: 3.1111111111rem;
+    line-height: 0.8928571429;
+    margin-bottom: 2.4444444444rem;
+    padding-top: 0.6666666667rem;
   }
 }
 

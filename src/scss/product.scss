@@ -1,26 +1,5 @@
 // Product
 .product {
-    &__header {
-        background-repeat: no-repeat;
-        background-position: 50%;
-        background-size: cover;
-
-        @include rem((
-            margin-bottom: 37px
-        ));
-
-        &-container {
-            padding-right: 0;
-            padding-left: 0;
-        }
-    }
-
-    &__intro {
-        @include rem((
-            margin-top: -$navbar-height-sm
-        ));
-    }
-
     &__img {
         &-item {
             position: relative;
@@ -83,24 +62,9 @@
         ));
     }
 
-    &__order {
-        &-row {
-            position: relative;
-
-            @include rem((
-                margin-bottom: 28px
-            ));
-        }
-    }
-
-    &__preorder {
-        position: absolute;
-        top: 50%;
-
-        transform: translateY(-50%);
-
+    &__amount {
         @include rem((
-            right: 37px
+            margin-bottom: 17px
         ));
     }
 
@@ -125,32 +89,25 @@
         }
     }
 
-    @media(min-width:768px) {
-        &__header {
+    @media(max-width:767px) {
+        &__info {
+            position:relative;
+        }
+
+        &__preorder {
+            position: absolute;            
             @include rem((
-                margin-bottom: 32px
+                right: 37px,
+                bottom: -84px
             ));
-
-            &-container {
-                padding-right: 0;
-                padding-left: 0;
-            }
         }
+    }
 
-        &__intro {
-            display: flex;
-
-            @include rem((
-                 margin-top: -$navbar-height-m,
-                 padding-top: $navbar-height-m
-             ));
-        }
-
+    @media(min-width:768px) {
         &__img {
             @include rem((
-                width: calc(100% - 260px),
+                width: calc(100% - 260px)
             ));
-
             &-item {
                 @include rem((
                     height: 346px
@@ -161,11 +118,10 @@
         &__body {
             padding-bottom: 0;
 
-            background-position: -100% 90%;
-
+            background-position: -100% 90%;   
             @include rem((
-                width:260px,
-                padding-left: 18px
+                padding-left: 18px,
+                width: 260px
             ));
         }
 
@@ -187,14 +143,6 @@
             ));
         }
 
-        &__order {
-            &-row {
-                @include rem((
-                    margin-bottom: 16px
-                ));
-            }
-        }
-
         &__preorder {
             position: static;
 
@@ -205,7 +153,8 @@
 
         &__amount {
             @include rem((
-                margin-top: 29px
+                margin-top: 25px,
+                margin-bottom: 17px
             ));
         }
 
@@ -224,23 +173,6 @@
     }
 
     @media(min-width:1200px) {
-        &__header {
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-            @include rem((
-                margin-bottom: 50px,
-                padding-top: $navbar-height-lg + 37px,
-                padding-bottom: 76px
-            ));
-        }
-
-        &__intro {
-            margin-top: 0;
-            padding-top: 0;
-        }
-
         &__img {
             @include rem((
                 width: 490px,

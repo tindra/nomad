@@ -41,14 +41,15 @@
     @media(min-width:768px) {
         &__intro {
             @include rem((
-                height: 410px
+                min-height: 410px
             ));
             padding-top:0;
+            height:auto;
         }
         
         &__img {
             width:33%;
-            height:100%;
+            height:auto;
         }
 
         &__body {
@@ -100,27 +101,45 @@
     }
 
     @media(min-width:1200px) {
-        &__img {
+        &__intro {
             @include rem((
-                width: 490px,
+                min-height: 385px,
             ));
-
-            &-item {
-                @include rem((
-                    height: 415px
-                ));
-            }
+        }
+        
+        &__img {
+            width:51%;
         }
 
         &__body {
+            text-align:center;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            width:49%;
             @include rem((
-                width:410px,
-                padding-top: 37px,
-                padding-left: 44px,
-                padding-right: 41px,
-                padding-bottom: 30px
+                padding-top: 44px,
+                padding-bottom: 40px
             ));
         }
 
+        &__title {
+            @include rem((
+                margin-bottom: 43px
+            ));
+        }
+ 
+        &__text {
+            @include font-variant(18px, 24px);
+        }
+        
+        &__description h1 {
+            @include font-variant(56px, 50px);
+            @include rem((
+                margin-bottom: 44px,
+                padding-top: 12px
+            ));
+        }
     }
 }
