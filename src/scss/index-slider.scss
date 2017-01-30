@@ -9,7 +9,7 @@
         background-position: 50%;
         background-size: cover;
 
-        @include px-to-rem(height, 474px);
+        @include rem(height, 474px);
 
         &:before {
             position: absolute;
@@ -38,8 +38,8 @@
 
         align-items: center;
         justify-content: center;
-        @include px-to-rem(padding-top, 63px);
-        @include px-to-rem(padding-bottom, 135px);
+        @include rem(padding-top, 63px);
+        @include rem(padding-bottom, 135px);
     }
 
     &__title {
@@ -49,7 +49,7 @@
         margin-left: auto;
 
         @include font-variant(32px,30px, $font-family: $font-family-serif);
-        @include px-to-rem(margin-bottom, 27px);
+        @include rem(margin-bottom, 27px);
     }
 
     &__text {
@@ -59,21 +59,21 @@
 
     @media(min-width:768px) {
         &__item {
-            @include px-to-rem(height, 477px);
+            @include rem(height, 477px);
         }
 
         &__content {
-            @include px-to-rem(padding-top, 53px);
-            @include px-to-rem(padding-bottom, 98px);
-            @include px-to-rem(padding-left, 50px);
-            @include px-to-rem(padding-right, 50px);
+            @include rem(padding-top, 53px);
+            @include rem(padding-bottom, 98px);
+            @include rem(padding-left, 50px);
+            @include rem(padding-right, 50px);
         }
 
         &__title {
             width: auto;
 
             @include font-variant(36px,30px);
-            @include px-to-rem(margin-bottom, 29px);
+            @include rem(margin-bottom, 29px);
         }
 
         &__text {
@@ -83,7 +83,7 @@
 
     @media(min-width:1200px) {
         &__item {
-            @include px-to-rem(height, 652px);
+            @include rem(height, 652px);
         }
 
         &__container {
@@ -92,13 +92,13 @@
         }
 
         &__content {
-            @include px-to-rem(padding-top, 64px);
-            @include px-to-rem(padding-bottom, 129px);
+            @include rem(padding-top, 64px);
+            @include rem(padding-bottom, 129px);
         }
 
         &__title {
             @include font-variant(50px,55px);
-            @include px-to-rem(margin-bottom, 41px);
+            @include rem(margin-bottom, 41px);
         }
 
         &__text {

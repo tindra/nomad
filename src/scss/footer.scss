@@ -116,7 +116,6 @@
             &-img {
                 width: auto;
 
-                @include px-to-rem(margin-bottom, 17px);
                 @include rem((
                     margin-bottom: 17px
                 ));

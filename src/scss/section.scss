@@ -6,8 +6,8 @@
         text-align: center;
 
         @include font-variant(16px, 21px, $font-family: $font-family-sans-serif-extrabold);
-        @include px-to-rem(margin-top, 23px);
-        @include px-to-rem(margin-bottom, 25px);
+        @include rem(margin-top, 23px);
+        @include rem(margin-bottom, 25px);
 
         &:before {
             display: block;
@@ -22,7 +22,7 @@
             background-size: contain;
 
             @include size(52px,31px);
-            @include px-to-rem(margin-bottom, 13px);
+            @include rem(margin-bottom, 13px);
         }
     }
 
@@ -32,8 +32,8 @@
 
             color: #ffffff;
 
-            @include px-to-rem(top, -33px);
-            @include px-to-rem(margin-bottom, -17px);
+            @include rem(top, -33px);
+            @include rem(margin-bottom, -17px);
         }
 
         .breadcrumbs__item + .breadcrumbs__item:before {
@@ -44,27 +44,27 @@
     @media(min-width:768px) {
         &__title {
             @include font-variant(26px, 26px);
-            @include px-to-rem(margin-top, 20px);
-            @include px-to-rem(margin-bottom, 36px);
+            @include rem(margin-top, 20px);
+            @include rem(margin-bottom, 36px);
         }
     }
 
     @media(min-width:1200px) {
         & + & {
-            @include px-to-rem(margin-top, 81px);
+            @include rem(margin-top, 81px);
         }
 
         &__title {
             @include font-variant(24px, 24px);
-            @include px-to-rem(margin-bottom, 40px);
+            @include rem(margin-bottom, 40px);
 
             &:before {
                 @include size(59px,35px);
             }
         }
         &__breadcrumbs {
-            @include px-to-rem(margin-top, 34px);
-            @include px-to-rem(margin-bottom, 64px);
+            @include rem(margin-top, 34px);
+            @include rem(margin-bottom, 64px);
         }
     }
 }

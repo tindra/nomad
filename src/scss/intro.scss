@@ -8,8 +8,8 @@
         display: flex;
         flex-direction: column;
 
-        @include px-to-rem(padding-top, 34px);
-        @include px-to-rem(padding-bottom, 36px);
+        @include rem(padding-top, 34px);
+        @include rem(padding-bottom, 36px);
     }
 
     &__author {
@@ -21,7 +21,7 @@
 
         &-name {
             @include font-variant(18px, 26px, $font-family: $font-family-sans-serif-bold);
-            @include px-to-rem(margin-bottom, 11px);
+            @include rem(margin-bottom, 11px);
         }
 
         &-info {
@@ -40,8 +40,8 @@
 
         order: 1;
         @include font-variant(25px, 26px, $font-family: $font-family-serif);
-        @include px-to-rem(padding-top, 29px);
-        @include px-to-rem(margin-bottom, 24px);
+        @include rem(padding-top, 29px);
+        @include rem(margin-bottom, 24px);
 
         &:before {
             position: absolute;
@@ -55,9 +55,9 @@
             background-color: $brand-sand;
 
             @include font-variant(89px, 89px, $font-family: $font-family-serif-bold);
-            @include px-to-rem(top, -76px);
-            @include px-to-rem(padding-left, 8px);
-            @include px-to-rem(padding-right, 8px);
+            @include rem(top, -76px);
+            @include rem(padding-left, 8px);
+            @include rem(padding-right, 8px);
         }
 
         &:after {
@@ -79,8 +79,8 @@
     &__action {
         background-color: #5f492d;
 
-        @include px-to-rem(margin-left, -13px);
-        @include px-to-rem(margin-right, -15px);
+        @include rem(margin-left, -13px);
+        @include rem(margin-right, -15px);
     }
 
     @media(min-width:768px) {
@@ -89,16 +89,16 @@
             flex-direction: row;
 
             align-items: center;
-            @include px-to-rem(padding-top, 23px);
-            @include px-to-rem(padding-bottom, 24px);
+            @include rem(padding-top, 23px);
+            @include rem(padding-bottom, 24px);
         }
 
         &__author {
             width: 272px;
 
             flex: 0 0 272px;
-            @include px-to-rem(padding-left, 15px);
-            @include px-to-rem(padding-right, 75px);
+            @include rem(padding-left, 15px);
+            @include rem(padding-right, 75px);
             order: 1;
 
             &-avatar {
@@ -109,12 +109,12 @@
 
                 @include size(90px);
                 @include rounded;
-                @include px-to-rem(margin-bottom, 10px);
+                @include rem(margin-bottom, 10px);
             }
 
             &-name {
-                @include px-to-rem(font-size, 16px);
-                @include px-to-rem(margin-bottom, 10px);
+                @include rem(font-size, 16px);
+                @include rem(margin-bottom, 10px);
             }
 
             &-info {
@@ -127,12 +127,12 @@
         &__quote {
             order: 2;
             @include font-variant(24px, 26px);
-            @include px-to-rem(padding-top, 30px);
-            @include px-to-rem(margin-bottom, 10px);
+            @include rem(padding-top, 30px);
+            @include rem(margin-bottom, 10px);
 
             &:before {
                 @include font-variant(106px, 106px);
-                @include px-to-rem(top, -93px);
+                @include rem(top, -93px);
             }
 
             &:after {
@@ -142,8 +142,8 @@
         }
 
         &__action {
-            @include px-to-rem(margin-left, -50px);
-            @include px-to-rem(margin-right, -50px);
+            @include rem(margin-left, -50px);
+            @include rem(margin-right, -50px);
         }
     }
 
@@ -163,7 +163,7 @@
 
             flex-grow: 1;
             justify-content: center;
-            @include px-to-rem(padding, 0 21px);
+            @include rem(padding, 0 21px);
         }
 
         &__author {
@@ -175,15 +175,15 @@
             padding-left: 0;
 
             flex: 0 0 auto;
-            @include px-to-rem(margin-bottom, 47px);
+            @include rem(margin-bottom, 47px);
 
             &-avatar {
-                @include px-to-rem(margin-bottom, 8px);
+                @include rem(margin-bottom, 8px);
             }
 
             &-name {
                 @include font-variant(20px,29px);
-                @include px-to-rem(margin-bottom, 7px);
+                @include rem(margin-bottom, 7px);
             }
 
             &-info {
@@ -195,11 +195,11 @@
             margin-bottom: 0;
 
             @include font-variant(22px, 29px);
-            @include px-to-rem(padding-top, 34px);
+            @include rem(padding-top, 34px);
 
             &:before {
                 @include font-variant(120px, 120px);
-                @include px-to-rem(top, -104px);
+                @include rem(top, -104px);
             }
 
             &:after {
@@ -213,8 +213,8 @@
         &__action {
             text-align: left;
 
-            @include px-to-rem(margin-left, -20px);
-            @include px-to-rem(margin-right, -20px);
+            @include rem(margin-left, -20px);
+            @include rem(margin-right, -20px);
         }
     }
 }
