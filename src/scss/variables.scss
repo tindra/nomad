@@ -33,7 +33,10 @@ $brand-success: #90b756 !default;
 
 $theme-orange: #d6603b !default;
 $theme-orange-overlay: rgba(214,96,59,0.85) !default;
+$theme-orange-overlay-darker: $theme-orange-overlay !default;
 $theme-brown: #400211 !default;
+$theme-brown-overlay: rgba(64,2,17,0.85) !default;
+$theme-brown-overlay-darker: $theme-brown-overlay !default;
 $theme-rosybrown: #573d41 !default;
 $theme-rosybrown-overlay: rgba(106,73,76,0.75) !default;
 $theme-rosybrown-overlay-darker: rgba(106,65,77,0.88) !default;
@@ -42,15 +45,118 @@ $theme-violet-overlay: rgba(56,23,83,0.62) !default;
 $theme-violet-overlay-darker: rgba(56,23,83,0.90) !default;
 $theme-lilac: rgba(125,117,183,1) !default;
 $theme-lilac-overlay: rgba(125,117,183,0.85) !default;
+$theme-lilac-overlay-darker: $theme-lilac-overlay !default;
 $theme-green: #30b52b !default;
 $theme-green-overlay: rgba(135,174,61,0.85) !default;
+$theme-green-overlay-darker: $theme-green-overlay !default;
 $theme-peru: #a17231 !default;
+$theme-peru-overlay: rgba(161,114,49,0.85) !default;
+$theme-peru-overlay-darker: $theme-peru-overlay !default;
 $theme-darkblue: #1d1d46 !default;
 $theme-darkblue-overlay: rgba(29,29,70,0.5) !default;
+$theme-darkblue-overlay-darker: $theme-darkblue-overlay !default;
 $theme-darkgoldenrod: #635429 !default;
 $theme-darkgoldenrod-overlay: rgba(99,84,41,0.5) !default;
+$theme-darkgoldenrod-overlay-darker: $theme-darkgoldenrod-overlay !default;
 $theme-darkred: #4e1106 !default;
 $theme-darkred-overlay: rgba(78,17,6,0.72) !default;
+$theme-darkred-overlay-darker: $theme-darkred-overlay !default;
+$theme-darkgray: #44434f !default;
+$theme-darkgray-overlay: rgba(68,67,79,0.85) !default;
+$theme-darkgray-overlay-darker: $theme-darkgray-overlay !default;
+
+$themes: (
+  brick: (
+        color: $brand-brick,
+        color-overlay: $brand-brick,
+        color-overlay-darker: $brand-brick
+  ),  
+  sand: (
+        color: $brand-sand,
+        color-overlay: $brand-sand,
+        color-overlay-darker: $brand-sand
+  ),  
+  sand-shade: (
+        color: $brand-sand-shade,
+        color-overlay: $brand-sand-shade,
+        color-overlay-darker: $brand-sand-shade
+  ),  
+  darksalmon: (
+        color: $brand-darksalmon,
+        color-overlay: $brand-darksalmon,
+        color-overlay-darker: $brand-darksalmon
+  ),  
+  gray: (
+        color: $brand-gray,
+        color-overlay: $brand-gray,
+        color-overlay-darker: $brand-gray
+  ),  
+  slategray: (
+        color: $brand-slategray,
+        color-overlay: $brand-slategray,
+        color-overlay-darker: $brand-slategray
+  ),  
+  darkbrown: (
+        color: $brand-darkbrown,
+        color-overlay: $brand-darkbrown,
+        color-overlay-darker: $brand-darkbrown
+  ),  
+  orange: (
+    color: $theme-orange,
+    color-overlay: $theme-orange-overlay,
+    color-overlay-darker: $theme-orange-overlay-darker
+  ),  
+  brown: (
+      color: $theme-brown,
+      color-overlay: $theme-brown-overlay,
+      color-overlay-darker: $theme-brown-overlay-darker
+  ),
+  rosybrown: (
+      color: $theme-rosybrown,
+      color-overlay: $theme-rosybrown-overlay,
+      color-overlay-darker: $theme-rosybrown-overlay-darker
+  ),
+  violet: (
+      color: $theme-violet,
+      color-overlay: $theme-violet-overlay,
+      color-overlay-darker: $theme-violet-overlay-darker
+  ),
+  lilac: (
+      color: $theme-lilac,
+      color-overlay: $theme-lilac-overlay,
+      color-overlay-darker: $theme-lilac-overlay-darker
+  ),
+  green: (
+      color: $theme-green,
+      color-overlay: $theme-green-overlay,
+      color-overlay-darker: $theme-green-overlay-darker
+  ),
+  peru: (
+      color: $theme-peru,
+      color-overlay: $theme-peru-overlay,
+      color-overlay-darker: $theme-peru-overlay-darker
+  ),
+  darkblue: (
+      color: $theme-darkblue,
+      color-overlay: $theme-darkblue-overlay,
+      color-overlay-darker: $theme-darkblue-overlay-darker
+  ),
+  darkgoldenrod: (
+      color: $theme-darkgoldenrod,
+      color-overlay: $theme-darkgoldenrod-overlay,
+      color-overlay-darker: $theme-darkgoldenrod-overlay-darker
+  ),
+  darkred: (
+      color: $theme-darkred,
+      color-overlay: $theme-darkred-overlay,
+      color-overlay-darker: $theme-darkred-overlay-darker
+  ),
+  darkgray: (
+      color: $theme-darkgray,
+      color-overlay: $theme-darkgray-overlay,
+      color-overlay-darker: $theme-darkgray-overlay-darker
+  )
+) !default;
 
 // Navbar
 //
@@ -82,6 +188,7 @@ $font-family-sans-serif-light: "ProximaNova-Light", "Helvetica Neue", Arial, san
 $font-family-sans-serif-semibold: "ProximaNova-Semibold", "Helvetica Neue", Arial, sans-serif !default;
 $font-family-sans-serif-bold: "ProximaNova-Bold", "Helvetica Neue", Arial, sans-serif !default;
 $font-family-sans-serif-extrabold: "ProximaNova-Extrabld", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif-italic: "ProximaNova-RegularIt", "Helvetica Neue", Arial, sans-serif !default;
 $font-family-serif: "PlayfairDisplay-Regular", Georgia, "Times New Roman", Times, serif !default;
 $font-family-serif-bold: "PlayfairDisplay-Bold", Georgia, "Times New Roman", Times, serif !default;
 $font-family-base: $font-family-sans-serif !default;

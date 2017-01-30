@@ -1,0 +1,71 @@
+// Contextual backgrounds
+
+@mixin bg-variant($parent, $background) {
+  #{$parent} {
+    background-color: $background;
+  }
+}
+
+// Themes
+@mixin theme-variants {
+  @each $color-name, $items in $themes {
+    $color: map-get($items, color);
+    $color-overlay: map-get($items, color-overlay);
+    $color-overlay-darker: map-get($items, color-overlay-darker);
+        
+    .theme-#{$color-name} {
+        &,
+        .tale__intro {
+            background-color:$color;
+        }
+      
+        &.card_product {
+            .card__overlay {
+                background-color:$color-overlay;
+            }
+        }
+        &.card_pub {
+            .card__img-overlay {
+                background-color: $color-overlay;
+            }
+            .card__overlay {
+                background-color: $color-overlay-darker;
+            }
+
+            &_double {
+                .card__body {
+                    background-color: $color;
+                }
+                &_right {
+                    .card__body {
+                        &:after {
+                            border-right-color: $color;
+                        }
+                    }
+                }
+                &_left {
+                    .card__body {
+                        &:after {
+                            border-left-color: $color;
+                        }
+                    }
+                }
+                &_bottom {
+                    .card__body {
+                        &:after {
+                            border-bottom-color: $color;
+                        }
+                    }
+                }
+                &_top {
+                    .card__body {
+                        &:after {
+                            border-top-color: $color;
+                        }
+                    }
+                }
+            }
+        }
+    }      
+  }
+}

@@ -1,0 +1,73 @@
+// Hero
+.hero {
+    position:relative;
+    @include rem((margin-bottom: 37px));
+
+    &__container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+ 
+    &__img-bg {
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+    }
+
+    &__intro {
+        position:relative;
+        @include rem((
+            margin-top: -$navbar-height-sm
+        ));
+    }
+
+    @media(min-width:768px) {
+        @include rem((
+            margin-bottom: 32px
+        ));
+ 
+        &__container {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        &__intro {
+            display: flex;
+
+            @include rem((
+                 margin-top: -$navbar-height-m,
+                 padding-top: $navbar-height-m
+             ));
+        }
+    }
+
+    @media(min-width:1200px) {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        @include rem((
+            margin-bottom: 50px,
+            padding-top: $navbar-height-lg + 37px,
+            padding-bottom: 76px
+        ));
+
+        &__intro {
+            margin-top: 0;
+            padding-top: 0;
+  	        box-shadow: 0 0 43px rgba(0,0,0,.11);
+      }
+    }
+}
+
+[class*="theme-"] {
+    .hero__img-bg {
+        opacity:.15;
+    }
+}
+

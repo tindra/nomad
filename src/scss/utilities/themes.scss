@@ -2,22 +2,6 @@
 // Contextual backgrounds
 //
 
-@include bg-variant('.theme-brick', $brand-brick);
-
-@include bg-variant('.theme-sand', $brand-sand);
-
-@include bg-variant('.theme-sand-shade', $brand-sand-shade);
-
-@include bg-variant('.theme-darksalmon', $brand-darksalmon);
-
-@include bg-variant('.theme-darksalmon', $brand-darksalmon);
-
-@include bg-variant('.theme-gray', $brand-gray);
-
-@include bg-variant('.theme-slategray', $brand-slategray);
-
-@include bg-variant('.theme-darkbrown', $brand-darkbrown);
-
 .theme-pattern-tea {
     background-image:url(../i/patterns/tea.jpg);
     background-position:100% 100%;
@@ -42,3 +26,6 @@
         }
     }
 }
+
+@include theme-variants;
+

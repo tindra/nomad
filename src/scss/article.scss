@@ -7,6 +7,10 @@
             margin-bottom: 54px
         ));
     }
+    
+    &__source {
+        font-family:$font-family-sans-serif-italic;
+    }
 
     &__section {
         @include rem((

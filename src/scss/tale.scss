@@ -1,0 +1,91 @@
+// Tale
+.tale {
+    &__img {
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+        @include rem((
+            height: 319px
+        ));
+    }
+
+    &__body {
+        @include rem((
+            padding-top: 33px,
+            padding-left: 13px,
+            padding-right: 15px,
+            padding-bottom: 60px
+        ));
+    }
+
+    &__title {
+        margin-top: 0;
+
+        @include font-variant(29px, 33px, $font-family: $font-family-serif-bold);
+        @include rem((
+            margin-bottom: 30px
+        ));
+    }
+
+    &__text {
+        @include font-variant(16px, 21px);
+    }
+    
+    &__description h1 {
+        @include font-variant(29px, 38px, $font-family: $font-family-serif-bold);
+        @include rem((
+            margin-bottom: 18px
+        ));
+    }
+
+    @media(min-width:768px) {
+        &__img {
+            @include rem((
+                width: calc(100% - 260px),
+            ));
+
+            &-item {
+                @include rem((
+                    height: 346px
+                ));
+            }
+        }
+
+        &__body {
+
+            @include rem((
+                width:260px,
+                padding-left: 18px
+            ));
+        }
+
+        &__title {
+            margin-bottom: 0;
+        }
+    }
+
+    @media(min-width:1200px) {
+        &__img {
+            @include rem((
+                width: 490px,
+            ));
+
+            &-item {
+                @include rem((
+                    height: 415px
+                ));
+            }
+        }
+
+        &__body {
+            @include rem((
+                width:410px,
+                padding-top: 37px,
+                padding-left: 44px,
+                padding-right: 41px,
+                padding-bottom: 30px
+            ));
+        }
+
+    }
+}
