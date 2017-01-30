@@ -2359,12 +2359,30 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.45), transparent);
 }
 
-.card__tags {
+.card__tags, .card__labels {
   position: relative;
+}
+
+.card__labels {
+  margin-left: -0.7222222222rem;
+  margin-right: -0.7222222222rem;
 }
 
 .card__tag, .card__label {
   text-transform: uppercase;
+}
+
+.card__label {
+  width: 100%;
+  max-width: 242px;
+  text-align: center;
+  color: #000000;
+  background-color: #ddd058;
+  padding-left: 1.1111111111rem;
+  padding-right: 1.1111111111rem;
+  font-size: 1.1111111111rem;
+  line-height: 3.05;
+  font-family: "ProximaNova-Extrabld", "Helvetica Neue", Arial, sans-serif;
 }
 
 .card__body {
@@ -2401,10 +2419,6 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   display: none;
 }
 
-.card [class^="theme"] .card__img-overlay {
-  background-image: none;
-}
-
 .card_product {
   cursor: pointer;
 }
@@ -2412,24 +2426,6 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 .card_product:not(.card_with-overlay):hover .card__img-overlay {
   background-color: rgba(28, 13, 13, 0.68);
   background-image: none;
-}
-
-.card_product .card__labels {
-  margin-left: -0.7222222222rem;
-  margin-right: -0.7222222222rem;
-}
-
-.card_product .card__label {
-  width: 100%;
-  max-width: 242px;
-  text-align: center;
-  color: #000000;
-  background-color: #ddd058;
-  padding-left: 1.1111111111rem;
-  padding-right: 1.1111111111rem;
-  font-size: 1.1111111111rem;
-  line-height: 3.05;
-  font-family: "ProximaNova-Extrabld", "Helvetica Neue", Arial, sans-serif;
 }
 
 .card_product .card__title {
@@ -2824,6 +2820,15 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   margin-bottom: 0;
 }
 
+.card_pub_single {
+  height: 15.9444444444rem;
+}
+
+.card_pub_single .card__labels {
+  z-index: 10;
+  align-self: flex-start;
+}
+
 .card_slogan {
   text-align: center;
   justify-content: center;
@@ -3183,6 +3188,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   .card_right .card__price {
     margin-bottom: 1.5rem;
   }
+}
+
+[class^="theme"] .card__img-overlay {
+  background-image: none;
 }
 
 /* Slider */
@@ -3550,14 +3559,13 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   margin-bottom: 1.8888888889rem;
 }
 
-.slider__text {
-  opacity: 0.76;
-}
-
 @media (min-width: 768px) {
   .slider__content {
     padding: 0;
     max-width: 23.8888888889rem;
+  }
+  .slider__text {
+    opacity: 0.76;
   }
 }
 
@@ -4134,14 +4142,14 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 
 @media (min-width: 768px) {
   .tale__img {
-    width: calc(100% - 260px);
-  }
-  .tale__img-item {
-    height: 19.2222222222rem;
+    width: 33%;
+    height: 22.7777777778rem;
   }
   .tale__body {
-    width: 14.4444444444rem;
-    padding-left: 1rem;
+    width: 67%;
+    flex-grow: 1;
+    padding-left: 2.7777777778rem;
+    padding-right: 2.7777777778rem;
   }
   .tale__title {
     margin-bottom: 0;

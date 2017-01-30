@@ -40,22 +40,18 @@
 
     @media(min-width:768px) {
         &__img {
+            width:33%;
             @include rem((
-                width: calc(100% - 260px),
+                height: 410px
             ));
-
-            &-item {
-                @include rem((
-                    height: 346px
-                ));
-            }
         }
 
         &__body {
-
+            width: 67%;
+            flex-grow:1;
             @include rem((
-                width:260px,
-                padding-left: 18px
+                padding-left: 50px,
+                padding-right: 50px
             ));
         }
 

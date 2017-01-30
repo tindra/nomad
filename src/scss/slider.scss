@@ -36,15 +36,15 @@
         @include rem((margin-bottom: 34px));
     }
 
-    &__text {
-        opacity: 0.76;
-    }
-
     @media(min-width:768px) {
         &__content {
             padding: 0;
 
             @include rem((max-width: 430px));
+        }
+   
+        &__text {
+            opacity: 0.76;
         }
     }
 

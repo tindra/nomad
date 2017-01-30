@@ -31,13 +31,33 @@
         background-image: linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0));
     }
 
-    &__tags {
+    &__tags,
+    &__labels {
         position: relative;
+    }
+
+    &__labels {
+        @include rem(margin-left, -13px);
+        @include rem(margin-right, -13px);
     }
 
     &__tag,
     &__label {
         text-transform: uppercase;
+    }
+
+    &__label {
+        width: 100%;
+        max-width: 242px;
+
+        text-align: center;
+
+        color: #000000;
+        background-color: #ddd058;
+
+        @include rem(padding-left, 20px);
+        @include rem(padding-right, 20px);
+        @include font-variant(20px, 61px, $font-family: $font-family-sans-serif-extrabold);
     }
 
     &__body {
@@ -77,12 +97,6 @@
         display: none;
     }
 
-    [class^="theme"] {
-        .card__img-overlay {
-            background-image: none;
-        }
-    }
-
     &_product {
         cursor: pointer;
 
@@ -91,25 +105,6 @@
                 background-color: rgba(28,13,13,0.68);
                 background-image: none;
             }
-        }
-
-        .card__labels {
-            @include rem(margin-left, -13px);
-            @include rem(margin-right, -13px);
-        }
-
-        .card__label {
-            width: 100%;
-            max-width: 242px;
-
-            text-align: center;
-
-            color: #000000;
-            background-color: #ddd058;
-
-            @include rem(padding-left, 20px);
-            @include rem(padding-right, 20px);
-            @include font-variant(20px, 61px, $font-family: $font-family-sans-serif-extrabold);
         }
 
         .card__title {
@@ -403,6 +398,15 @@
             }
             .card__action {
                 margin-bottom: 0;
+            }
+        }
+        
+        &_single {
+            @include rem(height, 287px);
+ 
+            .card__labels {
+                z-index:10;
+                align-self:flex-start;
             }
         }
     }
@@ -864,5 +868,11 @@
                 @include rem(margin-bottom, 27px);
             }
         }
+    }
+}
+
+[class^="theme"] {
+    .card__img-overlay {
+        background-image: none;
     }
 }
