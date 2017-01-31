@@ -111,6 +111,21 @@
                 ));
             }
         }
+        
+        &_blog {
+            .grid__col,
+            .grid__h-sm-1 {
+                @include rem((
+                    height: 279px
+                ));
+            }
+
+            .grid__h-sm-2 {
+                @include rem((
+                    height: 558px
+                ));
+            }
+        }        
     }
 
     @media (min-width:768px) {
@@ -196,7 +211,8 @@
             ));
         }
 
-        &_sm {
+        &_sm,
+        &_blog {
             .grid__col,
             .grid__h-lg-1 {
                 @include rem((
@@ -221,6 +237,12 @@
                     height: $height-xl-base*4
                 ));
             }
+        }
+        
+        &_blog {
+            @include rem((
+                margin-bottom: 72px
+            ));
         }
 
         &_tales {

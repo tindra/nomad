@@ -19,19 +19,24 @@
             background-color:$color;
         }
       
-        &.card_product {
-            .card__overlay {
-                background-color:$color-overlay;
+        @if($color-overlay){
+            &.card_product {
+                .card__overlay {
+                    background-color:$color-overlay;
+                }
             }
         }
         &.card_pub {
-            .card__img-overlay {
-                background-color: $color-overlay;
+            @if($color-overlay){
+                .card__img-overlay {
+                    background-color: $color-overlay;
+                }
             }
-            .card__overlay {
-                background-color: $color-overlay-darker;
+            @if($color-overlay-darker){
+                .card__overlay {
+                    background-color: $color-overlay-darker;
+                }
             }
-
             &_double {
                 .card__body {
                     background-color: $color;

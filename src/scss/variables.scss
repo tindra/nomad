@@ -26,11 +26,15 @@ $brand-brick: #93463a !default;
 $brand-sand: #948344 !default;
 $brand-sand-shade: #9b843e !default;
 $brand-darksalmon: #aa7e64 !default;
-$brand-gray: #efefef !default;
+$brand-lightgray: #efefef !default;
+$brand-lightgray-darker: #dfdfdf !default;
+$brand-grayblue: #becfd0 !default;
 $brand-slategray: #4c4c59 !default;
 $brand-darkbrown: #3e2d2e !default;
 $brand-success: #90b756 !default;
 $brand-lightbrown: #856d58 !default;
+$brand-khaki: #534e3b !default;
+$brand-lightyellow: #e7e1b6 !default;
 
 $theme-orange: #d6603b !default;
 $theme-orange-overlay: rgba(214,96,59,0.85) !default;
@@ -68,44 +72,40 @@ $theme-darkgray-overlay-darker: $theme-darkgray-overlay !default;
 
 $themes: (
   brick: (
-        color: $brand-brick,
-        color-overlay: $brand-brick,
-        color-overlay-darker: $brand-brick
+        color: $brand-brick
   ),  
   sand: (
-        color: $brand-sand,
-        color-overlay: $brand-sand,
-        color-overlay-darker: $brand-sand
+        color: $brand-sand
   ),  
   sand-shade: (
-        color: $brand-sand-shade,
-        color-overlay: $brand-sand-shade,
-        color-overlay-darker: $brand-sand-shade
+        color: $brand-sand-shade
   ),  
   darksalmon: (
-        color: $brand-darksalmon,
-        color-overlay: $brand-darksalmon,
-        color-overlay-darker: $brand-darksalmon
+        color: $brand-darksalmon
   ),  
-  gray: (
-        color: $brand-gray,
-        color-overlay: $brand-gray,
-        color-overlay-darker: $brand-gray
+  lightgray: (
+        color: $brand-lightgray
+  ),  
+  lightgray-darker: (
+        color: $brand-lightgray-darker
+  ),  
+  grayblue: (
+        color: $brand-grayblue
   ),  
   slategray: (
-        color: $brand-slategray,
-        color-overlay: $brand-slategray,
-        color-overlay-darker: $brand-slategray
+        color: $brand-slategray
   ),  
   darkbrown: (
-        color: $brand-darkbrown,
-        color-overlay: $brand-darkbrown,
-        color-overlay-darker: $brand-darkbrown
+        color: $brand-darkbrown
   ),  
   lightbrown: (
-        color: $brand-lightbrown,
-        color-overlay: $brand-lightbrown,
-        color-overlay-darker: $brand-lightbrown
+        color: $brand-lightbrown
+  ),  
+  khaki: (
+        color: $brand-khaki
+  ),  
+  lightyellow: (
+        color: $brand-lightyellow
   ),  
   orange: (
     color: $theme-orange,

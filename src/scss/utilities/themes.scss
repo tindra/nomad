@@ -25,7 +25,20 @@
             background-image: url(../i/logo.png);
         }
     }
+    
+    .page-header {
+        color: #f0f0f0;
+    }
 }
 
 @include theme-variants;
+
+[class*="theme-"] {
+    .hero__img-bg {
+        opacity:.15;
+    }
+    .info__img-bg {
+        opacity:.57;
+    }
+}
 
