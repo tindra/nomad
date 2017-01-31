@@ -1,0 +1,354 @@
+// Cart
+.cart {
+    @include rem((
+        padding-top: $navbar-height-m + 20px
+    ));
+
+    &__td {
+        @include font-variant(16px, 18px, $font-family:$font-family-sans-serif-bold);
+        
+        &.cart__cell_name {
+            font-family:$font-family-sans-serif-semibold;
+        }
+    }
+    
+    &__cell {     
+        &_price,
+        &_sum {
+            white-space:nowrap;
+        }
+    }
+
+    &__img {
+        display:block;
+    }
+    
+    &__delete-icon {
+        @include rem((
+            width: 21px,
+            height: 21px
+        ));
+        display:inline-block;
+        opacity:.55;
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.925.32L10.5 7.743 3.073.32C2.737-.016 1.543-.294.625.624c-.918.92-.645 2.113-.31 2.45l7.43 7.426-7.43 7.425c-.335.336-.608 1.533.31 2.45.92.92 2.112.646 2.448.305l7.427-7.425 7.425 7.425c.336.34 1.533.614 2.45-.304.92-.92.646-2.113.305-2.45L13.255 10.5l7.425-7.427c.34-.336.614-1.53-.304-2.45-.92-.917-2.112-.644-2.45-.303z' fill='%23999' fill-rule='evenodd'/%3E%3C/svg%3E");  
+              
+        @include hover-focus {
+            opacity:1;
+        }
+    } 
+    
+    &__footer {
+        @include rem((
+            padding-top: 30px,
+            padding-bottom: 67px
+        ));
+    }
+
+    &__total {
+        @include font-variant(23px, 33px, $font-family:$font-family-sans-serif-bold);
+    }
+
+    &__sum {
+        @include font-variant(33px, 33px, $font-family:$font-family-sans-serif-bold);
+        @include rem((
+            margin-left: 24px
+        ));
+    }
+    
+    &__button {
+        font-family:$font-family-sans-serif-bold;      
+        @include rem((
+            width: 226px
+        ));
+    }
+
+    @media(max-width:767px) {
+        &__list,
+        &__list tbody {
+            display:block;
+        }
+        &__item {
+            display:block;
+            border-bottom:1px solid #f3f3f3;
+            @include rem((
+                padding-top: 34px,
+                padding-bottom: 33px
+            ));
+            @include clearfix;
+            position:relative;
+        }
+        &__header {
+            display:none;
+        }
+        &__th {
+            display:block;
+        }
+        &__td {
+            display:block;
+        }
+        &__cell_name {
+            opacity:.89;
+            @include rem((
+                padding-right: 40px,
+                margin-bottom: 16px
+            ));
+        }
+        &__img {
+            float:left;
+            @include rem((
+                width: 153px,
+                margin-right: 13px,
+                margin-bottom: 28px
+            ));
+        }
+        &__amount {
+            float:left;
+            clear:left;
+        }
+        &__cell_sum {
+            position:absolute;
+            right: 0;
+            @include font-variant(23px, 24px);
+            @include rem((
+                bottom: 50px
+            ));
+        }
+        &__delete-icon {
+            position:absolute;
+            @include rem((
+                top: 34px,
+                right: 4px
+            ));
+        }
+        &__footer {
+            text-align:center;
+        }
+        &__total {
+            text-align:left;
+        }
+        &__button {
+            @include rem((
+                margin-top: 61px
+            ));
+        }
+    }
+
+    @media(min-width:768px) {
+        @include rem((
+            padding-top: $navbar-height-m + 29px
+        ));
+        
+        &__list {
+            width:100%;
+            border-spacing:0;
+        }
+    
+        &__th {
+            color:#979a9c;
+            @include font-variant(13px, 22px);
+            text-align:left;
+            @include rem((
+                padding-top: 7px,
+                padding-bottom: 7px
+            ));
+        }
+
+        &__td {
+            @include rem((
+                padding-top: 11px,
+                padding-bottom: 11px
+            ));
+            vertical-align:middle;
+            text-align:left;
+        
+            &.cart__cell_name {
+                vertical-align:top;
+            }
+            &.cart__cell_img {
+                vertical-align:top;
+            }
+        }
+    
+        &__cell {     
+            border-bottom:1px solid #f3f3f3;
+            &_img {
+                width:106px;
+            }
+            &_name {
+                @include rem((
+                    padding-right: 15px
+                ));
+            }
+            &_price {
+                @include rem((
+                    width: 104px,
+                    padding-right: 15px
+                ));
+            }
+            &_amount {
+                @include rem((
+                    width: 152px
+                ));
+            }
+            &_delete {
+                text-align:right;
+                @include rem((
+                    width: 30px
+                ));
+            }
+        }
+
+        &__img {
+            @include rem((
+                width: 91px
+            ));
+        }
+    
+        &__delete-icon {
+            @include rem((
+                width: 17px,
+                height: 17px
+            ));
+            display:inline-block;
+            background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.51.26L8.5 6.267 2.488.258C2.216-.01 1.25-.237.506.506c-.743.745-.522 1.71-.25 1.982L6.27 8.5.256 14.51c-.272.273-.493 1.242.25 1.985.744.743 1.71.522 1.982.246L8.5 10.73l6.01 6.01c.273.277 1.242.498 1.985-.245.743-.745.522-1.71.246-1.984L10.73 8.5l6.01-6.013c.277-.272.498-1.237-.245-1.982-.745-.743-1.71-.522-1.984-.246z' fill='%23999999' fill-rule='evenodd'/%3E%3C/svg%3E");
+        } 
+
+        &__footer {
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            @include rem((
+                padding-top: 30px,
+                padding-bottom: 60px
+            ));
+        }
+
+        &__total {
+            @include font-variant(15px, 24px, $font-family:$font-family-sans-serif-bold);
+        }
+
+        &__sum {
+            @include font-variant(22px, 24px, $font-family:$font-family-sans-serif-bold);
+            @include rem((
+                margin-left: 14px
+            ));
+        }
+    
+        &__button {
+            @include rem((
+                width: 147px
+            ));
+        }
+    }
+
+    @media(min-width:1200px) {
+        @include rem((
+            padding-top: $navbar-height-lg + 29px,
+            margin-left: -19px,
+            margin-right: -19px
+        ));
+
+        &__th {
+            font-family:$font-family-sans-serif-bold;
+            @include font-variant(15px, 22px);
+            @include rem((
+                padding-top: 9px,
+                padding-bottom: 9px
+            ));
+            
+            &.cart__cell_name {
+                @include rem((
+                    padding-left: 114px
+                ));
+            }
+        }
+
+        &__td {
+            vertical-align:top;
+            @include rem((
+                padding-top: 33px,
+                padding-bottom: 16px
+            ));
+            &.cart__cell_img,
+            &.cart__cell_name {
+                @include rem((
+                    padding-top: 15px
+                ));
+            }
+            &.cart__cell_amount {
+                &_amount {
+                    @include rem((
+                        padding-top: 24px
+                    ));
+                }
+            }
+        }
+    
+        &__cell {
+            &:first-child {
+                @include rem((
+                     padding-left: 19px
+                ));
+            }
+            &:last-child {
+                @include rem((
+                     padding-right: 19px
+                ));
+            }
+            &_img {
+                @include rem((
+                    width: 114px,
+                ));
+            }
+            &_price {
+                @include rem((
+                    width: 120px
+                ));
+            }
+            &_amount {
+                text-align:right;
+                @include rem((
+                    width: 439px,
+                    padding-right: 73px
+                ));
+            }
+            &_sum {
+                @include rem((
+                    width: 130px
+                ));
+            }
+            &_delete {
+                text-align:left;
+                @include rem((
+                    width: 34px
+                ));
+            }
+        }
+
+        &__img {
+            @include rem((
+                width: 83px
+            ));
+        }
+        
+        &__amount {
+            display:inline-block;
+        }
+    
+        &__delete-icon {
+            @include rem((
+                width: 10px,
+                height: 10px
+            ));
+            display:inline-block;
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.536.152L5 3.687 1.463.152C1.303-.008.735-.14.297.297-.14.735-.01 1.303.15 1.463L3.688 5 .15 8.536c-.16.16-.29.73.147 1.167.438.437 1.006.307 1.166.145L5 6.312l3.536 3.536c.16.162.73.292 1.167-.145.437-.438.307-1.006.145-1.167L6.312 5l3.536-3.537c.162-.16.292-.728-.145-1.166C9.265-.14 8.697-.01 8.536.152z' fill='%23999999' fill-rule='evenodd'/%3E%3C/svg%3E");
+        } 
+        
+        &__footer {
+            @include rem((
+                padding-left: 19px,
+                padding-right: 19px
+            ));
+        }
+    }
+}

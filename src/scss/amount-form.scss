@@ -94,23 +94,23 @@
 
     @media(min-width:768px) {
         @include rem((
-            width: 98px,
-            height: 33px,
-            padding-left: 33px,
-            padding-right: 33px,
+            width: 102px,
+            height: 35px,
+            padding-left: 35px,
+            padding-right: 35px,
             padding-top: 1px
         ));
 
         &__control {
             @include rem((
-                width: 33px,
-                height: 33px
+                width: 35px,
+                height: 35px
             ));
 
             &_dec {
                 &:after {
                     @include rem((
-                        width: 16px,
+                        width: 17px,
                         height: 1px
                     ));
                 }
@@ -120,12 +120,12 @@
                 &:before {
                     @include rem((
                         width: 1px,
-                        height: 16px
+                        height: 17px
                     ));
                 }
                 &:after {
                     @include rem((
-                        width: 16px,
+                        width: 17px,
                         height: 1px
                     ));
                 }

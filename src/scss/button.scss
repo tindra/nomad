@@ -13,6 +13,7 @@
 
     @include font-variant(14px, 38px);
     @include transition(all 0.2s ease-in-out);
+    border-radius: 50px;
     @include hover-focus {
         text-decoration: none;
     }
@@ -53,9 +54,14 @@ fieldset[disabled] a.button {
 //
 
 .button_primary {
-    border-radius: 19px;
+    text-transform:uppercase;
     background-image: linear-gradient(to top, rgba(0,0,0,0.07), rgba(255,255,255,0.07));
-    box-shadow: 0 2px 7px rgba(0,0,0,0.15);
+    @include font-variant(22px, 58px);
+    @include rem((
+        padding-left: 28px,
+        padding-right: 28px,
+        box-shadow: 0 2px 7px rgba(0,0,0,0.15)
+    ));
 
     @include button-variant($button-primary-color, $button-primary-bg, $button-primary-border, $button-primary-hover-color, $button-primary-hover-bg, $button-primary-hover-border);
 }
@@ -74,6 +80,10 @@ fieldset[disabled] a.button {
 }
 
 @media (min-width:768px) {
+    .button_primary {
+        @include font-variant(14px, 38px);
+    }
+ 
     .button_outline {
         border-color: rgba(0,0,0,0.44);
 

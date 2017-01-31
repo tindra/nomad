@@ -48,6 +48,11 @@
             ));
         }
 
+        &_xl {
+            @include rem((
+                max-width: 1100px
+            ));
+        }
         .grid {
             margin-right: 0;
             margin-left: 0;

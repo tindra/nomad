@@ -46,6 +46,10 @@ html {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+html, body {
+    height:100%;
+}
+
 body {
     color: $body-color;
     // By default, `<body>` has no `background-color` so we set one as a best practice.

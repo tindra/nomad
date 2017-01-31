@@ -30,6 +30,7 @@ $brand-gray: #efefef !default;
 $brand-slategray: #4c4c59 !default;
 $brand-darkbrown: #3e2d2e !default;
 $brand-success: #90b756 !default;
+$brand-lightbrown: #856d58 !default;
 
 $theme-orange: #d6603b !default;
 $theme-orange-overlay: rgba(214,96,59,0.85) !default;
@@ -100,6 +101,11 @@ $themes: (
         color: $brand-darkbrown,
         color-overlay: $brand-darkbrown,
         color-overlay-darker: $brand-darkbrown
+  ),  
+  lightbrown: (
+        color: $brand-lightbrown,
+        color-overlay: $brand-lightbrown,
+        color-overlay-darker: $brand-lightbrown
   ),  
   orange: (
     color: $theme-orange,
