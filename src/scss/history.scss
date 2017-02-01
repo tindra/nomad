@@ -1,0 +1,219 @@
+// History
+.history {
+    @include rem((
+        padding-top: 31px
+    ));
+    
+    &.theme-inverse {
+        color:#ffffff;
+    }
+    
+    &__title {
+        margin-top:0;
+        @include font-variant(23px, 24px, $font-family: $font-family-sans-serif-semibold);
+        @include rem((margin-bottom: 33px));
+    }
+
+    &__text {
+        @include em-line-height(18px, 24px);
+    }
+    
+    &__img {
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+        height:100%;
+        
+        &-caption {
+            display:none;
+        }
+    }
+    
+    &__section {
+        &_top {
+            .history__right {
+                @include rem((
+                    margin-left: -13px,
+                    margin-right: -15px,
+                    margin-top: 31px
+                ));
+            }
+            .history__img {
+                @include rem((
+                    height: 290px
+                ));
+            }
+        }
+    }
+
+    @media(max-width:767px) {
+        &__section {
+            &_author {
+                display:flex;
+            
+                .history__left,
+                .history__right {
+                    width:50%;
+                }
+                .history__left {
+                    @include rem((
+                        margin-left: -13px
+                    ));
+                }
+                .history__right {
+                    @include rem((
+                        padding-left: 18px,
+                        padding-right: 3px,
+                        padding-top: 26px,
+                        padding-bottom: 20px
+                    ));
+                }
+            }
+        }
+    }
+
+    @media(min-width:768px) {
+        @include rem((
+            padding-top: 1px
+        ));
+ 
+        .breadcrumbs {
+            @include rem((
+                top: -41px,
+                margin-bottom: -39px
+            ));
+        }
+        
+        &__section {
+            display:flex;
+            @include rem((
+                margin-left: -50px,
+                margin-right: -50px
+            ));
+ 
+            &_top {
+                .history__left {
+                    @include rem((
+                        padding-left: 50px,
+                        padding-right: 35px,
+                        padding-top: 39px,
+                        padding-bottom: 46px
+                    ));
+                }
+                .history__right {
+                    margin-left: 0;
+                    margin-right: 0;
+                    margin-top: 0;
+                }
+                .history__img {
+                    height: 100%
+                }
+            }
+            
+            &_author {
+                @include rem((
+                    height: 325px
+                ));
+                .history__right {
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:center;
+                    @include rem((
+                        padding-left: 45px,
+                        padding-right: 35px
+                    ));
+                }
+            }
+        }
+        &__left {
+            width:34%;
+        }
+        &__right {
+            width:66%;
+        }
+        &__title {
+            @include font-variant(36px, 36px);
+            @include rem((margin-bottom: 25px));
+        }
+    }
+
+    @media(min-width:1200px) {
+        @include rem((
+            padding-top: 10px,
+            padding-bottom: 121px
+        ));
+  
+        .breadcrumbs {
+            opacity:1;
+            top: 0;
+            @include rem((
+                margin-bottom: 98px
+            ));
+        }
+        
+        &__section {
+            margin-left: 0;
+            @include rem((
+                margin-right: -26px
+            ));
+ 
+            &_top {
+                @include rem((
+                    height: 293px
+                ));
+                .history__left {
+                    padding-left: 0;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    @include rem((
+                        padding-right: 60px,
+                    ));
+                }
+            }
+            
+            &_author {
+                @include rem((
+                    height: 360px
+                ));
+                .history__left {
+                    display:flex;
+                    align-items:flex-end;
+                    justify-content:space-between;
+                    
+                    .history__img {
+                        width:260px;
+                    }
+                }
+                .history__right {
+                    padding-right: 0;
+                    @include rem((
+                        padding-left: 56px
+                    ));
+                }
+            }
+        }
+        &__left {
+            width:45%;
+        }
+        &__right {
+            width:55%;
+        }
+        &__title {
+            @include font-variant(44px, 44px);
+            @include rem((
+                margin-bottom: 36px,
+                margin-top: -12px
+            ));
+        }
+        &__img {
+            &-caption {
+                display:block;
+                @include font-variant(17px, 18px, $font-family: $font-family-sans-serif-italic);
+                position:relative;
+                @include rem((
+                    top: 4px
+                ));
+            }
+        }
+    }
+}

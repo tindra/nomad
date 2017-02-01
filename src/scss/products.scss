@@ -1,0 +1,173 @@
+// Products
+.products {
+    color:#313131;
+    
+    &__title {
+        margin-top:0;
+        @include font-variant(23px, 50px, $font-family: $font-family-sans-serif-bold);
+        @include rem((margin-bottom: 17px));
+    }
+
+    &__text {
+        @include em-line-height(18px, 24px);
+    }
+    
+    &__img {
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+        height:100%;
+    }
+    
+    &__section {
+        display:flex;
+        flex-direction:column;
+        
+        &_top {
+            .products__body {
+                @include rem((
+                    padding-top: 26px,
+                    padding-bottom: 48px,
+                    padding-left: 13px,
+                    padding-right: 15px
+                ));
+            }
+            .products__img-block {
+                @include rem((
+                    height: 442px
+                ));
+            }
+        }
+    }
+
+    @media(max-width:767px) {
+        &__section {
+            &_top {
+                .products__body {
+                    order:1;
+                }
+                .products__img-block {
+                    order:2;
+                }
+            }
+            &_bottom {
+                flex-direction:row;
+                position:relative;
+                @include rem((
+                    padding-bottom: 239px
+                ));
+                            
+                .products__img-block {
+                    order:1;
+                    width:47.5%;
+                    @include rem((
+                        height: 372px
+                    ));
+                }
+                .products__body {
+                    order:2;
+                    display:flex;
+                    align-items:center;
+                    width:52.5%;
+                    @include rem((
+                        padding-top: 10px,
+                        padding-bottom: 10px,
+                        padding-left: 19px,
+                        padding-right: 19px,
+                    ));
+                }
+                .products__card {
+                    position:absolute;
+                    bottom:0;
+                    left:0;
+                    right:0;
+                    @include rem((
+                        height: 239px
+                    ));
+                }
+            }
+        }
+    }
+
+    @media(min-width:768px) { 
+        &__section {
+            flex-direction:row;
+            
+            &_top {
+                .products__body {
+                    @include rem((
+                        padding-top: 63px,
+                        padding-bottom: 58px,
+                        padding-left: 48px,
+                        padding-right: 20px
+                    ));
+                }
+                .products__img-block {
+                    height:auto;
+                }
+            }
+
+            &_bottom {
+                .products__img-block {
+                    height:auto;
+                }
+                .products__text {
+                    @include rem((
+                        padding-top: 35px,
+                        padding-bottom: 36px,
+                        padding-left: 50px,
+                        padding-right: 50px
+                    ));
+                }
+            }
+        }
+        &__img-block,
+        &__body {
+            width:50%;
+        }
+        &__title {
+            @include font-variant(36px, 36px);
+            @include rem((margin-bottom: 24px));
+        }
+    }
+
+    @media(min-width:1200px) {
+        &__section {            
+            &_top {
+                @include rem((
+                    height: 477px
+                ));
+                .products__body {
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:center;
+                    
+                    @include rem((
+                        padding-top: 30px,
+                        padding-bottom: 30px,
+                        padding-left: 59px,
+                        padding-right: 69px
+                    ));
+                }
+            }
+
+            &_bottom {
+                .products__text {
+                    @include rem((
+                        padding-top: 58px,
+                        padding-bottom: 61px,
+                        padding-left: 56px,
+                        padding-right: 46px
+                    ));
+                }
+            }
+        }
+
+        &__title {
+            @include font-variant(44px, 44px);
+            @include rem((
+                margin-bottom: 48px,
+            ));
+        }
+    }
+}

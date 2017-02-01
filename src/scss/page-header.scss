@@ -2,6 +2,17 @@
 .page-header {
     position: relative;
     color: #575c63;
+    
+    &__img-bg {
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+    }    
 
     &__container {
         @include rem((
@@ -37,7 +48,8 @@
         @include font-variant(36px, 22px, $font-family: $font-family-serif);
     }
 
-    &__img {
+    &__img,
+    &__nav {
         display: none;
     }
 
@@ -91,6 +103,14 @@
                     margin-bottom: -28px
                 ));
             }
+        }
+        
+        &__nav {
+            display:block;
+            opacity:0;
+            @include rem((
+                margin-bottom: 38px
+            ));
         }
     }
 
@@ -153,6 +173,31 @@
                     margin-top: -30px,
                     margin-bottom: -71px
                 ));
+            }
+        }
+        
+        &__nav {
+            opacity:1;
+            display:block;
+            @include list-unstyled;
+            @include rem((
+                margin-top: 84px,
+                margin-bottom: -20px
+            ));
+            
+            &-item {
+                display:block;
+                text-align:center;
+                text-transform:uppercase;
+                @include font-variant(18px, 35px, $font-family: $font-family-sans-serif-light);
+            }
+            &-link {
+                text-decoration:none;
+                
+                &.active {
+                    color:$brand-primary;
+                    font-family: $font-family-sans-serif-semibold;
+                }
             }
         }
     }

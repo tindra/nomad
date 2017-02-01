@@ -1,0 +1,84 @@
+// Mission
+.mission {
+    position:relative;
+    text-align:center;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    @include rem((
+        padding-top: 53px,
+        padding-bottom: 86px
+    ));
+    
+    &:before {
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        content:'';
+        background:#332e28;
+        opacity:.56;
+    }
+    
+    &.theme-inverse {
+        color:#ffffff;
+    }
+    
+    &__content {
+        position:relative;
+        @include rem((
+            padding-left: 57px,
+            padding-right: 57px
+        ));
+    }
+    
+    &__title {
+        @include font-variant(24px, 50px, $font-family: $font-family-sans-serif-bold);
+        @include rem((margin-bottom: 15px));
+    }
+    
+    &__text {
+        @include em-line-height(18px,24px);
+    }
+
+    @media(min-width:768px) {
+        padding-top:0;
+        padding-bottom:0;
+        @include rem((
+            height: 445px
+        ));
+        
+        &__content {
+            padding-left:0;
+            padding-right:0;
+            @include rem((
+                max-width: 520px
+            ));
+        }
+ 
+        &__title {
+            @include font-variant(36px, 50px);
+            @include rem((margin-bottom: 38px));
+        }
+        
+        &__text {
+            opacity:1;
+        }
+    }
+
+    @media(min-width:1200px) {
+        @include rem((
+            height: 544px
+        ));
+        
+        &__title {
+            @include font-variant(44px, 50px);
+            @include rem((margin-bottom: 38px));
+        }
+
+        &__text {
+            @include font-variant(18px,24px);
+        }
+    }
+}

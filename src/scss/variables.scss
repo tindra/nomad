@@ -31,8 +31,10 @@ $brand-lightgray-darker: #dfdfdf !default;
 $brand-grayblue: #becfd0 !default;
 $brand-slategray: #4c4c59 !default;
 $brand-darkbrown: #3e2d2e !default;
+$brand-darkbrown-warm: #3c240d !default;
 $brand-success: #90b756 !default;
 $brand-lightbrown: #856d58 !default;
+$brand-lightbrown-lighter: #8d7053 !default;
 $brand-khaki: #534e3b !default;
 $brand-lightyellow: #e7e1b6 !default;
 
@@ -98,9 +100,15 @@ $themes: (
   darkbrown: (
         color: $brand-darkbrown
   ),  
+  darkbrown-warm: (
+        color: $brand-darkbrown-warm
+  ),  
   lightbrown: (
         color: $brand-lightbrown
-  ),  
+  ),
+  lightbrown-lighter: (
+        color: $brand-lightbrown-lighter
+  ),    
   khaki: (
         color: $brand-khaki
   ),  

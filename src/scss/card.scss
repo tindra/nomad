@@ -159,7 +159,7 @@
         }
 
         &_single {
-            flex-direction: row;
+            align-items:flex-end;
 
             background-position: -100px 80%;
             background-size: auto 150%;
@@ -167,7 +167,10 @@
             @include rem(height, 288px);
 
             .card__labels {
-                width: 50%;
+                position:absolute;
+                left:0;
+                top:0;
+                margin-left: 0;
                 margin-right: 0;
             }
             .card__body {
@@ -186,6 +189,29 @@
             .card__price {
                 @include rem(margin-bottom, 28px);
             }
+            
+            &.products__card {
+                .card__body {
+                    width: 64%;
+                    @include rem(padding-right, 44px);
+                    padding-left:0;
+                }
+                .card__action {
+                    display: flex;
+
+                    text-align: left;
+
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .card__price {
+                    margin-bottom:0;
+                }
+                .card__button {
+                    @include font-variant(16px, 33px);
+                    @include rem(width, 126px);
+                }
+            } 
         }
     }
 
@@ -545,11 +571,13 @@
                 background-size: auto 180%;
 
                 @include rem(height, 206px);
-                justify-content: space-between;
 
+                .card__labels {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
                 .card__body {
                     max-width: 100%;
-
                     @include rem(padding-left, 62px);
                     @include rem(padding-right, 63px);
                 }
@@ -572,6 +600,13 @@
 
                     @include font-variant(24px, 24px);
                 }
+
+                &.products__card {
+                    .card__body {
+                        width: 81%;
+                        @include rem(padding-right, 35px);
+                    }
+                } 
             }
         }
 
@@ -912,7 +947,7 @@
                 background-size: auto 270%;
 
                 .card__labels {
-                    width: 60%;
+                    margin-left: 0;
                     margin-right: 0;
                 }
                 .card__body {
@@ -923,6 +958,12 @@
                     @include rem(padding-right, 63px);
                     justify-content: center;
                 }
+                &.products__card {
+                    .card__body {
+                        width: 45%;
+                        @include rem(padding-right, 20px);
+                    }
+                } 
             }
         }
 
