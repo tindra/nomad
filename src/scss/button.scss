@@ -10,6 +10,8 @@
 
     border: 1px solid transparent;
     background: none;
+    padding-top:0;
+    padding-bottom:0;
 
     @include font-variant(14px, 38px);
     @include transition(all 0.2s ease-in-out);
@@ -77,6 +79,10 @@ fieldset[disabled] a.button {
     ));
     @include font-variant(24px, 60px);
     @include button-outline-variant($button-default-border);
+}
+
+.button_primary.button_sm {
+    @include font-variant(14px, 38px); 
 }
 
 @media (min-width:768px) {

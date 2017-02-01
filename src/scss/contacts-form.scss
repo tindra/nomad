@@ -1,0 +1,72 @@
+// Conatcts form 
+.contacts-form {
+    
+    &__title {
+        text-align:center;
+        color:#f9f9f9;
+        margin-top: 0;
+        @include rem(margin-bottom, 37px);
+        @include font-variant(24px, 24px, $font-family: $font-family-sans-serif-extrabold);
+    }
+
+    &__box {
+        @include rem((
+            border-radius: 17px,
+        	box-shadow: 3px 4px 46px rgba(10,11,11,.57),
+            padding: 23px 15px,
+            margin-bottom: 28px
+        
+        ));
+        background-color: rgba(255,255,255,.13);
+        
+        textarea {
+            color:#efefef;
+            border:0;
+            background:none;
+            margin:0;
+            padding:0;
+            outline:0;
+            width:100%;
+            @include rem(height, 95px);
+            @include font-variant(16px, 21px, $font-family: $font-family-sans-serif);
+        }
+    }
+
+    &__submit {
+        text-align:center;
+    }
+    
+    &__button {
+        @include rem(width, 146px);
+    }
+
+    @media(min-width:768px) {
+    }
+
+    @media(min-width:1200px) {
+        position:relative;
+        
+        &__box {
+            @include rem((
+                padding-bottom: 25px,
+                padding-left: 25px,
+                padding-right: 53px,
+                margin-bottom: 69px
+            ));
+        
+            textarea {
+                @include rem(height, 113px);
+                @include font-variant(18px, 21px);
+            }
+        }
+
+        &__submit {
+            position:absolute;
+            text-align:right;
+            @include rem((
+                bottom: 25px,
+                right: 53px
+            ));
+        }
+    }
+}

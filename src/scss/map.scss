@@ -1,0 +1,83 @@
+// Map
+.map {
+    position:relative;
+    
+    &__container {
+        width:100%;
+        @include rem((height: 386px));
+    }
+    
+    &:before {
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        content:'';
+        background-image:linear-gradient(to top, rgba(79,67,32,.63), rgba(93,73,44,0));
+        height:50%;
+        pointer-events:none;
+        z-index:10;
+    }
+    
+    .gm-style-iw {
+    	top: 114px !important;
+    	left: 99px !important;
+
+    	width: 230px !important;
+
+    	border: 0 !important;
+    	border-radius: 0 !important;
+    	background: none !important;
+    	box-shadow: none !important;
+
+        font-family: $font-family-sans-serif !important;
+    }
+    
+    &__info {
+        position:relative;
+        @include rem((
+            height: 62px,
+            width: 208px,
+            padding: 13px 0 13px 13px
+        ));
+        
+        &:before {
+            position:absolute;
+            top:50%;
+            left: 0;
+            content:'';
+            @include rem((
+                height: 62px,
+                width: 62px,
+                margin-top: -31px
+            ));
+            background:url(../i/marker-open.png);
+        }
+
+        &-content {
+            display:flex;
+            align-items:center;
+            @include rem((
+                height: 36px,
+                border-radius: 18px,
+                padding-left: 44px,
+                padding-right: 16px
+            ));
+            background-color: #977e3f;
+            color:#efefef;
+            @include font-variant(12px, 14px, $font-family: $font-family-sans-serif);
+        }        
+    }
+
+    @media(min-width:768px) {
+        &__container {
+            @include rem((height: 390px));
+        }
+    }
+
+    @media(min-width:1200px) {
+        &__container {
+            @include rem((height: 521px));
+        }
+    }
+}

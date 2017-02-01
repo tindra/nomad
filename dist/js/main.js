@@ -183,6 +183,16 @@ jQuery(document).ready(function($){
         articlePushedToTheRight();
     });
     
+    // Contacts form toggle
+    $(function () {
+        $('.js-contacts-form-toggle').click(function(e) {
+          	e.preventDefault();
+
+            $(this).hide();
+            $('.js-contacts-form').slideDown(350);
+        });
+    });
+    
     // Smooth anchor scroll
 	$(function() {
 	  $('a[href*="#"]:not([href="#"], [role="tab"])').click(function() {

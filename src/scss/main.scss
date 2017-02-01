@@ -23,7 +23,6 @@
 @import "header";
 @import "navbar";
 @import "nav";
-@import "contacts-menu";
 @import "intro";
 @import "page-header";
 @import "breadcrumbs";
@@ -41,6 +40,9 @@
 @import "mission";
 @import "history";
 @import "products";
+@import "contacts";
+@import "contacts-form";
+@import "contacts-menu";
 @import "hero";
 @import "article";
 @import "faq";
@@ -48,6 +50,7 @@
 @import "product";
 @import "tales";
 @import "tale";
+@import "map";
 
 // Utility classes
 @import "utilities";
