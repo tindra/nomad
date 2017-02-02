@@ -2168,6 +2168,7 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
     z-index: 10;
 
     width: auto;
+    max-width: 100%;
     margin-bottom: 2.6111111111rem;
     padding-right: 0;
     padding-left: 0;
@@ -2190,6 +2191,7 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
     line-height: 1.1666666667;
   }
   .intro__quote {
+    max-width: 100%;
     margin-bottom: 0;
     padding-top: 1.8888888889rem;
 
@@ -2901,6 +2903,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
           flex-grow: 1;
 }
 
+.card_pub .card__body {
+  max-width: 100%;
+}
+
 .card_pub .card__title {
   margin-top: 0.4444444444rem;
   margin-bottom: 0.4444444444rem;
@@ -2947,6 +2953,8 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 }
 
 .card_pub_double .card__content {
+  display: block;
+
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
@@ -3102,6 +3110,11 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 
 .card_pub_double_right .card__img-block, .card_pub_double_left .card__img-block {
   width: 50%;
+  height: 100%;
+}
+
+.card_pub_double_right .card__body, .card_pub_double_left .card__body {
+  height: 100%;
 }
 
 .card_pub_double_right .card__body:before, .card_pub_double_right .card__body:after, .card_pub_double_left .card__body:before, .card_pub_double_left .card__body:after {
@@ -4699,6 +4712,11 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
           justify-content: center;
 }
 
+.index-slider__container {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .index-slider__title {
   width: 80%;
   margin-top: 0;
@@ -4800,6 +4818,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.slider__title, .slider__text {
+  max-width: 100%;
 }
 
 .slider__title {
@@ -5695,7 +5717,9 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
 }
 
 .hero__container {
+  margin-left: 0;
   padding-right: 0;
+  padding-left: 0;
   padding-left: 0;
 }
 
@@ -6278,6 +6302,10 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
   padding-right: 0.8333333333rem;
   padding-bottom: 3.3333333333rem;
   padding-left: 0.7222222222rem;
+}
+
+.tale__title, .tale__text {
+  max-width: 100%;
 }
 
 .tale__title {

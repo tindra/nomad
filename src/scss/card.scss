@@ -238,6 +238,10 @@
             flex-grow: 1;
         }
 
+        .card__body {
+            max-width:100%;
+        }
+ 
         .card__title {
             @include font-variant(30px, 24px, $font-family: $font-family-serif);
             @include rem(margin-top, 8px);
@@ -278,6 +282,7 @@
 
             .card__content {
                 flex-grow: 0;
+                display:block;
             }
 
             .card__title {
@@ -342,8 +347,11 @@
 
                 .card__img-block {
                     width: 50%;
+                    height:100%;
                 }
                 .card__body {
+                    height:100%;
+
                     &:before,
                     &:after {
                         @include rem(top, 38px);

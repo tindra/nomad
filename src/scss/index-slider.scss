@@ -42,6 +42,11 @@
         @include rem(padding-bottom, 135px);
     }
 
+    &__container {
+        margin-left:0;
+        margin-right:0;
+    }
+  
     &__title {
         width: 80%;
         margin-top: 0;

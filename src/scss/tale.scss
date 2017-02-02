@@ -18,6 +18,11 @@
         ));
     }
 
+    &__title,
+    &__text {
+        max-width:100%;
+    }
+
     &__title {
         margin-top: 0;
 

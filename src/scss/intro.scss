@@ -167,6 +167,7 @@
         }
 
         &__author {
+            max-width:100%;
             position: relative;
             z-index: 10;
 
@@ -192,6 +193,7 @@
         }
 
         &__quote {
+            max-width:100%;
             margin-bottom: 0;
 
             @include font-variant(22px, 29px);
