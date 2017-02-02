@@ -2580,17 +2580,19 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
     width: 1.9444444444rem;
     height: 1.9444444444rem;
   }
+  .amount-form__control_dec {
+    height: 1px;
+  }
   .amount-form__control_dec:after {
     width: 0.9444444444rem;
-    height: 0.0555555556rem;
   }
   .amount-form__control_inc:before {
-    width: 0.0555555556rem;
+    width: 1px;
     height: 0.9444444444rem;
   }
   .amount-form__control_inc:after {
     width: 0.9444444444rem;
-    height: 0.0555555556rem;
+    height: 1px;
   }
   .amount-form__input {
     width: 1.7777777778rem;
@@ -5775,6 +5777,11 @@ Usage: @include cssTriangle(10px, 1px, #ccc, right, #000);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .hero__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .hero__intro {
     margin-top: 0;

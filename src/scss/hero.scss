@@ -59,6 +59,10 @@
             padding-bottom: 76px
         ));
 
+        &__container {
+            display:flex;
+        }
+
         &__intro {
             margin-top: 0;
             padding-top: 0;

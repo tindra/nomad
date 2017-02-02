@@ -110,24 +110,24 @@
             &_dec {
                 &:after {
                     @include rem((
-                        width: 17px,
-                        height: 1px
+                        width: 17px
                     ));
                 }
+                height: 1px;
             }
 
             &_inc {
                 &:before {
                     @include rem((
-                        width: 1px,
                         height: 17px
                     ));
+                    width: 1px;
                 }
                 &:after {
                     @include rem((
-                        width: 17px,
-                        height: 1px
+                        width: 17px
                     ));
+                    height: 1px;
                 }
             }
         }
