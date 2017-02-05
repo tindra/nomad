@@ -22,7 +22,7 @@
         @if($color-overlay){
             &.card_product {
                 .card__overlay {
-                    background-color:$color-overlay;
+                    background-color:$color-overlay-darker;
                 }
             }
         }

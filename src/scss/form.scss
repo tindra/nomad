@@ -75,6 +75,32 @@
 
     &__group {
         margin-bottom: $form-group-margin-bottom;
+        
+        &_submit {
+            text-align:center;
+        }
+    }
+    
+    &__label {
+        &_option {
+            padding-left:24px;
+            position:relative;
+            
+            input {
+                position:absolute;
+                top:3px;
+                left:0;
+            }
+            .form__control + & {
+                margin-top:8px;
+                margin-bottom:0;
+            }
+        }
+    }
+    
+    &__error {
+        color:#ff0000;
+        margin-bottom:8px;
     }
 }
 

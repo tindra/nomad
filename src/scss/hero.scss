@@ -6,8 +6,6 @@
     &__container {
         padding-right: 0;
         padding-left: 0;
-        margin-left:0;
-        padding-left:0;
     }
  
     &__img-bg {
@@ -49,10 +47,6 @@
     }
 
     @media(min-width:1200px) {
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
         @include rem((
             margin-bottom: 50px,
             padding-top: $navbar-height-lg + 37px,

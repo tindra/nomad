@@ -653,6 +653,7 @@
 
                 .card__content {
                     flex-grow: 0;
+                    @include rem(margin-bottom, 29px);
                 }
 
                 .card__title {
@@ -669,7 +670,8 @@
                     padding-left: 0;
 
                     @include font-variant(16px, 20px);
-                    @include rem(margin-bottom, 29px);
+                    @include rem(max-height, 60px);
+                    overflow:hidden;
                 }
 
                 &_right,

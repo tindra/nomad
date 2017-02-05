@@ -41,11 +41,11 @@ $brand-brown-lighter: #5b340e !default;
 $brand-darkgray-darker: #3c3d41 !default;
 
 $theme-orange: #d6603b !default;
-$theme-orange-overlay: rgba(214,96,59,0.85) !default;
-$theme-orange-overlay-darker: $theme-orange-overlay !default;
+$theme-orange-overlay: rgba(214,96,59,0.35) !default;
+$theme-orange-overlay-darker: rgba(214,96,59,0.85) !default;
 $theme-brown: #400211 !default;
-$theme-brown-overlay: rgba(64,2,17,0.85) !default;
-$theme-brown-overlay-darker: $theme-brown-overlay !default;
+$theme-brown-overlay: rgba(64,2,17,0.35) !default;
+$theme-brown-overlay-darker: rgba(64,2,17,0.85) !default;
 $theme-rosybrown: #573d41 !default;
 $theme-rosybrown-overlay: rgba(106,73,76,0.75) !default;
 $theme-rosybrown-overlay-darker: rgba(106,65,77,0.88) !default;
@@ -53,26 +53,26 @@ $theme-violet: #2b2248 !default;
 $theme-violet-overlay: rgba(56,23,83,0.62) !default;
 $theme-violet-overlay-darker: rgba(56,23,83,0.90) !default;
 $theme-lilac: rgba(125,117,183,1) !default;
-$theme-lilac-overlay: rgba(125,117,183,0.85) !default;
-$theme-lilac-overlay-darker: $theme-lilac-overlay !default;
+$theme-lilac-overlay: rgba(125,117,183,0.35) !default;
+$theme-lilac-overlay-darker: rgba(125,117,183,0.85) !default;
 $theme-green: #30b52b !default;
-$theme-green-overlay: rgba(135,174,61,0.85) !default;
-$theme-green-overlay-darker: $theme-green-overlay !default;
+$theme-green-overlay: rgba(135,174,61,0.35) !default;
+$theme-green-overlay-darker: rgba(135,174,61,0.85) !default;
 $theme-peru: #a17231 !default;
-$theme-peru-overlay: rgba(161,114,49,0.85) !default;
-$theme-peru-overlay-darker: $theme-peru-overlay !default;
+$theme-peru-overlay: rgba(161,114,49,0.35) !default;
+$theme-peru-overlay-darker: rgba(161,114,49,0.85) !default;
 $theme-darkblue: #1d1d46 !default;
-$theme-darkblue-overlay: rgba(29,29,70,0.5) !default;
-$theme-darkblue-overlay-darker: $theme-darkblue-overlay !default;
+$theme-darkblue-overlay: rgba(29,29,70,0.35) !default;
+$theme-darkblue-overlay-darker: rgba(29,29,70,0.5) !default;
 $theme-darkgoldenrod: #635429 !default;
 $theme-darkgoldenrod-overlay: rgba(99,84,41,0.5) !default;
-$theme-darkgoldenrod-overlay-darker: $theme-darkgoldenrod-overlay !default;
+$theme-darkgoldenrod-overlay-darker: rgba(99,84,41,0.85) !default;
 $theme-darkred: #4e1106 !default;
-$theme-darkred-overlay: rgba(78,17,6,0.72) !default;
-$theme-darkred-overlay-darker: $theme-darkred-overlay !default;
+$theme-darkred-overlay: rgba(78,17,6,0.5) !default;
+$theme-darkred-overlay-darker: rgba(78,17,6,0.72) !default;
 $theme-darkgray: #44434f !default;
-$theme-darkgray-overlay: rgba(68,67,79,0.85) !default;
-$theme-darkgray-overlay-darker: $theme-darkgray-overlay !default;
+$theme-darkgray-overlay: rgba(68,67,79,0.5) !default;
+$theme-darkgray-overlay-darker: rgba(68,67,79,0.85) !default;
 
 $themes: (
   brick: (
@@ -300,26 +300,26 @@ $button-block-spacing-y: 8.5px !default;
 // Form
 //
 // 
-$input-font-size: 15px !default;
-$input-padding-x: 18px !default;
-$input-padding-y-top: 13px !default;
-$input-padding-y-bottom: 14px !default;
-$input-line-height: 22px !default;
+$input-font-size: 16px !default;
+$input-padding-x: 8px !default;
+$input-padding-y-top: 0 !default;
+$input-padding-y-bottom: 0 !default;
+$input-line-height: 36px !default;
 
-$input-bg: #f5f5f5 !default;
+$input-bg: #ffffff !default;
 $input-bg-disabled: $gray-lightest !default;
 
 $input-color: $base-color !default;
-$input-border-color: $input-bg !default;
-$input-button-border-width: 2px !default; // For form controls and buttons
+$input-border-color: #dfdfdf !default;
+$input-button-border-width: 1px !default; // For form controls and buttons
 
 $input-bg-focus: #ffffff !default;
-$input-border-focus: #f1f1f1 !default;
+$input-border-focus: #cccccc !default;
 $input-color-focus: $base-color !default;
 
 $input-color-placeholder: $gray-light !default;
 
-$input-height: 50px !default;
+$input-height: 36px !default;
 
 $input-lg-font-size: 30px !default;
 $input-lg-padding-x: 28px !default;

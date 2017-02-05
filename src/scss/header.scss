@@ -34,7 +34,10 @@
         }
 
         &__left {
-            width: calc(100% - 277px);
+            @include rem((
+                height: 652px,
+                width: calc(100% - 277px)
+            ));
         }
 
         &__right {

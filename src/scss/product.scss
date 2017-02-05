@@ -2,6 +2,9 @@
 .product {
     &__img {
         &-item {
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: cover;
             position: relative;
 
             @include rem((
@@ -19,6 +22,7 @@
             transform: translateX(-50%);
 
             box-shadow: 0 13px 24px rgba(12,13,14,0.22);
+            opacity:0;
         }
     }
 

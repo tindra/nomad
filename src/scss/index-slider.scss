@@ -67,6 +67,11 @@
             @include rem(height, 477px);
         }
 
+        &__container {
+            max-width: 560px;
+            padding: 0;
+        }
+
         &__content {
             @include rem(padding-top, 53px);
             @include rem(padding-bottom, 98px);
@@ -89,11 +94,6 @@
     @media(min-width:1200px) {
         &__item {
             @include rem(height, 652px);
-        }
-
-        &__container {
-            max-width: 560px;
-            padding: 0;
         }
 
         &__content {

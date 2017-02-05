@@ -102,7 +102,7 @@
                                                 <span class="price__currency-item active">Р</span>
                                             </span>
                                         </div><!-- /.product__price -->
-                                        <a href="#" class="product__buy-button button button_outline">В корзину</a>
+                                        <a href="#" class="product__buy-button button button_outline js-modal-cart-toggle">В корзину</a>
                                     </div><!-- /.product__buy -->
                                 </div><!-- /.product__order -->
                             </div><!-- /.product__body -->
@@ -383,6 +383,15 @@
             </div><!-- /.footer__copyright -->
         </div><!--  /.container -->
     </footer><!-- /.footer -->
+    
+    <div class="backdrop js-backdrop"></div>
+    <div class="modal-cart theme-inverse js-modal-cart">
+        <div class="modal-cart__title">Товар добавлен в корзину</div>
+        <div class="modal-cart__action">
+            <a href="cart.html" class="modal-cart__button button button_primary">Оформить заказ</a>
+            <a href="" class="modal-cart__link js-modal-cart-close">Продолжить выбор товаров</a>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
