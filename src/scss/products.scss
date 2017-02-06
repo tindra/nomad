@@ -88,6 +88,40 @@
             }
         }
     }
+    
+    @media(max-width:479px) {
+        &__section {
+            &_top {
+                .products__body {
+                    order:1;
+                }
+                .products__img-block {
+                    order:2;
+                }
+            }
+            &_bottom {
+                flex-direction:column;
+                @include rem((
+                    padding-bottom: 239px
+                ));
+                            
+                .products__img-block {
+                    order:2;
+                    width:100%;
+                }
+                .products__body {
+                    order:1;
+                    width:100%;
+                    @include rem((
+                        padding-top: 26px,
+                        padding-bottom: 48px,
+                        padding-left: 13px,
+                        padding-right: 15px
+                    ));
+                }
+            }
+        }
+    }
 
     @media(min-width:768px) { 
         &__section {

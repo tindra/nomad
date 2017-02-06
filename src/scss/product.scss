@@ -107,6 +107,21 @@
         }
     }
 
+    @media(max-width:479px) {
+        &__preorder {
+            position: static;            
+        }
+        &__buy {
+            display:block;
+        }
+        &__price {
+            @include rem((
+                margin-top: 30px,
+                margin-bottom: 30px
+            ));
+        }
+    }
+    
     @media(min-width:768px) {
         &__img {
             @include rem((

@@ -1,5 +1,9 @@
 .form {
-    &__control {
+    &__control,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
         display: block;
 
         width: 100%;
@@ -72,19 +76,43 @@
     //
     // Designed to help with the organization and spacing of vertical forms. For
     // horizontal forms, use the predefined grid classes.
+    
+    &__title {
+        margin-top:0;
+        @include font-variant(18px,24px,$font-family: $font-family-sans-serif-bold);
+        text-align:center;
+        @include rem(margin-bottom, 35px);
+    }
 
     &__group {
         margin-bottom: $form-group-margin-bottom;
         
         &_submit {
             text-align:center;
+            @include rem(margin-top, 50px);
+            @include rem(margin-bottom, 65px);
         }
     }
     
     &__label {
+        display:inline-block;
+        vertical-align:top;
+        color:#949494;
+        @include font-variant(16px,18px);
+        @include rem(margin-bottom, 8px);
+
         &_option {
+            display:inline-block;
+            vertical-align:top;
+            color:#424141;
+            @include font-variant(14px,20px,$font-family: $font-family-sans-serif-semibold);
             padding-left:24px;
             position:relative;
+            
+            .form__label + & {
+                @include rem(margin-left, 29px);
+                @include rem(margin-bottom, -3px);
+            }
             
             input {
                 position:absolute;
@@ -102,8 +130,22 @@
         color:#ff0000;
         margin-bottom:8px;
     }
+
+    @media (min-width:960px) {
+        &__row {
+            display:flex;
+            justify-content:space-between;
+        }
+        &__left {
+            width:30%;
+        }
+        &__right {
+            width:65%;
+        }
+    }
 }
 
+textarea,
 textarea.form__control {
     height: auto;
 }

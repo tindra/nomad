@@ -78,6 +78,11 @@ body {
     height: 75px;
 }
 
+@media(max-width:479px) {
+    .page {
+        overflow-x:hidden;
+    }
+}
 @media(min-width:768px) {
     .page {
         margin-bottom: -175px;

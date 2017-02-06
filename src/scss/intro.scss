@@ -82,6 +82,13 @@
         @include rem(margin-left, -13px);
         @include rem(margin-right, -15px);
     }
+    
+    @media(max-width:479px) {
+        &__action {
+            text-align:left;
+            @include rem(padding-right, 80px);
+        }
+    }
 
     @media(min-width:768px) {
         &__content {

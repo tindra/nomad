@@ -304,13 +304,13 @@ $input-font-size: 16px !default;
 $input-padding-x: 8px !default;
 $input-padding-y-top: 0 !default;
 $input-padding-y-bottom: 0 !default;
-$input-line-height: 36px !default;
+$input-line-height: 44px !default;
 
 $input-bg: #ffffff !default;
 $input-bg-disabled: $gray-lightest !default;
 
 $input-color: $base-color !default;
-$input-border-color: #dfdfdf !default;
+$input-border-color: #d9d9d9 !default;
 $input-button-border-width: 1px !default; // For form controls and buttons
 
 $input-bg-focus: #ffffff !default;
@@ -319,7 +319,7 @@ $input-color-focus: $base-color !default;
 
 $input-color-placeholder: $gray-light !default;
 
-$input-height: 36px !default;
+$input-height: 44px !default;
 
 $input-lg-font-size: 30px !default;
 $input-lg-padding-x: 28px !default;
@@ -329,6 +329,6 @@ $input-lg-line-height: 40px !default;
 
 $input-lg-height: 70px !default;
 
-$form-group-margin-bottom: 20px !default;
+$form-group-margin-bottom: 12px !default;
 
 $cursor-disabled: not-allowed !default;

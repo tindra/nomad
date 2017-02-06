@@ -41,6 +41,16 @@
         @include rem((margin-bottom: 34px));
     }
 
+    @media(max-width:479px) {
+        &__title {
+            @include font-variant(30px, 36px);
+            @include rem((margin-bottom: 14px));
+        }
+        &__text {
+            @include font-variant(16px, 21px);
+        }
+    }
+    
     @media(min-width:768px) {
         &__content {
             padding: 0;

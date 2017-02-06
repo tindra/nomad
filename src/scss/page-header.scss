@@ -54,6 +54,12 @@
         display: none;
     }
 
+    @media(max-width:479px) {
+        &__title {
+            letter-spacing: 0;
+        }
+    }
+    
     @media(min-width:768px) {
         &__container {
             @include rem((

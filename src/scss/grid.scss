@@ -83,7 +83,22 @@
             height: 102px
         ));
     }
+    
+    &_sm {
+        background-color:#311901;
+    }
 
+    @media(max-width:479px) {
+        &__col {
+            float: none;
+        }
+
+        &__sizer-sm,
+        &__w-sm-1 {
+            width: 100%;
+        }   
+    }
+    
     @media (max-width:767px) {
         &_sm {
             .grid__col {

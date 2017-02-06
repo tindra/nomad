@@ -9,7 +9,7 @@
     color: #ffffff;
     background-color: $brand-lightgray;
     background-repeat: no-repeat;
-    background-position: 0 80%;
+    background-position: 50%;
     background-size: cover;
 
     @include size(100%);
@@ -161,8 +161,8 @@
         &_single {
             align-items:flex-end;
 
-            background-position: -100px 80%;
-            background-size: auto 150%;
+            background-position: 50%;
+            background-size: cover;
 
             @include rem(height, 288px);
 
@@ -296,17 +296,18 @@
 
             .card__text {
                 position: absolute;
-                top: 0;
-
-                display: flex;
+                top: 50%;
 
                 width: 100%;
                 height: 100%;
-
+                display:flex;
+                align-items:center;
                 @include font-variant(18px, 22px);
                 @include rem(padding-left, 15px);
                 @include rem(padding-right, 15px);
-                align-items: center;
+                max-height:73%;
+                overflow:hidden;
+                transform:translateY(-50%);
             }
 
             .card__action {
@@ -377,8 +378,9 @@
                     }
                 }
                 .card__text {
-                    top: -100%;
+                    top: -83%;
                     left: 0;
+                    transform:none;
                 }
             }
 
@@ -399,15 +401,15 @@
                     }
                 }
                 .card__text {
-                    top: 100%;
+                    top: 113%;
                     left: 0;
+                    transform:none;
                 }
             }
 
             &_bottom,
             &_top {
                 float: left;
-
 
                 .card__img-block {
                     width: 100%;
@@ -506,10 +508,81 @@
         &_catalog {
             .card__text {
                 opacity: 1;
+                position:relative;
 
                 @include font-variant(16px, 16px);
                 @include rem(padding-left, 44px);
                 @include rem(padding-right, 42px);
+            }
+        }
+    }
+    
+    @media(max-width:479px) {
+        &__button {
+            @include rem(width, 120px);
+        }
+
+        &_product {
+            &_catalog {
+                .card__action {
+                    display:flex;
+                    align-items:center;
+                    justify-content:space-between;
+                }
+
+                .card__price {
+                    position: static;
+                }
+            }
+  
+            &_single {
+                .card__body {
+                    width: 100%;
+                    padding-left:0;
+                    @include rem(margin-top, 50px);
+                }
+                .card__title {
+                    @include rem(margin-bottom, 8px);
+                }
+                .card__subtitle {
+                    @include font-variant(18px, 18px);
+                    @include rem(margin-bottom, 8px);
+                }
+                .card__price {
+                    @include rem(margin-bottom, 8px);
+                }
+            
+                &.products__card {
+                    .card__body {
+                        width: 100%;
+                        padding-right:0;
+                        padding-left:0;
+                    }
+                    .card__action {
+                        display: flex;
+
+                        text-align: left;
+
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                } 
+            }
+        }
+
+        &_slogan {
+            .card__text {
+                @include font-variant(26px, 30px);
+                padding-left:0;
+                padding-right:0;
+            }
+
+            &_catalog {
+                .card__text {
+                    @include font-variant(14px, 16px);
+                    padding-left:0;
+                    padding-right:0;
+                }
             }
         }
     }
@@ -575,9 +648,6 @@
             }
 
             &_single {
-                background-position: 0 80%;
-                background-size: auto 180%;
-
                 @include rem(height, 206px);
 
                 .card__labels {
@@ -671,7 +741,7 @@
 
                     @include font-variant(16px, 20px);
                     @include rem(max-height, 60px);
-                    overflow:hidden;
+                    transform:none;
                 }
 
                 &_right,
@@ -953,9 +1023,6 @@
             }
 
             &_single {
-                background-position: -20% 70%;
-                background-size: auto 270%;
-
                 .card__labels {
                     margin-left: 0;
                     margin-right: 0;

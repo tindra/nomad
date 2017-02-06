@@ -61,7 +61,19 @@
         @include em-line-height(18px,22px);
     }
 
+    @media(max-width:479px) {
+        &__title {
+            width: auto;
 
+            @include font-variant(24px,28px);
+            @include rem(margin-bottom, 20px);
+        }
+
+        &__text {
+            @include em-line-height(14px,18px);
+        }
+    }
+    
     @media(min-width:768px) {
         &__item {
             @include rem(height, 477px);

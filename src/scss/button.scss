@@ -85,6 +85,18 @@ fieldset[disabled] a.button {
     @include font-variant(14px, 38px); 
 }
 
+@media(max-width:479px) {
+    .button_outline {
+        @include rem((
+            border-radius: 30px,
+            border-width: 1px,
+            padding-left: 22px,
+            padding-right: 22px
+        ));
+        @include font-variant(18px, 40px);
+    }
+}
+
 @media (min-width:768px) {
     .button_primary {
         @include font-variant(14px, 38px);

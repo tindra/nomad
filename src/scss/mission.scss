@@ -41,6 +41,15 @@
     &__text {
         @include em-line-height(18px,24px);
     }
+    
+    @media(max-width:479px) {
+        &__content {
+            @include rem((
+                padding-left: 13px,
+                padding-right: 15px
+            ));
+        }
+    }
 
     @media(min-width:768px) {
         padding-top:0;

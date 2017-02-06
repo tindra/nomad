@@ -129,30 +129,36 @@
                         <div class="cart__total">Итого: <span class="cart__sum">1 800 руб.</span></div>
                         <a href="#" class="cart__button button button_primary">Оплатить</a>
                     </div>
-                    
-                    <form action="" class="cart__form form">
-                        <div class="form__group">
-                            <label for="id_email" class="form__label">Email</label>
-                            <input id="id_email" maxlength="254" name="email" type="email" class="form__control" tabindex="10">
-                            <label class="form__label_option" for="id_maillist" tabindex="20">
-                                <input id="id_maillist" name="maillist" type="checkbox">
-                                Хочу получать рассылку
-                            </label>
-                        </div>
-                    
-                        <div class="form__group">
-                            <label for="id_phone" class="form__label">Телефон</label>
-                            <input id="id_phone" maxlength="255" name="phone" required="" type="text" class="form__control" tabindex="30">
-                        </div>
-                        <div class="form__group">
-                            <label for="id_delivery" class="form__label">Информация о доставке</label>
-                            <textarea cols="40" id="id_delivery" name="delivery" rows="5" required="" class="form__control" tabindex="40"></textarea>
-                        </div>
-                        <div class="form__group">
-                            <button type="submit" name="action" value="checkout" class="form__button button button_primary">Оформить</button>
-                        </div>
-                    </form>
                 </div><!-- /.cart -->                
+                <form action="" class="cart__form form">
+                    <div class="form__title">Заполните данные о доставке</div>
+                    <div class="form__row">
+                        <div class="form__left">
+                            <div class="form__group">
+                                <label for="id_email" class="form__label">Email</label>
+                                <label class="form__label_option" for="id_maillist" tabindex="20">
+                                    <input id="id_maillist" name="maillist" type="checkbox">
+                                    Хочу получать рассылку
+                                </label>
+                                <input id="id_email" maxlength="254" name="email" type="email" class="form__control" tabindex="10">
+                            </div>
+                
+                            <div class="form__group">
+                                <label for="id_phone" class="form__label">Телефон</label>
+                                <input id="id_phone" maxlength="255" name="phone" required="" type="text" class="form__control" tabindex="30">
+                            </div>
+                        </div>
+                        <div class="form__right">
+                            <div class="form__group">
+                                <label for="id_delivery" class="form__label">Информация о доставке</label>
+                                <textarea cols="40" id="id_delivery" name="delivery" rows="5" required="" class="form__control" tabindex="40"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__group form__group_submit">
+                        <button type="submit" name="action" value="checkout" class="form__button button button_primary">Оформить</button>
+                    </div>
+                </form>
             </div><!-- /.container -->
         </main><!-- /.content -->
     </div><!-- /.page -->

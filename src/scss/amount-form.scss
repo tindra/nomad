@@ -20,6 +20,7 @@
         border: 1px solid rgba(49,49,49,0.13);
         outline: 0;
         background: none;
+        cursor:pointer;
 
         @include rounded;
         @include rem((
